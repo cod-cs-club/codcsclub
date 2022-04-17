@@ -1,12 +1,20 @@
 html, body {
     margin: 0;
     padding: 0;
+    background: rgb(71, 71, 71);
 }
 
 .blueBox {
     display: flex;
     justify-content: center;
 }
+
+.playerInput {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    }
 
 #red {
     background-color: red;
@@ -16,8 +24,7 @@ html, body {
 
 #blue {
     background-color: blue;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 350% 0;
 }
 
 #results {
