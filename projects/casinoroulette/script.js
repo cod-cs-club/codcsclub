@@ -18,28 +18,19 @@ betButton2.addEventListener('click', function() {
     document.getElementById("p2mon").innerHTML = p2mon;
 });
 
-// Once button "crack cocaine" is clicked, the text changes.
-const hi = document.getElementById('hi');
-hi.addEventListener('click', function() {
-    var input = document.getElementById("input").value;
-    document.getElementById("id").innerHTML = input;
-
-});
-
-
-// Once button Roll is clicked, the game will generate a random number between 1 and 37.
+// Once button spin is clicked, the game will generate a random number between 1 and 37.
 // If the number is <=18, it is a red number,
 // If the number is <=36, it is a black number,
 // If the number is 37, it is a green number.
-const rollButton = document.getElementById('spinButton');
-rollButton.addEventListener('click', function() {
-    var roll = Math.floor(Math.random() * 36) + 1; 
+const spinButton = document.getElementById('spinButton');
+spinButton.addEventListener('click', function() {
+    var spin = Math.floor(Math.random() * 36) + 1; 
     var color = "";
-    if (roll <= 18) {
+    if (spin <= 18) {
         color = "red";
     } 
     
-    else if (roll <= 36) {
+    else if (spin <= 36) {
         color = "black";
     }
 
@@ -47,7 +38,7 @@ rollButton.addEventListener('click', function() {
         color = "green";
     }
 
-    document.getElementById("spinPrint").innerHTML = roll;
+    document.getElementById("spinPrint").innerHTML = spin;
     document.getElementById("colorPrint").innerHTML = color;
 
     // Function to add the color to the history of colors
@@ -57,9 +48,6 @@ rollButton.addEventListener('click', function() {
 // Function to add the color to the history of colors
 function addColor(color) {
     var colorHistory = document.getElementById("colorHistory");
-    var newColor = document.createElement("li");
-    newColor.innerHTML = color;
-    colorHistory.appendChild(newColor);
 }
 
 
