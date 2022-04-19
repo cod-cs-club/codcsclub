@@ -1,6 +1,7 @@
 // Players starting at $200
 var p1mon = 200;
 var p2mon = 200;
+const colorArray = [];
 
 // Once button Bet is clicked, the player's money is reduced by the amount of the bet
 const betButton1 = document.getElementById('betButton1');
@@ -27,27 +28,40 @@ spinButton.addEventListener('click', function() {
     var spin = Math.floor(Math.random() * 36) + 1; 
     var color = "";
     if (spin <= 18) {
-        color = "red";
+        color = "R";
+        document.getElementById("colorHistory").style.color = "red";
     } 
     
     else if (spin <= 36) {
-        color = "black";
+        color = "B";
+        document.getElementById("colorHistory").style.color = "blue";
     }
 
     else {
-        color = "green";
+        color = "G";
     }
+
 
     document.getElementById("spinPrint").innerHTML = spin;
     document.getElementById("colorPrint").innerHTML = color;
 
     // Function to add the color to the history of colors
     addColor(color);
+    
 });
 
 // Function to add the color to the history of colors
 function addColor(color) {
-    var colorHistory = document.getElementById("colorHistory");
+
+    colorArray.push(color);
+    var colorHistoryText = "";
+    for (var i = 0; i < colorArray.length; i++) {
+        colorHistoryText += colorArray[i] + " ";
+    }
+    
+    console.log(colorHistoryText);
+    
+    document.getElementById("colorHistory").innerHTML = colorHistoryText;
 }
 
 

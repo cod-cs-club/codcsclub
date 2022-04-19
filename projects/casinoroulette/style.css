@@ -22,7 +22,7 @@ html, body {
     padding: 0;
 }
 
-#blue {
+.blue {
     background-color: blue;
     margin: 0 0 350% 0;
 }
