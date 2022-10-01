@@ -1,20 +1,12 @@
 /* CSS specific to the Projects page. */
-* {
-  background-color: #FFFFFF;
-  color: #000000;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  font-family: sans-serif;
-  box-sizing: border-box;
-}
+
 
 .border {
   border: 0.1em solid #000000;
   border-radius: 0.3em;
 }
 
-#container {
+#project-container {
   width: 100%;
   height: 100vh;
   padding: 10px 0;
@@ -73,7 +65,7 @@
   padding: 0 1em;
 }
 
-.contributors img {
+.project-contributors img {
   border-radius: 6em;
   height: 3em;
   width: 3em;

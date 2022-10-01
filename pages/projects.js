@@ -7,12 +7,12 @@ function Projects() {
     <>
       <Navbar />
 
-      <div id="container">
+      <div id="project-container">
 
         <div class="project border">
           <div class="project-element border"><a>project title</a></div>
           <div class="project-element border">
-            <div class="contributors border">
+            <div class="project-contributors border">
               <img class="border" width="100" height="100"></img>
               <img class="border" width="100" height="100"></img>
             </div>
@@ -31,7 +31,7 @@ function Projects() {
         </div>
         
 
-        <div id="footer">
+        <div id="project-footer">
           <div></div>
           <div></div>
         </div>
