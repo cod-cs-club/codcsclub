@@ -1,5 +1,23 @@
 /* CSS specific to the Home page. */
 
+.home * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.home .showcase {
+  background-image: url('/public/bgImage.webp');
+}
+
 .home h1 {
-  color: blue;
+  color: white;
+}
+
+.home p {
+  color: white;
+}
+
+.home .left {
+  float: left;
 }
