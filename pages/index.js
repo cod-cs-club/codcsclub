@@ -13,7 +13,7 @@ function Home() {
           <div class="container">
             <div class="jumbotron-text">
               <h1>Computer Science Club</h1>
-              <p>The best club in the world</p>
+              <p>The best club in the world!</p>
             </div>
           </div>
         </section>
