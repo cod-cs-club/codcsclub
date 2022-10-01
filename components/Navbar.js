@@ -1,7 +1,7 @@
 // Navigation bar component.
 function Navbar() {
   return (
-    <div class="navbar">
+    <div id="navbar">
       <img src="CSLogo.png" alt="Logo for the computer science club" />
       <div>
         <a href="/">Home</a>

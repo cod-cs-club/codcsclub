@@ -6,7 +6,7 @@ function Team() {
   return (
     <>
       <Navbar />
-      <div class="team">
+      <div id="team">
         <h1>Meet the Team</h1>
       </div>
     </>

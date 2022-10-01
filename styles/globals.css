@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
 }
 
-.navbar {
+#navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,24 +20,24 @@ body {
   background-color: rgb(20, 20, 20);
 }
 
-.navbar img {
+#navbar img {
   height: 60px;
   background-color: white;
   border-radius: 50%;
 }
 
-.navbar div {
+#navbar div {
   display: flex;
   align-items: center;
 }
 
-.navbar a {
+#navbar a {
   padding: 10px;
   text-decoration: none;
   font-size: 16px;
   color: white;
 }
 
-.navbar a:hover {
+#navbar a:hover {
   color: blue;
 }

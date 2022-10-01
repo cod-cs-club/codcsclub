@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div class="home">
+      <div id="home">
 
         {/* Jumbotron */}
         <section class="jumbotron">

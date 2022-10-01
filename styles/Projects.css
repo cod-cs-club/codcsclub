@@ -1,12 +1,6 @@
 /* CSS specific to the Projects page. */
 
-
-.border {
-  border: 0.1em solid #FFFFFF;
-  border-radius: 0.3em;
-}
-
-#project-container {
+#projects {
   color: #FFFFFF;
   width: 100%;
   height: 100vh;
@@ -18,7 +12,7 @@
   box-sizing: border-box;
 }
 
-.project {
+#projects .project {
   width: 70%;
   height: 22em;
   left: 0;
@@ -35,7 +29,7 @@
 
 
 
-.project-section {
+#projects .project-section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -43,19 +37,19 @@
   flex-basis: 50%;
 }
 
-.project-element {
+#projects .project-element {
   display: flex;
   height: 50%;
   width: 50%;
   align-items: center;
 }
 
-.project-element a {
+#projects .project-element a {
   font-size: 3em;
   margin: 0 1em;
 }
 
-.project-contributors {
+#projects .project-contributors {
   width: 100%;
   height: 100%;
   display: flex;
@@ -66,7 +60,7 @@
   padding: 0 1em;
 }
 
-.project-contributors img {
+#projects .project-contributors img {
   border-radius: 6em;
   height: 3em;
   width: 3em;
@@ -74,30 +68,30 @@
   left: 0;
 }
 
-.project-logo {
+#projects .project-logo {
   width: 100%;
   height: 90%;
   margin: 0 1em;
 }
 
-.project-element p {
+#projects .project-element p {
   margin: 0 1em;
   font-size: 1.5em;
 }
 
 
 @media screen and (max-width: 768px){
-  .project-element a {
+  #projects .project-element a {
     font-size: 3em;
     margin: 0 0.5em;
   }
-  .project {
+  #projects .project {
     width: 90%;
     height: 17em;
     margin: 0 2em;
     
   }
-  .project-element p {
+  #projects .project-element p {
     margin: 0 0.5em;
     font-size: 1.25em;
   }

@@ -7,7 +7,7 @@ function Projects() {
     <>
       <Navbar />
 
-      <div id="project-container">
+      <div id="projects">
 
         <div class="project border">
           <div class="project-element border"><a>project title</a></div>
