@@ -12,12 +12,20 @@
 
 .home h1 {
   color: white;
+  padding: 50px;
 }
 
 .home p {
   color: white;
+  padding-bottom: 50px;
 }
 
 .home .left {
   float: left;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.home .showcase {
+  text-align: center;
 }
