@@ -1,7 +1,7 @@
 To make sure you're able to commit a change
 to the project, Add your name below.
 
--------------------------------------------
+------------------------------------------
 
 Voy
 Akthem
