@@ -1,1 +1,21 @@
 /* CSS specific to the discord page */
+
+#discord * {
+    text-decoration: none;
+}
+
+#discord .btn {
+    background-color: #00a977;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+#discord #discordimg {
+    width: auto;
+    height: auto;
+    padding: 50px;
+}

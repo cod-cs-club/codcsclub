@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import '../styles/Home.css'
 import '../styles/Projects.css'
 import '../styles/Team.css'
+import '../styles/Discord.css'
 
 // Main app function.
 // For now, we don't need to worry about this.
