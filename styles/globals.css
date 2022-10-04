@@ -1,11 +1,17 @@
 /* CSS rules for every page. */
 
+:root {
+  --dark-blue: #152434;
+  --black: #000000;
+  --teal: #0D9292;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgb(30, 30, 30);
+  background-color: black;
 }
 
 *, *::before, *::after {
@@ -32,12 +38,31 @@ body {
 }
 
 #navbar a {
-  padding: 10px;
+
+  padding: 15px;
   text-decoration: none;
   font-size: 16px;
   color: white;
 }
 
-#navbar a:hover {
-  color: blue;
+#navbar :hover {
+  color: #0D9292;
+} 
+
+a:hover span {
+  color: transparent;
+}
+ 
+
+ #disco:hover {
+  color:transparent;
+ }
+
+#beans:hover{
+  margin-left: 25px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-image: url('/DiscordLogo.png');
+  background-size: cover;
 }
