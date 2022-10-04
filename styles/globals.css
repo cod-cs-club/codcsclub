@@ -49,16 +49,16 @@ body {
   color: #0D9292;
 } 
 
-a:hover span {
+#navbar a:hover span {
   color: transparent;
 }
  
 
- #disco:hover {
+#navbar  #disco:hover {
   color:transparent;
  }
 
-#beans:hover{
+ #navbar #beans:hover{
   margin-left: 25px;
   height: 60px;
   width: 60px;
