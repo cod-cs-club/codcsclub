@@ -1,5 +1,98 @@
 /* CSS specific to the Projects page. */
 
-.projects h1 {
-  color: red;
+#projects {
+  color: #FFFFFF;
+  width: 100%;
+  height: 100vh;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+#projects .project {
+  width: 70%;
+  height: 22em;
+  left: 0;
+  margin: 0 1em;
+  /*
+  margin
+  padding
+  */
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  flex-wrap: wrap;
+}
+
+
+
+#projects .project-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: none;
+  flex-basis: 50%;
+}
+
+#projects .project-element {
+  display: flex;
+  height: 50%;
+  width: 50%;
+  align-items: center;
+}
+
+#projects .project-element a {
+  font-size: 3em;
+  margin: 0 1em;
+}
+
+#projects .project-contributors {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: right;
+  padding: 0 1em;
+}
+
+#projects .project-contributors img {
+  border-radius: 6em;
+  height: 3em;
+  width: 3em;
+  top: 0;
+  left: 0;
+}
+
+#projects .project-logo {
+  width: 100%;
+  height: 90%;
+  margin: 0 1em;
+}
+
+#projects .project-element p {
+  margin: 0 1em;
+  font-size: 1.5em;
+}
+
+
+@media screen and (max-width: 768px){
+  #projects .project-element a {
+    font-size: 3em;
+    margin: 0 0.5em;
+  }
+  #projects .project {
+    width: 90%;
+    height: 17em;
+    margin: 0 2em;
+    
+  }
+  #projects .project-element p {
+    margin: 0 0.5em;
+    font-size: 1.25em;
+  }
 }
