@@ -1,6 +1,8 @@
 // Import any custom components we need.
 import Navbar from '../components/Navbar.js'
 
+// import projects from '../data/projects.json'
+
 // Projects page
 function Projects() {
   return (

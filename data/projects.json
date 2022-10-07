@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Project Name",
+    "description": "This is an epic project",
+    "image": "(Link)",
+    "endDate": "March, 2022",
+    "contributors": [
+      "Fake Person 1",
+      "Fake Person 2",
+      "Fake Person 3"
+    ]
+  }
+]

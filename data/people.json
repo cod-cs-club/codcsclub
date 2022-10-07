@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Fake Person 1",
+    "image": "(Link)",
+    "bio": "I am studying something",
+    "socials": {
+      "github": "(Link)",
+      "linkedIn": "(Link)",
+      "twiter": "(Link)"
+    }
+  },
+  {
+    "name": "Fake Person 2",
+    "image": "(Link)",
+    "bio": "I am studying something",
+    "socials": {
+      "github": "(Link)",
+      "linkedIn": "(Link)",
+      "twiter": "(Link)"
+    }
+  }
+]
