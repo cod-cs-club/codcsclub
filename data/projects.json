@@ -1,9 +1,26 @@
 [
   {
-    "name": "Project Name",
-    "description": "This is an epic project",
-    "image": "(Link)",
-    "endDate": "March, 2022",
+    "name": "codcsclub.com",
+    "description": "Placeholder Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel eros donec ac odio. Risus ultricies tristique nulla aliquet enim tortor at. Accumsan tortor posuere ac ut. Velit ut tortor pretium viverra suspendisse potenti. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Eu non diam",
+    "image": "/CSLogo.png",
+    "date": "September 2022",
+    "link": "https://codcsclub.com",
+    "repository": "https://github.com",
+    "languages": [ "Next.js", "JavaScript", "HTML", "CSS" ],
+    "contributors": [
+      "Fake Person 1",
+      "Fake Person 2",
+      "Fake Person 3"
+    ]
+  },
+  {
+    "name": "almightycandle",
+    "description": "Placeholder Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel eros donec ac odio. Risus ultricies tristique nulla aliquet enim tortor at. Accumsan tortor posuere ac ut. Velit ut tortor pretium viverra suspendisse potenti. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Eu non diam",
+    "image": "/almightycandle.png",
+    "date": "September 2022",
+    "link": "https://almightycandle.com",
+    "repository": "https://github.com",
+    "languages": [ "Python", "Next.js", "JavaScript", "HTML", "CSS" ],
     "contributors": [
       "Fake Person 1",
       "Fake Person 2",

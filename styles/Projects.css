@@ -1,98 +1,101 @@
 /* CSS specific to the Projects page. */
 
-#projects {
-  color: #FFFFFF;
-  width: 100%;
-  height: 100vh;
-  padding: 10px 0;
+#projects #project-list {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  box-sizing: border-box;
+  gap: 30px;
+  margin: 30px 60px;
 }
 
 #projects .project {
-  width: 70%;
-  height: 22em;
-  left: 0;
-  margin: 0 1em;
-  /*
-  margin
-  padding
-  */
   display: flex;
-  flex-direction: row;
-  justify-content: none;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 900px;
+  padding: 10px;
+  background-color: var(--bg-color-1);
+  border: 1px solid var(--border-color-1);
 }
 
-
-
-#projects .project-section {
+#projects .left {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: none;
-  flex-basis: 50%;
+  flex-direction: column;
+  /* background: red; */
 }
 
-#projects .project-element {
+#projects .left a {
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(127, 127, 255);
+}
+
+#projects .left a:hover { text-decoration: underline; }
+
+#projects .left p {
+  margin-bottom: 20px;
+  font-size: 17px;
+  color: var(--text-color-2);
+}
+
+#projects .contributors {
   display: flex;
-  height: 50%;
-  width: 50%;
   align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--text-color-3);
 }
 
-#projects .project-element a {
-  font-size: 3em;
-  margin: 0 1em;
+#projects .contributors span {
+  margin-right: 10px;
 }
 
-#projects .project-contributors {
-  width: 100%;
-  height: 100%;
+#projects .contributors img {
+  width: 20px;
+  height: 20px;
+  margin-right: -5px;
+  border-radius: 50%;
+}
+
+#projects .languages {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+#projects .bubble {
+  display: flex;
   align-items: center;
-  justify-content: right;
-  padding: 0 1em;
+  gap: 5px;
+  padding: 2px 5px;
+  font-size: 16px;
+  color: var(--text-color-2);
+  background-color: var(--bg-color-2);
+  border-radius: 8px;
 }
 
-#projects .project-contributors img {
-  border-radius: 6em;
-  height: 3em;
-  width: 3em;
-  top: 0;
-  left: 0;
+#projects .bubble img {
+  width: 15px;
+  height: 15px;
 }
 
-#projects .project-logo {
-  width: 100%;
-  height: 90%;
-  margin: 0 1em;
+#projects .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#projects .project-element p {
-  margin: 0 1em;
-  font-size: 1.5em;
+#projects .right img {
+  width: 100px;
+  height: 100px;
 }
 
-
-@media screen and (max-width: 768px){
-  #projects .project-element a {
-    font-size: 3em;
-    margin: 0 0.5em;
-  }
-  #projects .project {
-    width: 90%;
-    height: 17em;
-    margin: 0 2em;
-    
-  }
-  #projects .project-element p {
-    margin: 0 0.5em;
-    font-size: 1.25em;
-  }
+#projects .right a {
+  padding: 4px 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--text-color-2);
+  background-color: var(--bg-color-3);
+  border: 1px solid var(--border-color-3);
 }
+
+#projects .right a:hover { background-color: var(--bg-color-4); }

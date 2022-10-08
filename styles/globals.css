@@ -1,6 +1,19 @@
 /* CSS rules for every page. */
 
 :root {
+  --bg-color-1: rgb(15, 15, 15);
+  --bg-color-2: rgb(25, 25, 25);
+  --bg-color-3: rgb(35, 35, 35);
+  --bg-color-4: rgb(45, 45, 45);
+  --text-color-1: rgb(255, 255, 255);
+  --text-color-2: rgb(220, 220, 220);
+  --text-color-3: rgb(180, 180, 180);
+  --text-color-4: rgb(140, 140, 140);
+  --border-color-1: rgb(40, 40, 40);
+  --border-color-2: rgb(50, 50, 50);
+  --border-color-3: rgb(60, 60, 60);
+  --border-color-4: rgb(70, 70, 70);
+
   --dark-blue: #152434;
   --black: #000000;
   --teal: #0D9292;
