@@ -1,9 +1,10 @@
 /* CSS specific to the Home page. */
 #home * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
+}
+
+#home {
+  min-height: 5000px;
 }
 
 #home .container {
@@ -19,7 +20,7 @@
   gap: 20px;
 }
 
-#home .btn {
+#home .button {
   background-color: #00a977;
   color: white;
   cursor: pointer;
