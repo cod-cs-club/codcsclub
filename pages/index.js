@@ -9,17 +9,17 @@ function Home() {
       <div id="home">
         
         {/* Jumbotron */}
-        <section class="jumbotron">
+        <div class="jumbotron">
           <div class="container">
             <div class="jumbotron-text">
               <h1>Computer Science Club</h1>
               <p>The best club in the world!</p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Showcase */}
-        <section class="showcase">
+        <div class="showcase">
           <div class="container">
             <div class="showcase-box grid">
               <div class="left">
@@ -27,12 +27,12 @@ function Home() {
                 <h1>Welcome to the Computer Science Club!</h1> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
                 {/* Button below */}
-                <a href="" class="btn">See Our Projects</a> 
+                <a href="" class="button">See Our Projects</a> 
               </div>
               <iframe id="intro-vid" width="560" height="315" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   )
