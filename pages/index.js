@@ -33,6 +33,14 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* Info cards */}
+        <div class="info">
+          <div class="container">
+            
+          </div>
+        </div>
+
       </div>
     </>
   )
