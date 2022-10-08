@@ -45,7 +45,7 @@
   color: white;
   font-size: 60px;
   padding: 50px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif, Courier, monospace;
 }
 
 #home .jumbotron-text p {
