@@ -1,5 +1,5 @@
 // Import any custom components we need.
-import Navbar from '../components/Navbar.js'
+import Navbar from '/components/Navbar.js'
 
 // Home page
 function Home() {
@@ -12,8 +12,8 @@ function Home() {
       <div class = "jumbotron">
         <div class = "container">
           <div class = "jumbotron-text">
-            <h1> Computer Science Club </h1>
-            <p> The best club on the Planet! </p>
+            <h1>Computer Science Club</h1>
+            <p>The best club on the Planet!</p>
           </div>
         </div>
       </div>

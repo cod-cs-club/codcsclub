@@ -4,6 +4,7 @@ import '../styles/Home.css'
 import '../styles/Projects.css'
 import '../styles/Team.css'
 import '../styles/Discord.css'
+import '/styles/People.css'
 
 // Main app function.
 // For now, we don't need to worry about this.
