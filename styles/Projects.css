@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 30px;
   margin: 30px 60px;
+  align-items: center;
 }
 
 #projects .project {
