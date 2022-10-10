@@ -22,6 +22,7 @@
 
 #home .button {
   background-color: #00a977;
+  /* background-color: var(--teal); */
   color: white;
   cursor: pointer;
   border: none;
@@ -79,4 +80,53 @@
 #home #intro-vid {
   border-radius: 10px;
   /* box-shadow: 0px 0px 10px #666666; */
+}
+
+/* INFO CSS */
+
+#home .info {
+  background-color: #00a977;
+}
+
+#home .info div {
+  padding: 10px;
+  color: white;
+}
+
+#home .info-wrapper {
+  display: grid;
+  grid-template-areas: 
+  'first second fourth'
+  'third third fourth';
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 10px;
+}
+
+#home .info-wrapper div {
+  border: green solid 1px;
+  border-radius: 10px;
+  background-color: var(--dark-blue);
+}
+
+#home .info-wrapper div h3 {
+  text-align: center;
+  border-bottom: white 2px solid;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+#home .first {
+  grid-area: first;
+}
+
+#home .second {
+  grid-area: second;
+}
+
+#home .third {
+  grid-area: third;
+}
+
+#home .fourth {
+  grid-area: fourth;
 }
