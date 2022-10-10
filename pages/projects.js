@@ -1,14 +1,16 @@
-// Import any custom components we need.
-import Navbar from '../components/Navbar.js'
+// Import everything we need.
+import Navbar from '/components/Navbar.js'
+import projects from '/data/projects.json'
+import getPersonInfo from '/functions/getPersonInfo.js'
 
-import projects from '../data/projects.json'
-
-const languageIcons = {}
-languageIcons['HTML'] = '/html.png'
-languageIcons['CSS'] = '/css.png'
-languageIcons['JavaScript'] = '/javascript.png'
-languageIcons['Next.js'] = '/nextjs.png'
-languageIcons['Python'] = '/python.png'
+// All the possible languages in the projects.
+const languageIcons = {
+  "HTML": "/html.png",
+  "CSS": "/css.png",
+  "JavaScript": "/javascript.png",
+  "Next.js": "/nextjs.png",
+  "Python": "/python.png"
+}
 
 // Projects page
 function Projects() {
@@ -29,8 +31,14 @@ function Projects() {
                       <span>{project.contributors.length} Contributors:</span>
                       {
                         project.contributors.map(person => {
-                          // Placeholder image for people
-                          return <img src="/CSLogoWhite.png" />
+                          var person = getPersonInfo(person)
+                          if (person) {
+                            return (
+                              <a href={"/people/" + person.name}>
+                                <img src={person.image} />
+                              </a>
+                            )
+                          }
                         })
                       }
                     </div>

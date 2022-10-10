@@ -1,5 +1,5 @@
 // Import any custom components we need.
-import Navbar from '../components/Navbar.js'
+import Navbar from '/components/Navbar.js'
 
 // Meet the Team page
 function Team() {
