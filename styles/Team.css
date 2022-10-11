@@ -5,18 +5,22 @@
 }
 
 #team .jumbotron {
-  background-image: url(/codBackground2.jpg);
+  background-image: url(/TheTeam.jpg);
   background-size: cover;
-  height: 100px;
-  background-attachment: unfixed;
+  height: 500px;
+  background-attachment: fixed;
   box-shadow: inset 0 0 0 9999em rgb(0, 0, 0, 0.5);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-position: center;
 }
 
 #team .jumbotron-text h1 {
   color: white;
   font-size: 60px;
+  align-items: center;
   font-family: sans-serif, Courier, monospace;
   padding-bottom: 50px;
 }

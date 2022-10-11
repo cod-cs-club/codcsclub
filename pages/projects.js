@@ -17,7 +17,28 @@ function Projects() {
   return (
     <>
       <Navbar />
+<div id="projects">
+      <section class="jumbotron">
+          <div class="container">
+            <div class="jumbotron-text">
+              <h1>PROJECTS</h1>
+            </div>
+          </div>
+        </section>
 
+        { /*About the team*/ }
+      <div class = "showcase">
+        <div class = "container">
+          <div class = "showcase-box grid">
+            <div class = "left">
+              <h1>Our Work</h1>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+      
       <div id="projects">
         <div id="project-list">
           {
