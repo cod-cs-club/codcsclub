@@ -21,7 +21,7 @@
 }
 
 #home .button {
-  background-color: #16d800;
+  background-color: #00a977;
   /* background-color: var(--teal); */
   color: white;
   cursor: pointer;
@@ -59,8 +59,20 @@
 
 /* SHOWCASE CSS */
 
-#home .showcase-box {
-  padding: 0px;
+#home .showcase {
+  padding: 20px 0;
+}
+
+#home .showcase::before, .showcase::after {
+  content: '';
+  position: absolute;
+  height: 90px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background-color: #00a977;
+  transform: skewY(-2deg);
+  z-index: -1;
 }
 
 #home .showcase h1 {
@@ -86,11 +98,11 @@
 
 #home .info {
   background-color: #00a977;
+  padding: 20px 0;
 }
 
 #home .info div {
   padding: 10px;
-  color: white;
 }
 
 #home .info-wrapper {
@@ -100,12 +112,13 @@
   'third third fourth';
   grid-template-columns: 1fr 1fr 2fr;
   gap: 10px;
+  align-items: center;
 }
 
-#home .info-wrapper div {
-  border: green solid 1px;
+#home .info-wrapper div:not(.fourth) {
   border-radius: 10px;
   background-color: var(--dark-blue);
+  color: white;
 }
 
 #home .info-wrapper div h3 {
@@ -113,6 +126,10 @@
   border-bottom: white 2px solid;
   margin-bottom: 5px;
   padding-bottom: 5px;
+}
+
+#home .info-wrapper div.fourth h3 {
+  border-bottom: black 2px solid;
 }
 
 #home .first {
@@ -129,4 +146,6 @@
 
 #home .fourth {
   grid-area: fourth;
+  text-align: center;
+  color: black;
 }
