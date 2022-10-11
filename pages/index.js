@@ -35,7 +35,31 @@ function Home() {
       </div>
 
       { /* Info cards */ }
+
       <div class = "info">
+        <div class = "container">
+          <div class = "info-text">
+            <h2>About Our Club</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
+          </div>
+          <div class = "info-cards">
+            <div>
+              <h3>Lorem</h3>
+              <p class = "text-secondary">Lorem ipsum</p>
+            </div>
+            <div>
+              <h3>Lorem</h3>
+              <p class = "text-secondary">Lorem ipsum</p>
+            </div>
+            <div>
+              <h3>Lorem</h3>
+              <p class = "text-secondary">Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div class = "info">
         <div class = "container">
           <div class = "info-wrapper">
             <div class="first">
@@ -51,12 +75,12 @@ function Home() {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
             </div>
             <div class="fourth">
-              <h3>Fourth</h3>
+              <h3>About Our Club</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       </div>
     </>

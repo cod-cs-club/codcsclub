@@ -63,10 +63,10 @@
   padding: 20px 0;
 }
 
-#home .showcase::before, .showcase::after {
+#home .showcase::before, #home .showcase::after {
   content: '';
   position: absolute;
-  height: 90px;
+  height: 70px;
   bottom: -70px;
   right: 0;
   left: 0;
@@ -99,9 +99,16 @@
 #home .info {
   background-color: #00a977;
   padding: 20px 0;
+  text-align: center;
 }
 
-#home .info div {
+#home .info-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 0;
+}
+
+/* #home .info div {
   padding: 10px;
 }
 
@@ -148,4 +155,4 @@
   grid-area: fourth;
   text-align: center;
   color: black;
-}
+} */
