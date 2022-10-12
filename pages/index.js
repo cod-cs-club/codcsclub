@@ -44,16 +44,19 @@ function Home() {
           </div>
           <div class = "info-cards">
             <div>
-              <h3>Lorem</h3>
-              <p class = "text-secondary">Lorem ipsum</p>
+              <img src = "/computer-solid.svg"></img>
+              <h3>10+</h3>
+              <p class = "text-secondary">Projects</p>
             </div>
             <div>
-              <h3>Lorem</h3>
-              <p class = "text-secondary">Lorem ipsum</p>
+              <img src = "/users-solid.svg"></img>
+              <h3>350+</h3>
+              <p class = "text-secondary">Members</p>
             </div>
             <div>
-              <h3>Lorem</h3>
-              <p class = "text-secondary">Lorem ipsum</p>
+              <img src = "/server-solid.svg"></img>
+              <h3>5,020,893</h3>
+              <p class = "text-secondary">$ in bank account</p>
             </div>
           </div>
         </div>

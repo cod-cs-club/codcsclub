@@ -98,14 +98,30 @@
 
 #home .info {
   background-color: #00a977;
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
+}
+
+#home .info .info-text {
+  padding: 20px;
+}
+
+#home .info h2 {
+  padding: 20px;
 }
 
 #home .info-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px 0;
+  padding: 30px 0;
+}
+
+#home .info-cards img {
+  height: 60px;
+}
+
+#home .info-cards h3 {
+  font-size: 1.6rem;
 }
 
 /* #home .info div {
