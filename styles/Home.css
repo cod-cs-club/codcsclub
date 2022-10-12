@@ -7,14 +7,8 @@
   min-height: 5000px;
 }
 
-#home .container {
-  margin: 0 auto;
-  max-width: 1300px;
-}
-
 #home .grid {
   display: grid;
-  grid-template-columns: 3fr 1fr;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -22,7 +16,6 @@
 
 #home .button {
   background-color: #00a977;
-  /* background-color: var(--teal); */
   color: white;
   cursor: pointer;
   border: none;
@@ -43,16 +36,16 @@
   background-position: center;
 }
 
-#home .jumbotron-text h1 {
+#home .jumbotron h1 {
   color: white;
-  font-size: 60px;
+  font-size: 3.75rem;
   padding: 50px;
   font-family: sans-serif, Courier, monospace;
 }
 
-#home .jumbotron-text p {
+#home .jumbotron p {
   color: white;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-family: 'Courier New', Courier, monospace;
   padding-bottom: 50px;
 }
@@ -60,19 +53,13 @@
 /* SHOWCASE CSS */
 
 #home .showcase {
+  max-width: 1300px;
+  margin: 0 auto;
   padding: 20px 0;
 }
 
-#home .showcase::before, #home .showcase::after {
-  content: '';
-  position: absolute;
-  height: 70px;
-  bottom: -70px;
-  right: 0;
-  left: 0;
-  background-color: #00a977;
-  transform: skewY(-2deg);
-  z-index: -1;
+#home .showcase.grid {
+  grid-template-columns: 3fr 1fr;
 }
 
 #home .showcase h1 {
@@ -85,13 +72,12 @@
   padding-bottom: 50px;
 }
 
-#home .left {
+#home .showcase-text {
   padding: 50px;
 }
 
 #home #intro-vid {
   border-radius: 10px;
-  /* box-shadow: 0px 0px 10px #666666; */
 }
 
 /* INFO CSS */
@@ -103,6 +89,8 @@
 }
 
 #home .info .info-text {
+  max-width: 1300px;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -110,65 +98,16 @@
   padding: 20px;
 }
 
-#home .info-cards {
+#home .info-stats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 30px 0;
 }
 
-#home .info-cards img {
+#home .info-stats img {
   height: 60px;
 }
 
-#home .info-cards h3 {
+#home .info-stats h3 {
   font-size: 1.6rem;
 }
-
-/* #home .info div {
-  padding: 10px;
-}
-
-#home .info-wrapper {
-  display: grid;
-  grid-template-areas: 
-  'first second fourth'
-  'third third fourth';
-  grid-template-columns: 1fr 1fr 2fr;
-  gap: 10px;
-  align-items: center;
-}
-
-#home .info-wrapper div:not(.fourth) {
-  border-radius: 10px;
-  background-color: var(--dark-blue);
-  color: white;
-}
-
-#home .info-wrapper div h3 {
-  text-align: center;
-  border-bottom: white 2px solid;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-}
-
-#home .info-wrapper div.fourth h3 {
-  border-bottom: black 2px solid;
-}
-
-#home .first {
-  grid-area: first;
-}
-
-#home .second {
-  grid-area: second;
-}
-
-#home .third {
-  grid-area: third;
-}
-
-#home .fourth {
-  grid-area: fourth;
-  text-align: center;
-  color: black;
-} */

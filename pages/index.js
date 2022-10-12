@@ -6,84 +6,51 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div id = "home" >
+      <div id="home" >
 
       { /* Jumbotron */ }
-      <div class = "jumbotron">
-        <div class = "container">
-          <div class = "jumbotron-text">
-            <h1>Computer Science Club</h1>
-            <p>The best club on the Planet!</p>
-          </div>
-        </div>
+      <div class="jumbotron">
+        <h1>Computer Science Club</h1>
+        <p>The best club on the Planet!</p>
       </div>
 
       { /* Showcase */ }
-      <div class = "showcase">
-        <div class = "container">
-          <div class = "showcase-box grid">
-            <div class = "left">
-              { /* Header below */ }
-              <h1>Welcome to the Computer Science Club!</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
-              { /* Button below */ }
-              <a href = "" class = "button">See Our Projects</a>
-            </div>
-            <iframe id = "intro-vid" width = "560" height = "315" src = "https://www.youtube.com/embed/LZ-f2hMaJKs" title = "YouTube video player" frameborder = "0" allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+      <div class="showcase grid">
+        <div class="showcase-text">
+          { /* Header below */ }
+          <h1>Welcome to the Computer Science Club!</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
+          { /* Button below */ }
+          <a href="" class="button">See Our Projects</a>
         </div>
+        <iframe id="intro-vid" width="560" height="315" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
       </div>
 
       { /* Info cards */ }
 
-      <div class = "info">
-        <div class = "container">
-          <div class = "info-text">
-            <h2>About Our Club</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
+      <div class="info">
+        <div class="info-text">
+          <h2>About Our Club</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
+        </div>
+        <div class="info-stats">
+          <div>
+            <img src="/computer-solid.svg" />
+            <h3>10+</h3>
+            <p class="text-secondary">Projects</p>
           </div>
-          <div class = "info-cards">
-            <div>
-              <img src = "/computer-solid.svg"></img>
-              <h3>10+</h3>
-              <p class = "text-secondary">Projects</p>
-            </div>
-            <div>
-              <img src = "/users-solid.svg"></img>
-              <h3>350+</h3>
-              <p class = "text-secondary">Members</p>
-            </div>
-            <div>
-              <img src = "/server-solid.svg"></img>
-              <h3>5,020,893</h3>
-              <p class = "text-secondary">$ in bank account</p>
-            </div>
+          <div>
+            <img src="/users-solid.svg" />
+            <h3>350+</h3>
+            <p class="text-secondary">Members</p>
+          </div>
+          <div>
+            <img src="/server-solid.svg" />
+            <h3>$5,020,893</h3>
+            <p class="text-secondary">in bank account</p>
           </div>
         </div>
       </div>
-
-      {/* <div class = "info">
-        <div class = "container">
-          <div class = "info-wrapper">
-            <div class="first">
-              <h3>First</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="second">
-              <h3>Second</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="third">
-              <h3>Third</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
-            </div>
-            <div class="fourth">
-              <h3>About Our Club</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       </div>
     </>
