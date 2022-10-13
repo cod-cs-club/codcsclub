@@ -1,5 +1,6 @@
 // Import everything we need.
 import Navbar from '/components/Navbar'
+import Footer from '/components/Footer'
 import people from '/data/people.json'
 import getPersonInfo from '/functions/getPersonInfo'
 
@@ -32,6 +33,7 @@ function People({ person }) {
   return (
     <>
       <Navbar />
+      
       <div id="people">
         <img id="profile-image" src={person.image} alt="Profile image of person" />
         <div id="right">
@@ -50,6 +52,8 @@ function People({ person }) {
           }
         </div>
       </div>
+
+      <Footer />
     </>
   )
 }

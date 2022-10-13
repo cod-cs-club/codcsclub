@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+// All pages on the navbar.
 const pages = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
@@ -11,8 +12,13 @@ const pages = [
 function Navbar({ selectedPage }) {
   return (
     <div id="navbar">
-      <img src="/CSLogo.png" alt="Logo for the computer science club" />
-      <div>
+      <Link href="/">
+        <a id="logo">
+          <img src="/CSLogoWhite.png" alt="Logo for the computer science club" />
+          COD Computer Science Club
+        </a>
+      </Link>
+      <div id="pages">
         {
           pages.map(page => {
             if (selectedPage == page.name) {
@@ -36,5 +42,5 @@ function Navbar({ selectedPage }) {
   )
 }
 
-// Export the component
+// Export the component.
 export default Navbar

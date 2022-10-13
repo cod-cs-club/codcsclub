@@ -1,22 +1,21 @@
 // Import any custom components we need.
-import Navbar from '/components/Navbar.js'
+import Navbar from '/components/Navbar'
+import Banner from '/components/Banner'
+import Footer from '/components/Footer'
 import people from '/data/people.json'
-
 
 // Meet the Team page
 function Team() {
   return (
     <>
       <Navbar selectedPage="Meet the Team" />
-      <div id="team">
-        <section class="jumbotron">
-          <div class="container">
-            <div class="jumbotron-text">
-              <h1>Meet The Team</h1>
-            </div>
-          </div>
-        </section>
+      <Banner
+        image="/TheTeam.jpg"
+        title="Meet the Team"
+        // subtitle="Subtitle"
+      />
 
+      <div id="team">
         { /*About the team*/ }
         <div class = "showcase">
           <div class = "container">
@@ -44,6 +43,7 @@ function Team() {
         </div>
       </div>
       
+      <Footer />
     </>
   )
 }

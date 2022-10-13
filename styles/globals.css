@@ -33,6 +33,7 @@ body {
   padding: 0;
 }
 
+/* Global Navbar */
 #navbar {
   display: flex;
   align-items: center;
@@ -41,46 +42,99 @@ body {
   background-color: rgb(30, 30, 30);
 }
 
-#navbar img {
-  height: 60px;
-  background-color: white;
+#navbar #logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+}
+
+#navbar #logo img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
-#navbar div {
+#navbar #pages {
   display: flex;
   align-items: center;
 }
 
-#navbar a {
-
+#navbar #pages a {
   padding: 15px;
   text-decoration: none;
   font-size: 16px;
-  color: white;
+  color: rgb(240, 240, 240);
 }
 
-#navbar :hover {
+#navbar #pages a:hover {
   color: #0D9292;
 } 
-
-#navbar a:hover span {
-  color: transparent;
-}
  
-#navbar .current-page {
+#navbar #pages .current-page {
   border-bottom: 2px solid white;
 }
 
-#navbar  #disco:hover {
-  color:transparent;
- }
+#navbar #pages .current-page:hover {
+  color: white;
+}
 
- #navbar #beans:hover{
-  margin-left: 25px;
-  height: 60px;
-  width: 60px;
+/* Global Footer */
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 100px;
+  padding: 30px 30px 50px 30px;
+  background-color: var(--bg-color-2);
+  border-top: 1px solid var(--border-color-2);
+  border-bottom: 1px solid var(--border-color-2);
+}
+
+#footer img {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-image: url('/DiscordLogo.png');
+}
+
+#footer p {
+  font-size: 16px;
+  color: var(--text-color-2);
+}
+
+/* Banner/jumbotron */
+#banner {
+  padding: 50px;
   background-size: cover;
+  background-attachment: unfixed;
+  /* background-attachment: fixed; */
+  box-shadow: inset 0 0 0 9999em rgb(0, 0, 0, 0.5);
+  text-align: center;
+  background-position: center;
+  border-bottom: 1px solid var(--border-color-2);
+}
+
+#banner h1 {
+  font-family: sans-serif, Courier, monospace;
+  font-size: 3.75rem;
+  color: white;
+  animation: text-fade-in ease-in-out 500ms;
+}
+
+#banner p {
+  margin-top: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.875rem;
+  color: white;
+  animation: text-fade-in ease-in-out 800ms;
+}
+
+@keyframes text-fade-in {
+  0% { opacity: 0; scale: 0; }
+  100% { opacity: 1; scale: 1; }
 }

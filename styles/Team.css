@@ -1,32 +1,6 @@
 /* CSS specific to the Meet the Team page. */
 
-#team h1 {
-  color: green;
-}
-
-#team .jumbotron {
-  background-image: url(/TheTeam.jpg);
-  background-size: cover;
-  height: 500px;
-  background-attachment: fixed;
-  box-shadow: inset 0 0 0 9999em rgb(0, 0, 0, 0.5);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-}
-
-#team .jumbotron-text h1 {
-  color: white;
-  font-size: 60px;
-  align-items: center;
-  font-family: sans-serif, Courier, monospace;
-  padding-bottom: 50px;
-}
-
 #team #people-container {
-  /* background: red; */
   display: flex;
   /* justify-content: space-around; */
   flex-wrap: wrap;
@@ -39,21 +13,26 @@
   flex-direction: column;
   text-decoration: none;
   align-items: center;
-  /* gap: 5px; */
   min-width: 200px;
   max-width: 200px;
   padding: 10px;
   border-radius: 10px;
+  --underlined: none;
+  --image-scale: 0.8;
 }
 
 #team .person:hover {
   background-color: var(--bg-color-3);
+  --underlined: underline;
+  --image-scale: 1;
 }
 
 #team .person img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  transition: ease-in-out 300ms;
+  scale: var(--image-scale);
 }
 
 #team .person h3 {
@@ -76,6 +55,7 @@
 #team .person .role-Member { color: aqua; }
 
 #team .person .info {
+  text-decoration: var(--underlined);
   font-size: 14px;
   color: rgb(127, 127, 255);
 }

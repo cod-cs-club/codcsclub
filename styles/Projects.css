@@ -7,24 +7,7 @@
   gap: 30px;
   margin: 30px 60px;
 }
-#projects .jumbotron {
-  background-image: url(/almightycandle.png);
-  background-size: cover;
-  height: 100px;
-  background-attachment: fixed;
-  box-shadow: inset 0 0 0 9999em rgb(0, 0, 0, 0.5);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-}
-#projects .jumbotron-text h1 {
-  color: white;
-  font-size: 60px;
-  text-align: center;
-  font-family: sans-serif, Courier, monospace;
-}
+
 #projects .project {
   display: flex;
   justify-content: space-between;

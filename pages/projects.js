@@ -1,5 +1,7 @@
 // Import everything we need.
-import Navbar from '/components/Navbar.js'
+import Navbar from '/components/Navbar'
+import Banner from '/components/Banner'
+import Footer from '/components/Footer'
 import projects from '/data/projects.json'
 import getPersonInfo from '/functions/getPersonInfo.js'
 
@@ -17,29 +19,25 @@ function Projects() {
   return (
     <>
       <Navbar selectedPage="Projects" />
-<div id="projects">
-      <section class="jumbotron">
-          <div class="container">
-            <div class="jumbotron-text">
-              <h1>PROJECTS</h1>
-            </div>
-          </div>
-        </section>
-
+      <Banner
+        image="/almightycandle.png"
+        title="Projects"
+        subtitle="All of our projects"
+      />
+      
+      
+      <div id="projects">
         { /*About the team*/ }
-      <div class = "showcase">
-        <div class = "container">
-          <div class = "showcase-box grid">
-            <div class = "left">
-              <h1>Our Work</h1>
+        <div class = "showcase">
+          <div class = "container">
+            <div class = "showcase-box grid">
+              <div class = "left">
+                <h1>Our Work</h1>
+              </div>
             </div>
           </div>
         </div>
         
-      </div>
-      </div>
-      
-      <div id="projects">
         <div id="project-list">
           {
             projects.map(project => {
@@ -85,36 +83,9 @@ function Projects() {
             })
           }
         </div>
-
-        {/* <div class="project border">
-          <div class="project-element border"><a>project title</a></div>
-          <div class="project-element border">
-            <div class="project-contributors border">
-              <img class="border" width="100" height="100"></img>
-              <img class="border" width="100" height="100"></img>
-            </div>
-          </div>
-          <div class="project-element border">
-            <img class="project-logo border" width="100" height="100"></img>
-          </div>
-          <div class="project-element border">
-            <p>lorem ipsum sit amet
-            lorem ipsum sit amet
-            lorem ipsum sit amet
-            lorem ipsum sit amet
-            </p>
-          </div>
-
-        </div>
-        
-
-        <div id="project-footer">
-          <div></div>
-          <div></div>
-        </div> */}
-
       </div>
 
+      <Footer />
     </>
   )
 }
