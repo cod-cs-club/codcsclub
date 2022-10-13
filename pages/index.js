@@ -5,7 +5,7 @@ import Navbar from '/components/Navbar.js'
 function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar selectedPage="Home" />
       <div id="home" >
 
       { /* Jumbotron */ }

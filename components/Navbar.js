@@ -1,14 +1,36 @@
+import Link from 'next/link'
+
+const pages = [
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "/projects" },
+  { name: "Meet the Team", href: "/team" },
+  { name: "Discord", href: "/discord" }
+]
+
 // Navigation bar component.
-function Navbar() {
+function Navbar({ selectedPage }) {
   return (
     <div id="navbar">
       <img src="/CSLogo.png" alt="Logo for the computer science club" />
       <div>
-        <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/team">Meet The Team</a>
-        <a id="beans" href="/discord"><span id="disco">Discord</span></a>
-
+        {
+          pages.map(page => {
+            if (selectedPage == page.name) {
+              return (
+                <Link href={page.href}>
+                  <a class="current-page">{page.name}</a>
+                </Link>
+              )
+            }
+            else {
+              return (
+                <Link href={page.href}>
+                  <a>{page.name}</a>
+                </Link>
+              )
+            }
+          })
+        }
       </div>
     </div>
   )

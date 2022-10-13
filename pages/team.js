@@ -7,7 +7,7 @@ import people from '/data/people.json'
 function Team() {
   return (
     <>
-      <Navbar />
+      <Navbar selectedPage="Meet the Team" />
       <div id="team">
         <section class="jumbotron">
           <div class="container">

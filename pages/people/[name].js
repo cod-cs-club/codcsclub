@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 // Return all the given person's info as a prop,
 // so we can use it in the People() function.
-export const getStaticProps = async (context) => {
+export async function getStaticProps(context) {
   const person = getPersonInfo(context.params.name)
   return { props: { person } }
 }

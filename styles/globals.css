@@ -68,6 +68,9 @@ body {
   color: transparent;
 }
  
+#navbar .current-page {
+  border-bottom: 2px solid white;
+}
 
 #navbar  #disco:hover {
   color:transparent;

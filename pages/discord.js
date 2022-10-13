@@ -5,7 +5,7 @@ import Navbar from '/components/Navbar.js'
 function Discord() {
   return (
     <>
-      <Navbar />
+      <Navbar selectedPage="Discord" />
       <div id="discord">
         <center><img src="/DiscordLogo.png" alt="The discord logo" id="discordimg"/></center>
         <center><a href="https://discord.gg/uzBEgApK9K" class="btn">Join the Discord!</a></center>

@@ -16,7 +16,7 @@ const languageIcons = {
 function Projects() {
   return (
     <>
-      <Navbar />
+      <Navbar selectedPage="Projects" />
 <div id="projects">
       <section class="jumbotron">
           <div class="container">
