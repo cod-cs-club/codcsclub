@@ -14,7 +14,7 @@ function Navbar({ selectedPage }) {
     <div id="navbar">
       <Link href="/">
         <a id="logo">
-          <img src="/CSLogoWhite.png" alt="Logo for the computer science club" />
+          <img src="/CSLogoCircle.svg" alt="Logo for the computer science club" />
           COD Computer Science Club
         </a>
       </Link>
