@@ -35,14 +35,12 @@ body {
 
 /* Global Navbar */
 #navbar {
+  position: fixed;
   display: flex;
   align-items: center;
-  position: fixed;
   justify-content: space-between;
-  box-sizing: border-box;
- /* padding: 3px 10px;*/
-  background-color: rgb(30, 30, 30);
   width: 100%;
+  background-color: #1e1e1e;
 }
 
 #navbar #logo {
@@ -53,38 +51,34 @@ body {
   text-decoration: none;
   font-weight: normal;
   font-size: 20px;
-  color: white;
+  color: #ffffff;
 }
 
-#navbar #logo img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-}
-
-#navbar #pages {
-  display: flex;
-  align-items: center;
-}
+#navbar #logo img { border-radius: 50%; background-color: white; }
+#navbar #pages { display: flex; align-items: center; }
 
 #navbar #pages a {
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 15px 12px 15px;
   text-decoration: none;
   font-size: 16px;
-  color: rgb(240, 240, 240);
+  color: #e6e6e6;
+  fill: #e6e6e6;
+  border-bottom: 3px solid transparent;
 }
 
-#navbar #pages a:hover {
-  color: #0D9292;
-} 
- 
-#navbar #pages .current-page {
-  border-bottom: 2px solid white;
-}
+#navbar #pages a:hover { color: #0d9292; fill: #0d9292; }
+#navbar #pages a svg { width: 20px; height: 20px; }
+#navbar #pages .current-page { color: #ffffff; fill: #ffffff;  border-color: #b500d1; }
+#navbar #pages .current-page:hover { color: #ffffff; fill: #ffffff; }
+#navbar #pages .current-page svg { animation: svg-selected ease-in-out 400ms; }
 
-#navbar #pages .current-page:hover {
-  color: white;
+@keyframes svg-selected {
+  0% { scale: 1; }
+  50% { scale: 1.2; }
+  100% { scale: 1; }
 }
 
 /* Global Footer */
