@@ -80,3 +80,49 @@
 #home .info-stats h3 {
   font-size: 1.6rem;
 }
+
+/* Languages CSS */
+
+#home .languages {
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+#home .languages h2 {
+  padding: 20px;
+  font-size: 30px;
+}
+
+#home .lang-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+#home .lang-container .card {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+#home .lang-container .card:hover {
+  transform: translateY(-15px);
+}
+
+#home .lang-container .card img {
+  height: 80px;
+}
+
+#home .lang-container .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}

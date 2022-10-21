@@ -52,6 +52,39 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* Languages Used */}
+
+        <div class="languages">
+          <h2>Languages Used</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="lang-container">
+            <div class="card">
+              <h4>Next.js</h4>
+              <img src="/nextjs.png" />
+            </div>
+            <div class="card">
+              <h4>HTML</h4>
+              <img src="/html.png" />
+            </div>
+            <div class="card">
+              <h4>CSS</h4>
+              <img src="css.png" />
+            </div>
+            <div class="card">
+              <h4>TensorFlow</h4>
+              <img src="/tensorflow.png" />
+            </div>
+            <div class="card">
+              <h4>Node.js</h4>
+              <img src="/node.png" />
+            </div>
+            <div class="card">
+              <h4>Python</h4>
+              <img src="/python.png" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer />
