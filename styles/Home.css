@@ -8,6 +8,7 @@
 }
 
 #home .button {
+  /* background-color: #009ea9; */
   background-color: #00a977;
   color: white;
   cursor: pointer;
@@ -52,7 +53,8 @@
 /* INFO CSS */
 
 #home .info {
-  background-color: #00a977;
+  /* background-color: #ffea00; */
+  background-color: #008593;
   padding: 30px 0;
   text-align: center;
 }
