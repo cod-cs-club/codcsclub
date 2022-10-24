@@ -1,9 +1,8 @@
 // Import everything we need.
 import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
-import projects from '/data/projects.json'
+import api from '/functions/api'
 
-import Input from 'react'
 import { useState, useEffect } from 'react'
 
 const editIcon = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M364.13 125.25L87 403l-23 45 44.99-23 277.76-277.13-22.62-22.62zM420.69 68.69l-22.62 22.62 22.62 22.63 22.62-22.63a16 16 0 000-22.62h0a16 16 0 00-22.62 0z"/></svg>
@@ -12,9 +11,22 @@ const deleteIcon = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
 // Admin Panel page
 function Admin() {
   const [section, setSection] = useState('Projects')
+  const [projects, setProjects] = useState([])
   const [projectEditModal, setProjectEditModal] = useState(null)
   const [projectCreateModal, setProjectCreateModal] = useState(null)
   const [projectDeleteModal, setProjectDeleteModal] = useState(null)
+  const [projectContributors, setProjectContributors] = useState([{ name: 'Fake Person', note: 'Project Manager'}])
+  
+  const [people, setPeople] = useState([])
+  const [personEditModal, setPersonEditModal] = useState()
+  const [personCreateModal, setPersonCreateModal] = useState()
+  const [personDeleteModal, setPersonDeleteModal] = useState()
+
+  // Fetch needed data.
+  useEffect(() => {
+    api.getProjects()
+      .then(data => setProjects(data))
+  }, [])
 
   // Close open modal if you press ESCAPE.
   useEffect(() => {
@@ -37,13 +49,35 @@ function Admin() {
     setProjectCreateModal(null)
   }
 
-  function createProject(event) {
-    event.preventDefault()
-    // console.log(e.target[0].value)
-  }
-
   function editProject(event) {
     event.preventDefault()
+  }
+
+  function createProject(event) {
+    event.preventDefault()
+    closeModals()
+    api.createProject(event.target[0].value)
+      .then(newProjectID => api.getProjects()
+      .then(newProjects => {
+        setProjects(newProjects)
+        const editProject = newProjects.find(f => f.id == newProjectID)
+        setProjectEditModal(editProject)
+      }))
+  }
+
+  function deleteProject(event) {
+    event.preventDefault()
+    closeModals()
+    api.deleteProject(event.target[0].value)
+      .then(() => api.getProjects()
+      .then(newProjects => setProjects(newProjects)))
+  }
+
+  function projectAddContributor(e) {
+    e.preventDefault()
+    const p1 = [...projectContributors]
+    p1.push({ name: 'Fake Person', note: 'Project Manager'})
+    setProjectContributors(p1)
   }
 
   return (
@@ -90,10 +124,31 @@ function Admin() {
                   <form>
                     <label for="project-edit-name">Project Name</label>
                     <input id="project-edit-name" type="text" defaultValue={projectEditModal.name} />
+                    {/* <label>Project Contributors</label>
+                    <div id="project-contributors-container">
+                      { projectContributors && projectContributors.map(contributor => {
+                        return (
+                          <div id="project-contributor">
+                            <select>
+                              <option value="1">
+                                <img src="/defaultProject.png" />
+                                <p>Para</p>
+                              </option>
+                              <option value="2">Person 2</option>
+                              <option value="3">Person 3</option>
+                            </select>
+                            <input type="text" />
+                          </div>
+                        )
+                      })}
+                      <button onClick={(e) => {
+                        projectAddContributor(e)
+                      }}>+ Contributor</button>
+                    </div> */}
                     <label for="project-edit-description">Project Description</label>
                     <textarea id="project-edit-description" defaultValue={projectEditModal.description}></textarea>
                     <label for="project-edit-link">Project Visit Link</label>
-                    <input id="project-edit-link" type="text" defaultValue={projectEditModal.link} />
+                    <input id="project-edit-link" type="text" defaultValue={projectEditModal.visit} />
                     <label for="project-edit-repository">Project Repository Link</label>
                     <input id="project-edit-repository" type="text" defaultValue={projectEditModal.repository} />
                     <button type="submit">Save Changes</button>
@@ -122,7 +177,11 @@ function Admin() {
                 <div id="project-delete-modal" className="modal">
                   <h4>Delete Project</h4>
                   <p>Are you sure you want to permanently delete this project?</p>
-                  <button className="button-delete">Delete</button>
+                  <form onSubmit={deleteProject}>
+                    <input id="project-delete-id" type="hidden" value={projectDeleteModal.id} />
+                    <button class="button-delete">Delete</button>
+                    {/* <button type="submit" class="button-delete">Delete</button> */}
+                  </form>
                   <button onClick={() => closeModals()} className="button-close">Close</button>
                 </div>
               </div>

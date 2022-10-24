@@ -20,7 +20,7 @@ function Projects() {
     <>
       <Navbar selectedPage="Projects" />
       <Banner
-        image="/almightycandle.png"
+        image="/CSLogo.png"
         title="Projects"
         subtitle="All of our projects"
       />
