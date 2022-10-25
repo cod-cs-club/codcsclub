@@ -128,3 +128,10 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
+
+/* FAQ */
+
+#home .faq {
+  background-color: var(--main-bg-color);
+  padding: 50px 0;
+}

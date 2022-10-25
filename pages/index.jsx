@@ -85,6 +85,18 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* FAQ */}
+
+        <div className="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div className="question">
+            <h5>Question 1</h5>
+          </div>
+          <div className="answer">
+            <p>Answer 1</p>
+          </div>
+        </div>
       </div>
 
       <Footer />

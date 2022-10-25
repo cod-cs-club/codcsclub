@@ -43,6 +43,7 @@ body {
   justify-content: space-between;
   width: 100%;
   background-color: #1e1e1e;
+  z-index: 900000000000000000000000000000000;
 }
 
 #navbar #logo {
