@@ -89,12 +89,24 @@ function Home() {
         {/* FAQ */}
 
         <div className="faq">
-          <h2>Frequently Asked Questions</h2>
-          <div className="question">
-            <h5>Question 1</h5>
+          <h2>Frequently Asked Questions (FAQs)</h2>
+          <div className="acc">
+            <div className="question">
+              <p>+</p>
+              <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
+            </div>
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
+            </div>
           </div>
-          <div className="answer">
-            <p>Answer 1</p>
+          <div className="acc">
+            <div className="question">
+              <p>+</p>
+              <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, dolores?</h5>
+            </div>
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus a facere alias provident sit tempore sapiente rerum, iste tempora. Vero?</p>
+            </div>
           </div>
         </div>
       </div>
