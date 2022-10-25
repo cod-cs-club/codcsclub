@@ -134,4 +134,45 @@
 #home .faq {
   background-color: var(--main-bg-color);
   padding: 50px 0;
+  margin: 0 auto;
+}
+
+#home .faq h2 {
+  color: white;
+  text-align: center;
+}
+
+#home .faq .question {
+  width: 100%;
+  padding: 10px 5px;
+  border: 2px solid var(--teal);
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+#home .faq .question h5 {
+  font-size: 22px;
+  margin: 0;
+  padding: 3px 0 0 0;
+  font-weight: normal;
+  color: white;
+}
+
+#home .faq .answer {
+  padding: 0 15px;
+  border-left: 2px solid var(--teal);
+  margin-left: 25px;
+  font-size: 14px;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 0;
+  transition: all .3s ease-out;
+}
+
+#home .faq .q-active {
+  background-color: var(--teal);
 }
