@@ -11,7 +11,7 @@ function Home() {
       <Banner
         image="/codBackground2.jpg"
         title="Computer Science Club"
-        subtitle="The best club on the Planet!"
+        subtitle="The best club on Earth!"
       />
       
       <div id="home">
