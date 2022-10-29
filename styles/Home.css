@@ -151,28 +151,17 @@
 }
 
 #home .faq .question {
-  padding: 10px 5px;
+  padding: 10px 10px;
   border: 2px solid var(--dark-teal);
   cursor: pointer;
   border-radius: 30px;
   display: flex;
-  margin: 10px 0;
+  margin: 5px 20px 5px 10px;
   align-items: center;
   transition-duration: 0.2s;
-}
-
-#home .faq .question h5 {
-  font-size: 22px;
-  margin: 0;
-  font-weight: normal;
-  color: white;
-}
-
-#home .faq .question p {
-  font-size: 22px;
-  margin: 0 20px 0 10px;
-  color: white;
+  font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 
 #home .faq .answer {
@@ -187,6 +176,6 @@
   transition: all .3s ease-out;
 }
 
-#home .faq .q-active {
+#home .faq .active {
   background-color: var(--dark-teal);
 }

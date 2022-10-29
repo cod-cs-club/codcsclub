@@ -3,8 +3,17 @@ import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
 
+import { useState } from 'react'
+
 // Home page
 function Home() {
+  const [openQuestion, setOpenQuestion] = useState(0)
+  
+  function toggleQuestion(id) {
+    if (openQuestion == 1) setOpenQuestion(0)
+    else setOpenQuestion(1)
+  }
+
   return (
     <>
       <Navbar selectedPage="Home" />
@@ -91,22 +100,14 @@ function Home() {
         <div className="faq">
           <h2>Frequently Asked Questions (FAQs)</h2>
           <div className="acc">
-            <div className="question">
-              <p>+</p>
-              <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
-            </div>
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
-            </div>
+            <h5 onClick={() => toggleQuestion(1)} class={openQuestion == 1 ? 'question active' : 'question'}>+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
+            { openQuestion == 1 &&
+              <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
+            }
           </div>
           <div className="acc">
-            <div className="question">
-              <p>+</p>
-              <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, dolores?</h5>
-            </div>
-            <div className="answer">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus a facere alias provident sit tempore sapiente rerum, iste tempora. Vero?</p>
-            </div>
+            <h5 class="question">+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
+            <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
           </div>
         </div>
       </div>
