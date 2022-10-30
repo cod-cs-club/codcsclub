@@ -29,7 +29,16 @@ function Home() {
         <div class="showcase grid">
           <div class="showcase-text">
             { /* Header below */ }
-            <h1>Welcome to the Computer Science Club!</h1>
+            <h1>
+              A Club of <span class="type">
+                <span>
+                  <span>Innovation</span>
+                  <span>Creativity</span>
+                  <span>Inspiration</span>
+                  <span>Development</span>
+                </span>
+              </span>
+            </h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
             { /* Button below */ }
             <a href="/projects" class="button">See Our Projects</a>

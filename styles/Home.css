@@ -18,7 +18,7 @@
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  transition: all .3s ease-out;
+  transition: all .2s ease-out;
 }
 
 #home .button:hover {
@@ -54,6 +54,42 @@
 #home #intro-vid {
   border-radius: 10px;
 }
+
+#home .type {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.type > span {
+  color: #00a977;
+  display: grid;
+  overflow: hidden;
+  height: 1.33em;
+}
+
+.type span span {
+  width: 0%;
+  max-width: max-content;
+  overflow: hidden;
+  height: inherit;
+  word-break: break-all;
+  border-right: 3px solid white;
+  animation: 
+    blink 0.3s step-end infinite alternate,
+    t 2s linear infinite alternate,
+    m 16s steps(4) infinite;
+}
+
+.type span span:before {
+  content: " ";
+  display: inline-block;
+}
+
+@keyframes t {90%, 100% {width:100%;}}
+
+@keyframes blink {50% {border-color: transparent;}}
+
+@keyframes m {100% {transform: translateY(-400%);}}
 
 /* INFO CSS */
 
