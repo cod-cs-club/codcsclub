@@ -2,17 +2,18 @@
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
+import Accordion from '/components/Accordian'
 
 import { useState } from 'react'
 
 // Home page
 function Home() {
-  const [openQuestion, setOpenQuestion] = useState(0)
+  // const [openQuestion, setOpenQuestion] = useState(0)
   
-  function toggleQuestion(id) {
-    if (openQuestion == 1) setOpenQuestion(0)
-    else setOpenQuestion(1)
-  }
+  // function toggleQuestion(id) {
+  //   if (openQuestion == 1) setOpenQuestion(0)
+  //   else setOpenQuestion(1)
+  // }
 
   return (
     <>
@@ -97,7 +98,9 @@ function Home() {
 
         {/* FAQ */}
 
-        <div className="faq">
+        <Accordion />
+
+        {/* <div className="faq">
           <h2>Frequently Asked Questions (FAQs)</h2>
           <div className="acc">
             <h5 onClick={() => toggleQuestion(1)} class={openQuestion == 1 ? 'question active' : 'question'}>+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
@@ -109,7 +112,7 @@ function Home() {
             <h5 class="question">+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
             <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <Footer />
