@@ -18,6 +18,11 @@
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+  transition: all .3s ease-out;
+}
+
+#home .button:hover {
+  background-color: var(--dark-teal);
 }
 
 /* SHOWCASE CSS */
@@ -150,6 +155,10 @@
   margin: 0 auto;
 }
 
+#home .faq b span {
+  font-size: 25px;
+}
+
 #home .faq .question {
   padding: 10px 10px;
   border: 2px solid var(--dark-teal);
@@ -162,6 +171,7 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
+  transition: all .3s ease-out;
 }
 
 #home .faq .answer {

@@ -5,7 +5,7 @@ function AccordionList({accordionData, handleToggle, toggle}){
       return(
         <div className="acc" key={id}>
           <div className={(id===toggle)?"question active":"question"} onClick={()=>handleToggle(id)}>
-            <b>{(id===toggle)?'-':'+'} {qn}</b>
+            <b><span>{(id===toggle)?'-':'+'}</span> {qn}</b>
           </div>
           {(id===toggle) ? <div className="answer">{ans}</div> : ''}
         </div>
