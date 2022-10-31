@@ -62,6 +62,51 @@ function Home() {
           </div>
         </div>
 
+        { /* Gallery */}
+        <div class="Gallery-text" align='center'>
+            <h2>Gallery</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
+          </div>
+        <div class='container'>
+          <div class='box'>
+            <img src='Session 1.jpg'>
+            </img>
+          </div>
+          <div class='box'>
+            <img src='Team 2022.jpg'>
+            </img>
+          </div>  
+          <div class='box'>
+            <img src='Session 2.jpg'>
+            </img>
+          </div>
+          <div class='box'>
+            <img src='Session 1.jpg'>
+            </img>
+          </div>
+          <div class='box'>
+            <img src='Team 2022.jpg'>
+            </img>
+          </div>  
+          <div class='box'>
+            <img src='Session 2.jpg'>
+            </img>
+          </div>
+          <div class='box'>
+            <img src='Session 1.jpg'>
+            </img>
+          </div>
+          <div class='box'>
+            <img src='Team 2022.jpg'>
+            </img>
+          </div>  
+          <div class='box'>
+            <img src='Session 2.jpg'>
+            </img>
+          </div>
+        </div>
+          
+
         {/* Languages Used */}
 
         <div class="languages">

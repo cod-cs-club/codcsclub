@@ -83,6 +83,58 @@
   font-size: 1.6rem;
 }
 
+
+/* Gallery */
+
+#home .Gallery-text {
+  max-width: 1400;
+  margin: 0 1;
+  padding: 20px;
+  align-content: center;
+  background: #08657B;
+}
+
+#home .container .h2 {
+  padding: 20px;
+  
+}
+
+
+#home .container {
+  display: flex;
+  width: 100% ;
+  padding: 5% 1%;
+  box-sizing: border-box;
+  height: auto;
+  background:#08657B;
+  align-items: center;
+  
+}
+
+#home .box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 1%;
+  box-sizing: border-box;
+}
+
+#home .box > img {
+  width: 100%;
+  height: calc(100% - 10vh);
+  object-fit:scale-down;  
+  transition: .5s;
+ 
+}
+
+#home .box:hover { flex: 1 1 50%; }
+
+#home .box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+ 
+
 /* Languages CSS */
 
 #home .languages {
