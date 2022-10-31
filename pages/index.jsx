@@ -78,40 +78,31 @@ function Home() {
           </div>
         <div class='container'>
           <div class='box'>
-            <img src='Session 1.jpg'>
-            </img>
+            <img src='Session 1.jpg' />
           </div>
           <div class='box'>
-            <img src='Team 2022.jpg'>
-            </img>
+            <img src='Team 2022.jpg' />
           </div>  
           <div class='box'>
-            <img src='Session 2.jpg'>
-            </img>
+            <img src='Session 2.jpg' />
           </div>
           <div class='box'>
-            <img src='Session 1.jpg'>
-            </img>
+            <img src='Session 1.jpg' />
           </div>
           <div class='box'>
-            <img src='Team 2022.jpg'>
-            </img>
+            <img src='Team 2022.jpg' />
           </div>  
           <div class='box'>
-            <img src='Session 2.jpg'>
-            </img>
+            <img src='Session 2.jpg' />
           </div>
           <div class='box'>
-            <img src='Session 1.jpg'>
-            </img>
+            <img src='Session 1.jpg' />
           </div>
           <div class='box'>
-            <img src='Team 2022.jpg'>
-            </img>
+            <img src='Team 2022.jpg' />
           </div>  
           <div class='box'>
-            <img src='Session 2.jpg'>
-            </img>
+            <img src='Session 2.jpg' />
           </div>
         </div>
           
