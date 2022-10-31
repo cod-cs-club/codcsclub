@@ -2,17 +2,18 @@
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
+import Accordion from '/components/Accordian'
 
 import { useState } from 'react'
 
 // Home page
 function Home() {
-  const [openQuestion, setOpenQuestion] = useState(0)
+  // const [openQuestion, setOpenQuestion] = useState(0)
   
-  function toggleQuestion(id) {
-    if (openQuestion == 1) setOpenQuestion(0)
-    else setOpenQuestion(1)
-  }
+  // function toggleQuestion(id) {
+  //   if (openQuestion == 1) setOpenQuestion(0)
+  //   else setOpenQuestion(1)
+  // }
 
   return (
     <>
@@ -28,10 +29,18 @@ function Home() {
         <div class="showcase grid">
           <div class="showcase-text">
             { /* Header below */ }
-            <h1>Welcome to the Computer Science Club!</h1>
+            <div className="wrapper">
+              <h1>A Club of</h1>
+              <ul className="dynamic-txts">
+                <li><span>Innovation</span></li>
+                <li><span>Creativity</span></li>
+                <li><span>Inspiration</span></li>
+                <li><span>Development</span></li>
+              </ul>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
             { /* Button below */ }
-            <a href="" class="button">See Our Projects</a>
+            <a href="/projects" class="button">See Our Projects</a>
           </div>
           <iframe id="intro-vid" width="560" height="315" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
         </div>
@@ -142,7 +151,9 @@ function Home() {
 
         {/* FAQ */}
 
-        <div className="faq">
+        <Accordion />
+
+        {/* <div className="faq">
           <h2>Frequently Asked Questions (FAQs)</h2>
           <div className="acc">
             <h5 onClick={() => toggleQuestion(1)} class={openQuestion == 1 ? 'question active' : 'question'}>+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
@@ -154,7 +165,7 @@ function Home() {
             <h5 class="question">+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
             <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <Footer />

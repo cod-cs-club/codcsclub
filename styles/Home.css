@@ -18,6 +18,11 @@
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+  transition: all .2s ease-out;
+}
+
+#home .button:hover {
+  background-color: var(--dark-teal);
 }
 
 /* SHOWCASE CSS */
@@ -48,6 +53,53 @@
 
 #home #intro-vid {
   border-radius: 10px;
+}
+
+#home .wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#home .wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+#home .dynamic-txts li {
+  list-style: none;
+  color: #00a977;
+  font-size: 34px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {100% {top: -360px;}}
+
+#home .dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--main-bg-color);
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%, 60% {left: 100%;}
+  100% {left: 0;}
 }
 
 /* INFO CSS */
@@ -202,6 +254,10 @@
   margin: 0 auto;
 }
 
+#home .faq b span {
+  font-size: 25px;
+}
+
 #home .faq .question {
   padding: 10px 10px;
   border: 2px solid var(--dark-teal);
@@ -214,6 +270,7 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
+  transition: all .3s ease-out;
 }
 
 #home .faq .answer {
@@ -224,7 +281,6 @@
   color: white;
   text-align: justify;
   overflow: hidden;
-  /* max-height: 0; */
   transition: all .3s ease-out;
 }
 
