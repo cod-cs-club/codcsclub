@@ -55,41 +55,52 @@
   border-radius: 10px;
 }
 
-#home .type {
-  display: inline-block;
-  vertical-align: bottom;
+#home .wrapper {
+  display: flex;
+  align-items: center;
 }
 
-.type > span {
+#home .wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+#home .dynamic-txts li {
+  list-style: none;
   color: #00a977;
-  display: grid;
-  overflow: hidden;
-  height: 1.33em;
+  font-size: 34px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
 }
 
-.type span span {
-  width: 0%;
-  max-width: max-content;
-  overflow: hidden;
-  height: inherit;
-  word-break: break-all;
-  border-right: 3px solid white;
-  animation: 
-    blink 0.3s step-end infinite alternate,
-    t 2s linear infinite alternate,
-    m 16s steps(4) infinite;
+@keyframes slide {100% {top: -360px;}}
+
+#home .dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
 }
 
-.type span span:before {
-  content: " ";
-  display: inline-block;
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--main-bg-color);
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
 }
 
-@keyframes t {90%, 100% {width:100%;}}
-
-@keyframes blink {50% {border-color: transparent;}}
-
-@keyframes m {100% {transform: translateY(-400%);}}
+@keyframes typing {
+  40%, 60% {left: 100%;}
+  100% {left: 0;}
+}
 
 /* INFO CSS */
 
