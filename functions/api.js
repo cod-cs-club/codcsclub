@@ -1,7 +1,29 @@
+async function getPeople() {
+  const result = await fetch(`/api/getPeople`)
+  return result.json()
+}
+
+async function createPerson(name) {
+  const result = await fetch(`/api/createPerson`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name })
+  })
+  return result.json()
+}
+
+async function deletePerson(id) {
+  const result = await fetch(`/api/deletePerson`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id })
+  })
+  return result.json()
+}
+
 async function getProjects() {
   const result = await fetch(`/api/getProjects`)
-  const data = await result.json()
-  return data
+  return result.json()
 }
 
 async function createProject(name) {
@@ -22,4 +44,4 @@ async function deleteProject(id) {
   return result.json()
 }
 
-export default { getProjects, createProject, deleteProject }
+export default { getPeople, createPerson, deletePerson, getProjects, createProject, deleteProject }

@@ -4,6 +4,16 @@ const db = new sqlite.Database('./database.db')
 
 // Create database tables.
 db.serialize(() => {
+  db.run(`CREATE TABLE IF NOT EXISTS People (
+    id INTEGER PRIMARY KEY,
+    name TEXT DEFAULT 'New Person',
+    image TEXT DEFAULT '/defaultPerson.png',
+    bio TEXT DEFAULT 'I am studying computer science.',
+    role TEXT DEFAULT 'Member',
+    socials TEXT DEFAULT '[]',
+    date TEXT DEFAULT '')`
+  )
+
   db.run(`CREATE TABLE IF NOT EXISTS Projects (
     id INTEGER PRIMARY KEY,
     name TEXT DEFAULT 'New Project',
