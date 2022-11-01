@@ -3,17 +3,12 @@ import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
 import Accordion from '/components/Accordian'
+import Link from 'next/link'
 
 import { useState } from 'react'
 
 // Home page
 function Home() {
-  // const [openQuestion, setOpenQuestion] = useState(0)
-  
-  // function toggleQuestion(id) {
-  //   if (openQuestion == 1) setOpenQuestion(0)
-  //   else setOpenQuestion(1)
-  // }
 
   return (
     <>
@@ -26,7 +21,7 @@ function Home() {
       
       <div id="home">
         { /* Showcase */ }
-        <div class="showcase grid">
+        <div class="showcase">
           <div class="showcase-text">
             { /* Header below */ }
             <div className="wrapper">
@@ -40,9 +35,9 @@ function Home() {
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
             { /* Button below */ }
-            <a href="/projects" class="button">See Our Projects</a>
+            <Link href={"/projects"}><a class="button">See Our Projects</a></Link>
           </div>
-          <iframe id="intro-vid" width="560" height="315" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
+          <iframe id="intro-vid" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
         </div>
 
         { /* Info cards */ }
@@ -72,37 +67,40 @@ function Home() {
         </div>
 
         { /* Gallery */}
-        <div class="Gallery-text" align='center'>
-            <h2>Gallery</h2>
+
+        <div class="gallery">
+          <div class="gallery-text">
+            <h2>Image Gallery</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
           </div>
-        <div class='container'>
-          <div class='box'>
-            <img src='Session 1.jpg' />
-          </div>
-          <div class='box'>
-            <img src='Team 2022.jpg' />
-          </div>  
-          <div class='box'>
-            <img src='Session 2.jpg' />
-          </div>
-          <div class='box'>
-            <img src='Session 1.jpg' />
-          </div>
-          <div class='box'>
-            <img src='Team 2022.jpg' />
-          </div>  
-          <div class='box'>
-            <img src='Session 2.jpg' />
-          </div>
-          <div class='box'>
-            <img src='Session 1.jpg' />
-          </div>
-          <div class='box'>
-            <img src='Team 2022.jpg' />
-          </div>  
-          <div class='box'>
-            <img src='Session 2.jpg' />
+          <div class='container'>
+            <div class='box'>
+              <img src='Session 1.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Team 2022.jpg' />
+            </div>  
+            <div class='box'>
+              <img src='Session 2.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Session 1.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Team 2022.jpg' />
+            </div>  
+            <div class='box'>
+              <img src='Session 2.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Session 1.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Team 2022.jpg' />
+            </div>  
+            <div class='box'>
+              <img src='Session 2.jpg' />
+            </div>
           </div>
         </div>
           
@@ -144,19 +142,6 @@ function Home() {
 
         <Accordion />
 
-        {/* <div className="faq">
-          <h2>Frequently Asked Questions (FAQs)</h2>
-          <div className="acc">
-            <h5 onClick={() => toggleQuestion(1)} class={openQuestion == 1 ? 'question active' : 'question'}>+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
-            { openQuestion == 1 &&
-              <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
-            }
-          </div>
-          <div className="acc">
-            <h5 class="question">+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</h5>
-            <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam.</p>
-          </div>
-        </div> */}
       </div>
 
       <Footer />

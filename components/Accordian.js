@@ -13,7 +13,7 @@ function Accordion(){
     }
         return(
             <div className="faq">
-                <h2>Frequently Asked Questions (FAQs)</h2>
+                <h2>Frequently Asked Questions</h2>
                 <AccordianList accordionData={AccordianData} handleToggle={handleToggle} toggle={toggle} />
             </div>
         )
