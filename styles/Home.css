@@ -64,7 +64,7 @@
 #home .dynamic-txts li {
   list-style: none;
   color: #00a977;
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: 500;
   position: relative;
   top: 0;
@@ -144,10 +144,12 @@
 }
 
 #home .gallery h2 {
-  padding: 20px;
+  margin: 20px;
 }
 
 #home .gallery-text {
+  max-width: 1300px;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -200,7 +202,7 @@
 
 #home .languages h2 {
   padding: 20px;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 #home .lang-container {
@@ -230,7 +232,7 @@
 }
 
 #home .lang-container .card h4 {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
 }
 
@@ -246,7 +248,7 @@
   color: white;
   text-align: center;
   margin: 50px 10px;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 #home .faq .acc {
@@ -268,7 +270,7 @@
   margin: 5px 20px 5px 10px;
   align-items: center;
   transition-duration: 0.2s;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: white;
   transition: all .3s ease-out;
@@ -280,7 +282,7 @@
   border-left: 2px solid var(--dark-teal);
   margin-left: 25px;
   margin-right: 15px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: white;
   text-align: justify;
   overflow: hidden;

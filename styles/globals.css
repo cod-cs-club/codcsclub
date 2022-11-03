@@ -56,7 +56,7 @@ body {
   padding: 5px;
   text-decoration: none;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #ffffff;
 }
 
@@ -70,7 +70,7 @@ body {
   gap: 5px;
   padding: 15px 15px 12px 15px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   color: #e6e6e6;
   fill: #e6e6e6;
   border-bottom: 3px solid transparent;
@@ -108,11 +108,11 @@ body {
 }
 
 #footer p {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--text-color-4);
 }
 
-/* Banner/jumbotron */
+/* Banner */
 #banner {
   padding: 80px;
   background-size: cover;
@@ -128,7 +128,6 @@ body {
   font-size: 3.75rem;
   color: white;
   animation: text-fade-in ease-in-out 500ms;
-
 }
 
 #banner p {
@@ -142,4 +141,13 @@ body {
 @keyframes text-fade-in {
   0% { opacity: 0; scale: 0; }
   100% { opacity: 1; scale: 1; }
+}
+
+@media(max-width: 500px) {
+  #banner {
+    padding: 50px;
+  }
+  #banner h1 {
+    font-size: 3.5rem;
+  }
 }
