@@ -3,7 +3,7 @@ import '/styles/globals.css'
 import '/styles/Home.css'
 import '/styles/Projects.css'
 import '/styles/Team.css'
-import '/styles/Discord.css'
+import '/styles/Contacts.css'
 import '/styles/People.css'
 import '/styles/Admin.css'
 
