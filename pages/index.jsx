@@ -85,6 +85,10 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <div className="glassWindow">
+        </div>
+
       </div>
 
       <Footer />

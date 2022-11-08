@@ -1,4 +1,9 @@
 /* CSS specific to the Home page. */
+#home .glassWindow{
+  background-image: url("/codBackground2.jpg");
+  background-size: cover;
+  background-position: fixed;
+}
 
 #home .grid {
   display: grid;
@@ -23,9 +28,15 @@
 /* SHOWCASE CSS */
 
 #home .showcase {
-  max-width: 1300px;
+  /*max-width: 1300px;*/
   margin: 0 auto;
   padding: 20px 0;
+  
+  /*background image portion*/
+  background-image: url("/codBackground2.jpg");
+  background-size: cover;
+  background-position: fixed;
+  
 }
 
 #home .showcase.grid {
@@ -55,12 +66,17 @@
 #home .info {
   /* background-color: #ffea00; */
   background-color: #008593;
-  padding: 30px 0;
+  padding: 0px;
   text-align: center;
+
+  /*background image portion*/
+  background-image: url("/codBackground2.jpg");
+  background-size: cover;
+  background-position: fixed;
 }
 
 #home .info .info-text {
-  max-width: 1300px;
+  /*max-width: 1300px;*/
   margin: 0 auto;
   padding: 20px;
 }
@@ -91,6 +107,11 @@
   text-align: center;
   margin: 0 auto;
   padding: 40px 0;
+
+  /*background image portion*/
+  background-image: url("/codBackground2.jpg");
+  background-size: cover;
+  background-position: fixed;
 }
 
 #home .languages h2 {
