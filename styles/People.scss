@@ -1,0 +1,57 @@
+/* CSS specific to the people/(Person) pages */
+
+#people {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  min-width: 500px;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: var(--bg-color-1);
+  border: 1px solid var(--border-color-1);
+
+  #profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  
+  #right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: var(--text-color-1);
+  }
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color-2);
+  }
+  
+  .social-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3px;
+  }
+  
+  .social-item img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .social-item a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(127, 127, 255);
+  }
+  
+  .social-item a:hover { text-decoration: underline; }
+}

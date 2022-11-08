@@ -1,0 +1,8 @@
+[
+  { "name": "HTML", "image": "/html.png" },
+  { "name": "CSS", "image": "/css.png" },
+  { "name": "JavaScript", "image": "/javascript.png" },
+  { "name": "Next.js", "image": "/nextjs.png" },
+  { "name": "Node.js", "image": "/node.png" },
+  { "name": "Python", "image": "/python.png" }
+]

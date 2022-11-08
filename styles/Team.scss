@@ -1,0 +1,63 @@
+/* CSS specific to the Meet the Team page. */
+
+#team {
+  #people-container {
+    display: flex;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 130px 50px;
+  }
+  
+  .person {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    min-width: 200px;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    --underlined: none;
+    --image-scale: 0.8;
+  }
+  
+  .person:hover {
+    background-color: var(--bg-color-3);
+    --underlined: underline;
+    --image-scale: 1;
+  }
+  
+  .person img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: ease-in-out 300ms;
+    scale: var(--image-scale);
+  }
+  
+  .person h3 {
+    font-weight: normal;
+    font-size: 20px;
+    color: var(--text-color-1);
+  }
+  
+  .person .role {
+    text-align: center;
+    font-size: 16px;
+    margin: 8px 0;
+    padding: .1em .5em;
+    background-color: var(--bg-color-3);
+    border: 1px solid var(--border-color-3);
+    border-radius: .5em;
+  }
+  
+  .person .role-Leadership { color: pink; }
+  .person .role-Member { color: aqua; }
+  
+  .person .info {
+    text-decoration: var(--underlined);
+    font-size: 14px;
+    color: rgb(127, 127, 255);
+  }
+}

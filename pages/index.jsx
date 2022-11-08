@@ -137,15 +137,10 @@ function Home() {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="glassWindow">
         </div>
-=======
         {/* FAQ */}
-
         <Accordion />
->>>>>>> bb189651a24a2ab8b69cd5f6e3009b3a462be960
-
       </div>
 
       <Footer />

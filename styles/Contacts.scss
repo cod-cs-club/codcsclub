@@ -1,0 +1,36 @@
+/* CSS specific to the contacts page */
+
+#contacts {
+  * {
+    text-decoration: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+      
+
+  .btn {
+    background-color: #00a977;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-weight: bold;
+  }
+
+  #discordimg {
+    width: auto;
+    height: auto;
+    padding: 50px;
+  }
+
+  #githubimg {
+    width: auto;
+    height: auto;
+    padding: 50px;
+  }
+}
