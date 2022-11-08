@@ -27,16 +27,6 @@ function Projects() {
       
       
       <div id="projects">
-        { /*About the team*/ }
-        <div class = "showcase">
-          <div class = "container">
-            <div class = "showcase-box grid">
-              <div class = "left">
-                <h1>Our Work</h1>
-              </div>
-            </div>
-          </div>
-        </div>
         
         <div id="project-list">
           {

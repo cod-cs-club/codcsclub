@@ -90,40 +90,7 @@
 }
 
 
-/* Projects-Section specific */
-#admin #projects-sec #projects-list {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  border: 1px solid var(--border-color-2);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-#admin #projects-sec .project-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid var(--border-color-2);
-}
-
-#admin #projects-sec .project-item .left,
-#admin #projects-sec .project-item .right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#admin #projects-sec .project-item img {
-  width: 40px;
-  height: 40px;
-}
-
-#admin #projects-sec .project-item h4 {
-  font-weight: normal;
-  font-size: 1rem;
-  color: var(--text-color-2);
-}
+/* Common modal-specific elements */
 
 #admin .modal-container {
   position: fixed;
@@ -246,6 +213,133 @@
 #admin .modal p {
   text-align: center;
   margin: 30px 0;
+  font-size: 1rem;
+  color: var(--text-color-2);
+}
+
+
+/* WIP SELECT ITEMS */
+#admin .modal .items-select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#admin .modal .item {
+  display: flex;
+  align-items: center;
+  background: red;
+}
+
+#admin .modal .item input[type="text"] {
+  margin: 0;
+}
+
+#admin .modal .item-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px;
+  font-size: 14px;
+  color: var(--text-color-3);
+  background: none;
+  border: 1px solid var(--border-color-3);
+}
+
+#admin .modal .item-button img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+#admin .modal .add-item-select {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#admin .modal .add-item-select:hover { background-color: var(--bg-color-3); }
+
+#admin .modal .add-item-select img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#admin .modal .add-item-select span {
+  font-size: 1rem;
+  color: var(--text-color-1);
+}
+
+/* -- Per-section specific -- */
+/* Projects-Section specific */
+#admin #projects-sec #projects-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  border: 1px solid var(--border-color-2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#admin #projects-sec .project-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color-2);
+}
+
+#admin #projects-sec .project-item .left,
+#admin #projects-sec .project-item .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#admin #projects-sec .project-item img {
+  width: 40px;
+  height: 40px;
+}
+
+#admin #projects-sec .project-item h4 {
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--text-color-2);
+}
+
+/* People-section specific */
+#admin #people-sec #people-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  border: 1px solid var(--border-color-2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#admin #people-sec .person-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color-2);
+}
+
+#admin #people-sec .person-item .left,
+#admin #people-sec .person-item .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#admin #people-sec .person-item img {
+  width: 40px;
+  height: 40px;
+}
+
+#admin #people-sec .person-item h4 {
+  font-weight: normal;
   font-size: 1rem;
   color: var(--text-color-2);
 }

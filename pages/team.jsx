@@ -16,16 +16,6 @@ function Team() {
       />
 
       <div id="team">
-        { /*About the team*/ }
-        <div class = "showcase">
-          <div class = "container">
-            <div class = "showcase-box grid">
-              <div class = "left">
-                <h1>About the Team</h1>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div id="people-container">
           {

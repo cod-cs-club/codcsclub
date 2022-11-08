@@ -17,6 +17,7 @@
   --dark-blue: #152434;
   --main-bg-color: rgb(20, 20, 20);
   --teal: #0D9292;
+  --dark-teal: #008593;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--main-bg-color);
+  padding-top: 50px;
 }
 
 *, *::before, *::after {
@@ -43,6 +45,8 @@ body {
   justify-content: space-between;
   width: 100%;
   background-color: #1e1e1e;
+  z-index: 5;
+  height: 50px;
 }
 
 #navbar #logo {
@@ -52,7 +56,7 @@ body {
   padding: 5px;
   text-decoration: none;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #ffffff;
 }
 
@@ -62,10 +66,11 @@ body {
 #navbar #pages a {
   display: flex;
   align-items: center;
+  height: 100%;
   gap: 5px;
   padding: 15px 15px 12px 15px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   color: #e6e6e6;
   fill: #e6e6e6;
   border-bottom: 3px solid transparent;
@@ -103,16 +108,15 @@ body {
 }
 
 #footer p {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--text-color-4);
 }
 
-/* Banner/jumbotron */
+/* Banner */
 #banner {
   padding: 80px;
   background-size: cover;
   background-attachment: fixed;
-  /* background-attachment: fixed; */
   box-shadow: inset 0 0 0 9999em rgb(0, 0, 0, 0.5);
   text-align: center;
   background-position: center;
@@ -124,7 +128,6 @@ body {
   font-size: 3.75rem;
   color: white;
   animation: text-fade-in ease-in-out 500ms;
-
 }
 
 #banner p {
@@ -138,4 +141,13 @@ body {
 @keyframes text-fade-in {
   0% { opacity: 0; scale: 0; }
   100% { opacity: 1; scale: 1; }
+}
+
+@media(max-width: 500px) {
+  #banner {
+    padding: 50px;
+  }
+  #banner h1 {
+    font-size: 3.5rem;
+  }
 }

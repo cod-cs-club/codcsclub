@@ -2,29 +2,42 @@
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
+import Accordion from '/components/Accordian'
+import Link from 'next/link'
+
+import { useState } from 'react'
 
 // Home page
 function Home() {
+
   return (
     <>
       <Navbar selectedPage="Home" />
       <Banner
         image="/codBackground2.jpg"
         title="Computer Science Club"
-        subtitle="The best club on the Planet!"
+        subtitle="The best club on Earth!"
       />
       
       <div id="home">
         { /* Showcase */ }
-        <div class="showcase grid">
+        <div class="showcase">
           <div class="showcase-text">
             { /* Header below */ }
-            <h1>Welcome to the Computer Science Club!</h1>
+            <div className="wrapper">
+              <h1>A Club of</h1>
+              <ul className="dynamic-txts">
+                <li><span>Innovation</span></li>
+                <li><span>Creativity</span></li>
+                <li><span>Inspiration</span></li>
+                <li><span>Development</span></li>
+              </ul>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
             { /* Button below */ }
-            <a href="" class="button">See Our Projects</a>
+            <Link href={"/projects"}><a class="button">See Our Projects</a></Link>
           </div>
-          <iframe id="intro-vid" width="560" height="315" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
+          <iframe id="intro-vid" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
         </div>
 
         { /* Info cards */ }
@@ -49,6 +62,44 @@ function Home() {
               <img src="/server-solid.svg" />
               <h3>$5,020,893</h3>
               <p class="text-secondary">in bank account</p>
+            </div>
+          </div>
+        </div>
+
+        { /* Gallery */}
+
+        <div class="gallery">
+          <div class="gallery-text">
+            <h2>Image Gallery</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
+          </div>
+          <div class='container'>
+            <div class='box'>
+              <img src='Session 1.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Team 2022.jpg' />
+            </div>  
+            <div class='box'>
+              <img src='Session 2.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Session 1.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Team 2022.jpg' />
+            </div>  
+            <div class='box'>
+              <img src='Session 2.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Session 1.jpg' />
+            </div>
+            <div class='box'>
+              <img src='Team 2022.jpg' />
+            </div>  
+            <div class='box'>
+              <img src='Session 2.jpg' />
             </div>
           </div>
         </div>
@@ -86,8 +137,14 @@ function Home() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="glassWindow">
         </div>
+=======
+        {/* FAQ */}
+
+        <Accordion />
+>>>>>>> bb189651a24a2ab8b69cd5f6e3009b3a462be960
 
       </div>
 
