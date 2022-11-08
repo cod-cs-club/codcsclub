@@ -1,5 +1,6 @@
 [
   { "name": "GitHub", "image": "/github.png" },
   { "name": "LinkedIn", "image": "/linkedin.png" },
+  { "name": "Email", "image": "/email.png" },
   { "name": "Twitter", "image": "/twitter.png" }
 ]

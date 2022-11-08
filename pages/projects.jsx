@@ -2,20 +2,19 @@
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
-import projects from '/data/projects.json'
-import getPersonInfo from '/functions/getPersonInfo.js'
+import api from '/functions/api'
 
-// All the possible languages in the projects.
-const languageIcons = {
-  "HTML": "/html.png",
-  "CSS": "/css.png",
-  "JavaScript": "/javascript.png",
-  "Next.js": "/nextjs.png",
-  "Python": "/python.png"
-}
+import { useState, useEffect } from 'react'
 
 // Projects page
 function Projects() {
+  const [projects, setProjects] = useState()
+
+  useEffect(() => {
+    api.getProjects({ fullInfo: true })
+      .then(data => setProjects(data))
+  }, [])
+
   return (
     <>
       <Navbar selectedPage="Projects" />
@@ -25,53 +24,42 @@ function Projects() {
         subtitle="All of our projects"
       />
       
-      
       <div id="projects">
-        
         <div id="project-list">
-          {
-            projects.map(project => {
-              return (
-                <div class="project">
-                  <div class="left">
-                    <a href={project.link}>{project.name}</a>
-                    <p>{project.description}</p>
-                    <div class="contributors">
-                      <span>{project.contributors.length} Contributors:</span>
-                      {
-                        project.contributors.map(person => {
-                          var person = getPersonInfo(person)
-                          if (person) {
-                            return (
-                              <a href={"/people/" + person.name}>
-                                <img src={person.image} />
-                              </a>
-                            )
-                          }
-                        })
-                      }
-                    </div>
-                    <div class="languages">
-                      {
-                        project.languages.map(language => {
-                          return (
-                            <div class="bubble">
-                              <img src={languageIcons[language]} />
-                              <span>{language}</span>
-                            </div>
-                          )
-                        })
-                      }
-                    </div>
+          { projects && projects.map(project => {
+            return (
+              <div className="project">
+                <div className="left">
+                  <a href={project.visit}>{project.name}</a>
+                  <p>{project.description}</p>
+                  <div className="contributors">
+                    <span>{project.contributors.length} Contributors:</span>
+                    { project.contributors.map(person => {
+                      return (
+                        <a href={"/people/" + person.name}>
+                          <img src={person.image} />
+                        </a>
+                      )
+                    })}
                   </div>
-                  <div class="right">
-                    <img src={project.image} alt="Project logo image" />
-                    <a href={project.repository}>Open in GitHub</a>
+                  <div className="languages">
+                    { project.tags.map(tag => {
+                      return (
+                        <div className="bubble">
+                          <img src={tag.image} />
+                          <span>{tag.name}</span>
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
-              )
-            })
-          }
+                <div className="right">
+                  <img src={project.image} alt="Project logo image" />
+                  <a href={project.repository}>Open in GitHub</a>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
 

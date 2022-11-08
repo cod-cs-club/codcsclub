@@ -1,0 +1,5 @@
+{
+  "host": "http://localhost:3000",
+  "adminPassword": "admin",
+  "encryptKey": "H9xKm19WaPqm4z"
+}

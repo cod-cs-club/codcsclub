@@ -1,6 +1,6 @@
 import db from '/database'
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const projects = []
   db.all(`SELECT * FROM Projects`, (err, rows) => {
     rows.forEach(row => {

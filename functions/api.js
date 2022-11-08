@@ -1,3 +1,5 @@
+import tags from '/data/projectTags.json'
+
 async function getPeople() {
   const result = await fetch(`/api/getPeople`)
   return result.json()
@@ -30,9 +32,31 @@ async function deletePerson(id) {
   return result.json()
 }
 
-async function getProjects() {
-  const result = await fetch(`/api/getProjects`)
-  return result.json()
+async function getProjects(options) {
+  const projects = await (await fetch(`/api/getProjects`)).json()
+  if (options && options.fullInfo) { // Makes project have full contributors and tags info.
+    const people = await (await fetch(`/api/getPeople`)).json()
+    projects.map(project => {
+      const fullContributors = []
+      project.contributors.map(contributor => {
+        const person = people.find(f => f.id == contributor.id)
+        if (!person) return
+        person.note = contributor.note
+        fullContributors.push(person)
+      })
+      project.contributors = fullContributors
+      
+      const fullTags = []
+      project.tags.map(tag => {
+        const fullTag = tags.find(f => f.name == tag)
+        if (!fullTag) return
+        fullTags.push(fullTag)
+      })
+      project.tags = fullTags
+    })
+    return projects
+  }
+  else return projects
 }
 
 async function editProject(info) {

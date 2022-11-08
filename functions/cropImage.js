@@ -7,10 +7,37 @@ export default function cropImage(file) {
     reader.readAsDataURL(file)
     reader.onerror = error => reject(error)
     reader.onload = () => {
-      canvasCropAspectRatio(reader.result, 1).then(image => {
+      canvasCropResolution(reader.result, 500, 1).then(image => {
         resolve(image)
       })
     }
+  })
+}
+
+function canvasCropResolution(url, resolution, aspectRatio) {
+  return new Promise((resolve) => {
+      const inputImage = new Image()
+      inputImage.onload = () => {
+          const inputImageAspectRatio = inputImage.naturalWidth / inputImage.naturalHeight
+          const inputWidth = resolution * inputImageAspectRatio
+          const inputHeight = resolution
+          let outputWidth = inputWidth
+          let outputHeight = inputHeight
+          if (inputImageAspectRatio > aspectRatio) {
+              outputWidth = inputHeight * aspectRatio
+          } else if (inputImageAspectRatio < aspectRatio) {
+              outputHeight = inputWidth / aspectRatio
+          }
+          const outputX = (outputWidth - inputWidth) * 0.5
+          const outputY = (outputHeight - inputHeight) * 0.5
+          const outputImage = document.createElement('canvas')
+          outputImage.width = outputWidth
+          outputImage.height = outputHeight
+          const ctx = outputImage.getContext('2d')
+          ctx.drawImage(inputImage, outputX, outputY, inputWidth, inputHeight)
+          resolve(outputImage.toDataURL())
+      }
+      inputImage.src = url
   })
 }
 
