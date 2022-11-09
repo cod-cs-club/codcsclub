@@ -4,8 +4,7 @@ import Banner from '/components/Banner'
 import Footer from '/components/Footer'
 import Question from '/components/Question'
 import Link from 'next/link'
-
-import { useState } from 'react'
+import ScrollToTop from '/components/ScrollToTop';
 
 // Home page
 function Home() {
@@ -143,6 +142,7 @@ function Home() {
         <Question />
       </div>
 
+      <ScrollToTop />
       <Footer />
     </>
   )
