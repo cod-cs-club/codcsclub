@@ -2,7 +2,7 @@
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
-import Accordion from '/components/Accordian'
+import Question from '/components/Question'
 import Link from 'next/link'
 
 import { useState } from 'react'
@@ -140,7 +140,7 @@ function Home() {
         <div className="glassWindow">
         </div>
         {/* FAQ */}
-        <Accordion />
+        <Question />
       </div>
 
       <Footer />

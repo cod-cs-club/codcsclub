@@ -1,8 +1,8 @@
-import AccordianList from "/components/accordianList";
-import AccordianData from "/data/accordianData.json";
+import QuestionList from "/components/questionList";
+import QuestionData from "/data/questionData.json";
 import { useState } from "react";
 
-function Accordion(){
+function Question(){
     const [toggle, setToggle] = useState(null);
     let handleToggle=(id)=>{
         if(toggle===id){
@@ -14,8 +14,8 @@ function Accordion(){
         return(
             <div className="faq">
                 <h2>Frequently Asked Questions</h2>
-                <AccordianList accordionData={AccordianData} handleToggle={handleToggle} toggle={toggle} />
+                <QuestionList questionData={QuestionData} handleToggle={handleToggle} toggle={toggle} />
             </div>
         )
     }
-    export default Accordion;
+    export default Question;

@@ -1,9 +1,9 @@
-function AccordionList({accordionData, handleToggle, toggle}){
+function QuestionList({questionData, handleToggle, toggle}){
   return(
-    accordionData.map((value)=>{
+    questionData.map((value)=>{
       const {id, qn, ans} = value;
       return(
-        <div className="acc" key={id}>
+        <div className="que" key={id}>
           <div className={(id===toggle)?"question active":"question"} onClick={()=>handleToggle(id)}>
             <b><span>{(id===toggle)?'-':'+'}</span> {qn}</b>
           </div>
@@ -13,4 +13,4 @@ function AccordionList({accordionData, handleToggle, toggle}){
     })
   )
 }
-export default AccordionList;
+export default QuestionList;
