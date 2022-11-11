@@ -29,9 +29,10 @@ function Team() {
           { people && people.map(person => {
             return (
               <a class="person" href={'/people/' + person.id}>
-                <img src={person.image} />
-                <h3>{person.name}</h3>
-                <span class={"role role-" + person.role}>{person.role}</span>
+                <div className="content">
+                  <img src={person.image} />
+                  <h3>{person.name}<br></br><span class={"role role-" + person.role}>{person.role}</span></h3>
+                </div>
                 <span class="info">More Info &rarr;</span>
               </a>
             )
