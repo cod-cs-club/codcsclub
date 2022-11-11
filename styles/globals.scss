@@ -158,3 +158,49 @@ body {
     }
   }
 }
+
+// Scroll to top button
+
+#scrollButton {
+  position: relative;
+
+  .icon-position {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    z-index: 20;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-style {
+    background-color: var(--dark-teal);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    animation: movebtn 1s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  .icon-style:hover {
+    background: #fff;
+    color: var(--dark-teal);
+    border: 2px solid var(--dark-teal);
+  }
+
+  @keyframes movebtn {
+    0%{
+      transform: translateY(100px);
+    }
+    75%{
+      transform: translateY(-20px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+}
