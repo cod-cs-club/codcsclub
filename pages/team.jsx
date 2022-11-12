@@ -44,6 +44,7 @@ function Team() {
           })}
         </div>
       </div>
+      
       {/* FAILED EXPERIMENT (SEE DESIGN 3 IN CSS) */}
       {/* <div id="team">
         <div id="people-container">
