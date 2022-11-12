@@ -21,7 +21,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
     const filledSocials = []
     socials.forEach((social, index) => {
       // Super hacky way of getting the correct input value, should fix later.
-      const inputIndex = 5 + index
+      const inputIndex = 6 + index
       if (event.target[inputIndex].value == '') return
       filledSocials.push({
         name: social.name,
@@ -34,6 +34,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
       bio: event.target[2].value,
       image: personImage,
       role: event.target[4].value,
+      onteam: event.target[5].value,
       socials: filledSocials
     }
 
@@ -51,7 +52,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
       .then(newPeople => {
         setPeople(newPeople)
         const editPerson = newPeople.find(f => f.id == newPersonID)
-        setPersonEditModal(editPerson)
+        openPersonEditor(editPerson)
       }))
   }
 
@@ -114,14 +115,25 @@ export default function AdminPeopleSection({ people, setPeople }) {
                   </div>
                 </div>
                 <div className="colum">
-                  <label for="person-edit-role">Club Role</label>
-                  <select id="person-edit-role" defaultValue={personEditModal.role}>
-                    { roles.map((role, index) => {
-                      return (
-                        <option value={role.name}>{role.name}</option>
-                      )
-                    })}
-                  </select>
+                  <div className="side-by-side">
+                    <div>
+                      <label for="person-edit-role">Club Role</label>
+                      <select id="person-edit-role" defaultValue={personEditModal.role}>
+                        { roles.map((role, index) => {
+                          return (
+                            <option value={role.name}>{role.name}</option>
+                          )
+                        })}
+                      </select>
+                    </div>
+                    <div>
+                      <label for="person-edit-onteam">On Team Page</label>
+                      <select id="person-edit-onteam" defaultValue={personEditModal.onteam}>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                      </select>
+                    </div>
+                  </div>
                   <label>Socials</label>
                   <div className="socials-container">
                     { socials.map((social, index) => {

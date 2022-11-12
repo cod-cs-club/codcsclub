@@ -18,40 +18,51 @@ export async function getStaticPaths() {
 // Return all the given person's info as a prop,
 // so we can use it in the People() function.
 export async function getStaticProps(context) {
-  const result = await fetch(`${config.host}/api/getPeopleFull`)
-  const people = await result.json()
-  const person = people.find(f => f.id == context.params.id)
+  const result = await fetch(`${config.host}/api/getPersonFull/${context.params.id}`)
+  const person = await result.json()
   return { props: { person } }
 }
 
-// All the possible social medias people will have.
-const socials = {
-  github: { name: "GitHub", icon: "/github.png" },
-  linkedin: { name: "LinkedIn", icon: "/linkedin.png" },
-  twiter: { name: "Twiter", icon: "/twiter.png" }
-}
-
-// People's template page
-function People({ person }) {
+// People's template page.
+export default function People({ person }) {
   return (
     <>
       <Navbar />
       
-      <div id="people">
-        <img id="profile-image" src={person.image} alt="Profile image of person" />
-        <div id="right">
-          <h2>{person.name}</h2>
-          <p>{person.bio}</p>
-          {
-            person.socials.map(social => {
-              return (
-                <div class="social-item">
-                  <img src={social.image} alt="Social icon" />
-                  <a href={social.link}>{social.name}</a>
-                </div>
-              )
-            })
-          }
+      <div id="people" className={person.name}>
+        <div id="card">
+          <div id="left">
+            <img id="profile-image" src={person.image} alt="Profile image of person" />
+            <div id="socials">
+              { person.socials.map(social => {
+                return (
+                  <div className="social-item">
+                    <img src={social.image} alt="Social icon" />
+                    <a href={social.link}>{social.name}</a>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div id="right">
+            <div id="top">
+              <h2>{person.name}</h2>
+              <span className={`role-${person.role}`}>{person.role}</span>
+            </div>
+            <p id="bio">{person.bio}</p>
+            <p id="contribute">{person.name.split(' ')[0]} has contributed to {person.projects.length} project(s):</p>
+            <div id="projects-list">
+              { person.projects.map(project => {
+                return (
+                  <div className="project">
+                    <img src={project.image} alt="" />
+                    <span>{project.name}</span>
+                    <p>{project.note}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -59,6 +70,3 @@ function People({ person }) {
     </>
   )
 }
-
-// Export the page.
-export default People

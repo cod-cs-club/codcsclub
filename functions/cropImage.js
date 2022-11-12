@@ -7,7 +7,7 @@ export default function cropImage(file) {
     reader.readAsDataURL(file)
     reader.onerror = error => reject(error)
     reader.onload = () => {
-      canvasCropResolution(reader.result, 500, 1).then(image => {
+      canvasCropResolution(reader.result, 400, 1).then(image => {
         resolve(image)
       })
     }

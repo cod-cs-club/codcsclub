@@ -23,6 +23,7 @@ export default function AdminProjectsSection({ projects, setProjects, people }) 
     projectContributors.forEach((contributor, index) => {
       // Super hacky way of getting the correct input value, should fix later.
       const inputIndex = 6 + tags.length + (index * 2)
+      if (!people.find(f => f.id == contributor.id)) return
       contributors.push({
         id: contributor.id,
         note: event.target[inputIndex].value
@@ -53,7 +54,7 @@ export default function AdminProjectsSection({ projects, setProjects, people }) 
       .then(newProjects => {
         setProjects(newProjects)
         const editProject = newProjects.find(f => f.id == newProjectID)
-        setProjectEditModal(editProject)
+        openProjectEditor(editProject)
       }))
   }
 

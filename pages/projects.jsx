@@ -4,6 +4,7 @@ import Banner from '/components/Banner'
 import Footer from '/components/Footer'
 import api from '/functions/api'
 
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 // Projects page
@@ -28,7 +29,7 @@ function Projects() {
         <div id="project-list">
           { projects && projects.map(project => {
             return (
-              <div className="project">
+              <div className="project" key={project.id}>
                 <div className="left">
                   <a href={project.visit}>{project.name}</a>
                   <p>{project.description}</p>
@@ -36,16 +37,18 @@ function Projects() {
                     <span>{project.contributors.length} Contributors:</span>
                     { project.contributors.map(person => {
                       return (
-                        <a href={"/people/" + person.name}>
-                          <img src={person.image} />
-                        </a>
+                        <Link href={`/people/${person.id}`} key={person.id}>
+                          <a>
+                            <img src={person.image} />
+                          </a>
+                        </Link>
                       )
                     })}
                   </div>
                   <div className="languages">
                     { project.tags.map(tag => {
                       return (
-                        <div className="bubble">
+                        <div className="bubble" key={tag.name}>
                           <img src={tag.image} />
                           <span>{tag.name}</span>
                         </div>

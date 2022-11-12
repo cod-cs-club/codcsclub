@@ -201,6 +201,18 @@
         }
       }
 
+      .side-by-side {
+        display: grid;
+        grid-template-columns: min-content min-content;
+        gap: 50px;
+        white-space: nowrap;
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
       button[type="submit"] {
         margin-top: 10px;
         padding: .4em;
@@ -326,7 +338,7 @@
         padding: 10px;
         border-bottom: 1px solid var(--border-color-2);
 
-        img { width: 40px; height: 40px; }
+        img { width: 40px; height: 40px; border-radius: 50%; }
 
         h4 {
           font-weight: normal;

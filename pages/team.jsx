@@ -4,6 +4,7 @@ import Banner from '/components/Banner'
 import Footer from '/components/Footer'
 import api from '/functions/api'
 
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 // Meet the Team page
@@ -28,13 +29,15 @@ function Team() {
         <div id="people-container">
           { people && people.map(person => {
             return (
-              <a class="person" href={'/people/' + person.id}>
-                <div className="content">
-                  <img src={person.image} />
-                  <h3>{person.name}<br></br><span class={"role role-" + person.role}>{person.role}</span></h3>
-                </div>
-                <span class="info">More Info &rarr;</span>
-              </a>
+              <Link href={'/people/' + person.id} key={person.id}>
+                <a className="person">
+                  <div className="content">
+                    <img src={person.image} />
+                    <h3>{person.name}<br></br><span class={"role role-" + person.role}>{person.role}</span></h3>
+                  </div>
+                  <span className="info">More Info &rarr;</span>
+                </a>
+              </Link>
             )
           })}
         </div>

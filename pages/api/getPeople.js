@@ -10,6 +10,7 @@ export default function handler(req, res) {
         image: row.image,
         bio: row.bio,
         role: row.role,
+        onteam: row.onteam,
         socials: JSON.parse(row.socials),
         date: row.date
       })

@@ -10,6 +10,7 @@ db.serialize(() => {
     image TEXT DEFAULT '/defaultPerson.png',
     bio TEXT DEFAULT 'I am studying computer science.',
     role TEXT DEFAULT 'Member',
+    onteam TEXT DEFAULT 'true',
     socials TEXT DEFAULT '[]',
     date TEXT DEFAULT '')`
   )

@@ -1,5 +1,7 @@
 [
   { "name": "President" },
+  { "name": "Vice President" },
+  { "name": "Project Manager" },
   { "name": "Leadership" },
   { "name": "Member" }
 ]

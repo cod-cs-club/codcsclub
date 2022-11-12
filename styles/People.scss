@@ -3,55 +3,131 @@
 #people {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  min-width: 500px;
-  max-width: 800px;
-  margin: 100px auto;
-  padding: 30px;
-  background-color: var(--bg-color-1);
-  border: 1px solid var(--border-color-1);
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('/TheTeam.jpg');
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  
+  #card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    // min-width: 500px;
+    max-width: max-content;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: var(--bg-color-1);
+    border: 1px solid var(--border-color-1);
+  }
 
-  #profile-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+  #left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    #profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 3px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        color: rgb(127, 127, 255);
+        &:hover { text-decoration: underline; }
+      }
+    }
   }
   
   #right {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+
+    #top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      h2 {
+        font-size: 1.8rem;
+        color: var(--text-color-1);
+      }
+
+      span {
+        padding: .1em .3em;
+        font-size: .9rem;
+        background-color: var(--bg-color-2);
+        border: 1px solid var(--border-color-2);
+        border-radius: 8px;
+      }
+    }
+    
+    #bio {
+      max-width: 550px;
+      font-size: 1.1rem;
+      color: var(--text-color-2);
+    }
+
+    #contribute {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: var(--text-color-4);
+    }
+
+    #projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      max-width: 500px;
+
+      .project {
+        display: grid;
+        grid-template-columns: min-content 150px 1fr;
+        align-items: center;
+        gap: 5px;
+        padding: .2em .3em;
+
+        img { width: 20px; height: 20px; }
+
+        span {
+          font-size: 1rem;
+          color: var(--text-color-2);
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        p { font-size: 1rem; color: var(--text-color-4); }
+      }
+    }
   }
-  
-  h2 {
-    margin-bottom: 10px;
-    font-size: 30px;
-    color: var(--text-color-1);
+
+  // Custom CSS for specific people easter eggs :)
+  &.Wojtek {
+    animation: party 2s infinite alternate-reverse;
+    @keyframes party {
+      0% { background-color: rgba(200, 0, 0, 0.5); }
+      33% { background-color: rgba(0, 200, 0, 0.5); }
+      66% { background-color: rgba(0, 0, 200, 0.5); }
+      100% { background-color: rgba(200, 0, 0, 0.5); }
+    }
   }
-  
-  p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: var(--text-color-2);
-  }
-  
-  .social-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 3px;
-  }
-  
-  .social-item img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-  
-  .social-item a {
-    text-decoration: none;
-    font-size: 16px;
-    color: rgb(127, 127, 255);
-  }
-  
-  .social-item a:hover { text-decoration: underline; }
 }

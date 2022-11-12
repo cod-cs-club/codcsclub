@@ -6,6 +6,7 @@ import '/styles/Team.scss'
 import '/styles/Contacts.scss'
 import '/styles/People.scss'
 import '/styles/Admin.scss'
+import '/styles/404.scss'
 
 // Main app function.
 function App({ Component, pageProps }) {
