@@ -36,15 +36,47 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        opacity: 0.5;
+        opacity: 0.7;
         transition: 0.5s;
 
+        .imgBox {
+          position: relative;
+          width: 160px;
+          height: 160px;
+          transition: 0.5s;
+          z-index: 1;
+          overflow: hidden;
+          border-radius: 50%;
+        }
+
+        .imgBox::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 100px;
+          width: 100%;
+          background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+          transform: translate(-50%, -180%);
+        }
+
+        .imgBox::after {
+          content: '';
+          position: absolute;
+          inset: 3px;
+        }
+
+        @keyframes animate {
+          0% {transform: translate(-50%, -180%);}
+          100% {transform: translate(-50%, 100%);}
+        }
+        
         img {
           position: relative;
-          width: 150px;
-          height: 150px;
+          width: 100%;
+          height: 100%;
           border-radius: 50%;
-          border: 10px solid rgba(0,0,0,0.25);
+          border: 5px solid transparent;
         }
 
         h3 {
@@ -83,6 +115,10 @@
         transform: translateY(-20px);
       }
 
+      .imgBox::before {
+        animation: animate 1s ease-in-out;
+      }
+
       .info {
         opacity: 1;
         transform: translateY(0px);
@@ -90,6 +126,194 @@
     }
   }
 }
+
+
+// DESIGN 3
+// THIS WAS A TEST DESIGN THAT LOOKED REALLY BAD
+
+// #team {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // background: #333;
+//   min-height: 100vh;
+//   flex-wrap: wrap;
+
+//   #people-container {
+//     position: relative;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//     margin: 70px 10px;
+//     gap: 80px 30px;
+
+//     .person {
+//       position: relative;
+//       width: 350px;
+//       height: 190px;
+//       background: #333;
+//       transition: 0.5s;
+
+//       .lines {
+//         position: absolute;
+//         inset: 0;
+//         background: #000;
+//         overflow: hidden;
+//       }
+
+//       .lines::before {
+//         content: '';
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         width: 600px;
+//         height: 120px;
+//         background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
+//         animation: animate 4s linear infinite;
+//       }
+
+//       .lines::after {
+//         content: '';
+//         position: absolute;
+//         inset: 3px;
+//         background: #333;
+//       }
+
+//       .imgBx {
+//         position: absolute;
+//         top: -50px;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         width: 150px;
+//         height: 150px;
+//         background: #000;
+//         transition: 0.5s;
+//         z-index: 1;
+//         overflow: hidden;
+
+//         img {
+//           position: absolute;
+//           top: 10px;
+//           left: 10px;
+//           z-index: 1;
+//           width: calc(100% - 20px);
+//           height: calc(100% - 20px);
+//         }
+//       }
+
+//       .imgBx::before {
+//         content: '';
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         width: 500px;
+//         height: 150px;
+//         transform: translate(-50%, -50%);
+//         background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+//         animation: animate2 6s linear infinite;
+//       }
+
+//       .imgBx::after {
+//         content: '';
+//         position: absolute;
+//         inset: 3px;
+//         background: #292929;
+//       }
+
+//       .content {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: flex-end;
+//         overflow: hidden;
+
+//         .details {
+//           padding: 40px;
+//           text-align: center;
+//           width: 100%;
+//           transition: 0.5s;
+//           transform: translateY(145px);
+
+//           h2 {
+//             font-size: 1.25em;
+//             font-weight: 600;
+//             color: #45f3ff;
+//             line-height: 1.2em;
+
+//             span {
+//               font-size: 0.75em;
+//               font-weight: 500;
+//               color: #fff;
+//             }
+//           }
+
+//           .data {
+//             display: flex;
+//             justify-content: space-between;
+//             margin: 25px 0;
+
+//             h3 {
+//               font-size: 1em;
+//               color: #45f3ff;
+//               line-height: 1.2em;
+//               font-weight: 600;
+
+//               span {
+//                 font-size: 0.85em;
+//                 font-weight: 400;
+//                 color: #fff;
+//               }
+//             }
+//           }
+
+//           button {
+//             padding: 10px 30px;
+//             border: none;
+//             outline: none;
+//             border-radius: 5px;
+//             font-size: 1em;              font-weight: 500;
+//             background: #45f3ff;
+//             color: #222;
+//             cursor: pointer;
+//             opacity: 0.8;
+//           }
+
+//           button:hover {
+//             opacity: 1;
+//           }
+//         }
+//       }
+//     }
+
+//     .person:hover {
+//       height: 450px;
+
+//       .imgBx {
+//         width: 250px;
+//         height: 250px;
+//       }
+
+//       .details {
+//         transform: translateY(0px);
+//       }
+//     }
+
+//     @keyframes animate {
+//       0% {transform: translate(-50%, -50%) rotate(0deg);}
+//       100% {transform: translate(-50%, -50%) rotate(360deg);}
+//     }
+//     @keyframes animate2 {
+//       0% {transform: translate(-50%, -50%) rotate(360deg);}
+//       100% {transform: translate(-50%, -50%) rotate(0deg);}
+//     }
+//   }
+// }
+
+
+// THIS IS THE FIRST DESIGN
 
 // #team {
 //   #people-container {

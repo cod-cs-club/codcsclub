@@ -32,7 +32,9 @@ function Team() {
               <Link href={'/people/' + person.id} key={person.id}>
                 <a className="person">
                   <div className="content">
-                    <img src={person.image} />
+                    <div className="imgBox">
+                      <img src={person.image} />
+                    </div>
                     <h3>{person.name}<br></br><span class={"role role-" + person.role}>{person.role}</span></h3>
                   </div>
                   <span className="info">More Info &rarr;</span>
@@ -42,6 +44,34 @@ function Team() {
           })}
         </div>
       </div>
+      {/* FAILED EXPERIMENT (SEE DESIGN 3 IN CSS) */}
+      {/* <div id="team">
+        <div id="people-container">
+          { people && people.map(person => {
+            return (
+              <div className="person">
+                <div className="lines"></div>
+                <div className="imgBx">
+                <img src={person.image} />
+                </div>
+                <div className="content">
+                  <div className="details">
+                    <h2>{person.name}<br></br><span class={"role role-" + person.role}>{person.role}</span></h2>
+                    <div className="data">
+                      <h3>2<br/><span>Projects</span></h3>
+                      <h3>3<br/><span>Semester</span></h3>
+                      <h3>Status<br/><span>Active</span></h3>
+                    </div>
+                    <Link href={'/people/' + person.id} key={person.id}>
+                      <button>More Info</button>
+                      </Link>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div> */}
       
       <Footer />
     </>
