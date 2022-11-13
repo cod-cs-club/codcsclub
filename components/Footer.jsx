@@ -2,22 +2,28 @@
 function Footer() {
   return (
     <footer id="footer">
-         <div class= "container">
-            <div class = "Footer-main">
-                  <div class = "footer-column">
-                        <h3 href = "#" class = ""> CONTACT US </h3>
-                        </div>
-                  <div class = "footer-column">
-                        <h5>ABOUT US</h5>
-                        <br>
-                        </br>
-                        <h5> PROJECTS</h5>
-                        <br>
-                        </br>
-                        <h5>GALLERY</h5>
-                  </div>
-                  <div class = "footer-column">
-                        <h4 href = "/" class = "#"> FREQUENTLY ASKED QUESTIONS</h4>
+       <div class= "container">
+           <div class= "row">
+               <div class= "footer-col">
+                  <h3>CONTACT US</h3>
+                  <ul>
+                        <li><img src="/DiscordLogo.png" alt="The discord logo" id="discordimg"/><a href="https://discord.gg/uzBEgApK9K" class="btn">DISCORD</a></li>
+                        <li><img src="/github.png" alt="The github logo" id="githubimg"/><a href="https://github.com/cod-cs-club" class="btn">GITHUB</a></li>
+                  </ul>
+                </div>
+                <div class = "footer-col">
+                        <h3>ABOUT US</h3>
+                        <ul>
+                              <li><a href="#" >PROJECTS </a></li>
+                              <li><a href="#"> GALLERY </a></li>
+                        </ul> 
+                 </div>
+                 <div class = "footer-col">
+                        <h3> FREQUENTLY ASKED QUESTIONS</h3>
+                        <ul>
+                              <li><a href = "/" class = "#"> FRQUENTLY ASKED QUESTION 1</a></li>
+                              <li><a href = "/" class = "#"> FRQUENTLY ASKED QUESTION 2</a></li>
+                        </ul>
                   </div>
             </div>
             <div class = "footer-bottom">
