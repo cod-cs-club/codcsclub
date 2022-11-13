@@ -8,16 +8,16 @@ function Footer() {
                         <h3 href = "#" class = ""> CONTACT US </h3>
                         </div>
                   <div class = "footer-column">
-                        <h5>About us</h5>
+                        <h5>ABOUT US</h5>
                         <br>
                         </br>
-                        <h5>Projects</h5>
+                        <h5> PROJECTS</h5>
                         <br>
                         </br>
-                        <h5>Gallery</h5>
-                        <br>
-                        </br>
-                        <h5>Frequently asked questions</h5>
+                        <h5>GALLERY</h5>
+                  </div>
+                  <div class = "footer-column">
+                        <h4 href = "/" class = "#"> FREQUENTLY ASKED QUESTIONS</h4>
                   </div>
             </div>
             <div class = "footer-bottom">
