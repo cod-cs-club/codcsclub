@@ -2,24 +2,30 @@
 function Footer() {
   return (
     <footer id="footer">
-      <div className="col-1"></div>
-            <h3>CONTACT US</h3>
-      <div className="col-2"></div>
-            <a href="/">Home</a>
-      <div className="col-3">
-            <p>About us</p>
-            <br>
-            </br>
-            <p>Projects</p>
-            <br>
-            </br>
-            <p>Gallery</p>
-            <br>
-            </br>
-            <p>Frequently asked questions</p>
-      </div>
-            <img src="/CSLogoWhite.png" alt="Website logo" />
-      <p>&copy; Website created by the College of Dupage Computer Science Club</p>
+         <div class= "container">
+            <div class = "Footer-main">
+                  <div class = "footer-column">
+                        <h3 href = "#" class = ""> CONTACT US </h3>
+                        </div>
+                  <div class = "footer-column">
+                        <h5>About us</h5>
+                        <br>
+                        </br>
+                        <h5>Projects</h5>
+                        <br>
+                        </br>
+                        <h5>Gallery</h5>
+                        <br>
+                        </br>
+                        <h5>Frequently asked questions</h5>
+                  </div>
+            </div>
+            <div class = "footer-bottom">
+                  <img src="/CSLogoWhite.png" alt="Website logo" /> 
+                  <p> &copy; Website created by the College of Dupage Computer Science Club</p>
+            </div>
+          </div>
+                   
     </footer>
   )
 }

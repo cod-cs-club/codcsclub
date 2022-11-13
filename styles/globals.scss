@@ -107,15 +107,38 @@ body {
   border-bottom: 1px solid var(--border-color-2);
   font-size: 1em;
 
+  .Footer-main{
+  display: flex;
+  margin-top: 25px;
+}
+  
+h3{
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+  width: max-content;
+  margin-top: 30px;
+}
+
+h5{
+  text-align: center;
+  color: var(--text-color-4);
+  font-size: 1rem;
+  
+}
   img {
     width: 30px;
     height: 30px;
     border-radius: 70%;
+    
   }
   
   p {
+    display: flex;
     font-size: 1rem;
     color: var(--text-color-4);
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
