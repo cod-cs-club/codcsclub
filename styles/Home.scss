@@ -155,7 +155,7 @@
     padding: 30px 0;
     background-color: #08657B;
     text-align: center;
-
+    
     h2 {
       margin: 20px;
     }
@@ -165,38 +165,23 @@
       margin: 0 auto;
       padding: 20px;
     }
-
-    .container {
-      display: flex;
-      width: 100% ;
-      padding: 5% 1%;
-      box-sizing: border-box;
-      height: auto;
-      background:#08657B;
-      align-items: center;
-    }
-
-    .box {
-      flex: 1;
-      overflow: hidden;
-      transition: .5s;
-      margin: 0 1%;
-      box-sizing: border-box;
-    }
-
-    .box > img {
-      width: 100%;
-      height: calc(100% - 10vh);
-      object-fit:scale-down;  
-      transition: .5s;
-    }
-
-    .box:hover { flex: 1 1 50%; }
-
-    .box:hover > img {
+     .img-container{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 15vw);
+      
+      
+      img{
+      padding:10px ;
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      }
+  
+
     }
+    
   }
 
   /* Languages CSS */
