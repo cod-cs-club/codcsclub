@@ -13,8 +13,9 @@ function Home() {
     <>
       <Navbar selectedPage="Home" />
       <Banner
-        image="/codBackground2.jpg"
-        title="Computer Science Club"
+       /* image = "https://source.unsplash.com/10000x10000?code"   ///shows error message but the image looks nice, possible final resort pic */
+       image = "https://source.unsplash.com/1000x1000?code"
+       title="Computer Science Club"
         subtitle="The best club on Earth!"
       />
       
