@@ -45,6 +45,7 @@ export default function Admin() {
           <button className={section == 'People' ? 'nav-selected' : ''} onClick={() => setSection('People')}>People</button>
           <button className={section == 'Projects' ? 'nav-selected' : ''} onClick={() => setSection('Projects')}>Projects</button>
           <button className={section == 'Other' ? 'nav-selected' : ''} onClick={() => setSection('Other')}>Other</button>
+          <a href="/api/logout" id="logout">Logout</a>
         </nav>
 
         { section == 'People' &&

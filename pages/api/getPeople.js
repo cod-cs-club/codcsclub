@@ -1,4 +1,4 @@
-import db from '/database'
+import db from '/functions/database'
 
 export default function handler(req, res) {
   const people = []

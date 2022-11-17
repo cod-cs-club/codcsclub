@@ -1,4 +1,4 @@
-import db from '/database'
+import db from '/functions/database'
 import socials from '/data/socials.json'
 
 export default function handler(req, res) {
