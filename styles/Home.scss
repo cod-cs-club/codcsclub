@@ -300,6 +300,9 @@
 /* Mobile */
 
 @media(max-width: 500px) {
+  #home .showcase .wrapper {
+    text-align: center;
+  }
   #home .info-stats div {
     margin: 20px 30px;
   }
