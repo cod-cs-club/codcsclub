@@ -6,6 +6,8 @@ This website is a hub for all things related to the College of Dupage Computer S
 
 This project is made with [Next.js 12.2+](https://nextjs.org/) and requires [Node.js 16+](https://nodejs.org/en/). To get started, run `npm install` to install all dependencies, then run `npm run dev` to start the development server. Open [http://localhost:3000](http://localhost:3000) with your browser to view the site.
 
+Important configuration settings can be changed in the `config.json` file.
+
 ## Other Technologies
 
 This project uses the following notable technologies/packages:
@@ -24,7 +26,7 @@ All data is stored in the `database.db` file, located in the root folder.
 
 You can access the following data using these API routes:
 
-#### Public
+### Public API
 Can be accessed at any time
 - `/api/getProjects` Returns all club projects.
 - `/api/getPeople` Returns all club members.
@@ -32,6 +34,6 @@ Can be accessed at any time
 - `/api/login` Login to the admin panel.
 - `/api/logout` Logout as admin.
 
-#### Private
-Can only be accessed if the request contains the correct admin password is given in the `ce-password` cookie.
+### Private API
+Can only be accessed if the request contains the correct admin password in the `cs-password` cookie.
 - `/api/createProject`, `/api/deleteProject`, `/api/editProject`, `/api/createPerson`, `/api/deletePerson`, `/api/editPerson`
