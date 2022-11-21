@@ -1,5 +1,6 @@
 // Import everything we need.
 import Navbar from '/components/Navbar'
+import Banner from '/components/Banner'
 import Footer from '/components/Footer'
 
 // Contacts page.
@@ -7,6 +8,12 @@ export default function Contacts() {
   return (
     <>
       <Navbar selectedPage="Contacts" />
+      <Banner
+        image = "/contactsBanner.jpg"
+        title="Contact Us"
+        subtitle="Subtitle"
+      />
+
 
       <div id="contacts">
         <div class="container">
