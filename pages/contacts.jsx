@@ -17,16 +17,20 @@ export default function Contacts() {
 
       <div id="contacts">
         <div class="container">
-          <div>
+          <div class="discord">
             <center><img src="/DiscordLogo.png" alt="The discord logo" id="discordimg"/></center>
             <center><a href="https://discord.gg/uzBEgApK9K" class="btn">Join the Discord!</a></center>
           </div>
 
-          <div>
+          <div class="github">
             <center><img src="/github.png" alt="The github logo" id="githubimg"/></center>
             <center><a href="https://github.com/cod-cs-club" class="btn">Join the Github!</a></center>
           </div>
-          
+
+          <div class="email">
+            <center><img src="/email.png" alt="The email logo" id="emailimg"/></center>
+            <center></center>
+          </div>
         </div>
       </div>
       
