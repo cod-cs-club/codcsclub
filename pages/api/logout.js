@@ -4,7 +4,7 @@ import config from '/config.json'
 export default function handler(req, res) {
   res.setHeader(
     'Set-Cookie',
-    cookie.serialize('password', '', {
+    cookie.serialize('cs-password', '', {
         httpOnly: true,
         secure: config.https,
         maxAge: new Date(0),

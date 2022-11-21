@@ -3,10 +3,9 @@ import config from '/config.json'
 
 export default function handler(req, res) {
   const password = req.body.password ? req.body.password : ''
-  console.log(password)
   res.setHeader(
     'Set-Cookie',
-    cookie.serialize('password', password, {
+    cookie.serialize('cs-password', password, {
         httpOnly: true,
         secure: config.https,
         maxAge: 7889238, // 3 months

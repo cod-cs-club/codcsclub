@@ -1,10 +1,10 @@
 import db from '/functions/database'
+import roles from '/data/roles.json'
 
 export default function handler(req, res) {
-  const people = []
   db.all(`SELECT * FROM People`, (err, rows) => {
-    rows.forEach(row => {
-      people.push({
+    const people = rows.map(row => {
+      return {
         id: row.id,
         name: row.name,
         image: row.image,
@@ -13,8 +13,14 @@ export default function handler(req, res) {
         onteam: row.onteam,
         socials: JSON.parse(row.socials),
         date: row.date
-      })
+      }
     })
-    res.status(200).json(people)
+
+    // Sort people by highest role.
+    const sortedPeople = roles.flatMap(role => {
+      return people.filter(person => person.role == role.name)
+    })
+
+    res.status(200).json(sortedPeople)
   })
 }

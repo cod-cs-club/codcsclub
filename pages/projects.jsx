@@ -7,8 +7,8 @@ import api from '/functions/api'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
-// Projects page
-function Projects() {
+// Projects page.
+export default function Projects() {
   const [projects, setProjects] = useState()
 
   useEffect(() => {
@@ -70,6 +70,3 @@ function Projects() {
     </>
   )
 }
-
-// Export the page.
-export default Projects

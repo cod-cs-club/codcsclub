@@ -4,7 +4,7 @@ import { adminPassword } from '/config.json'
 export default function middleware(req) {
   const url = req.nextUrl.pathname
   // Prevent users without the correct password cookie from going to /admin.
-  const password = req.cookies.get('password')
+  const password = req.cookies.get('cs-password')
   if (url == '/login') {
     if (password != adminPassword) return
     return NextResponse.redirect(new URL('/admin', req.url))

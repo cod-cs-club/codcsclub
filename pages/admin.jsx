@@ -7,7 +7,7 @@ import api from '/functions/api'
 
 import { useState, useEffect } from 'react'
 
-// Admin Panel page
+// Admin Panel page.
 export default function Admin() {
   const [section, setSection] = useState('People')
   const [people, setPeople] = useState([])
@@ -20,13 +20,6 @@ export default function Admin() {
     api.getProjects()
       .then(data => setProjects(data))
   }, [])
-
-  // Close open modal if you press ESCAPE.
-  // useEffect(() => {
-  //   document.addEventListener("keydown", e => {
-  //     if (e.key == "Escape") closeModals()
-  //   })
-  // }, [])
 
   // Disable body scrolling when a modal is open.
   useEffect(() => {

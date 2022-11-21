@@ -1,9 +1,9 @@
-// Import any custom components we need
+// Import everything we need.
 import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
 
-// Contacts page
-function Contacts() {
+// Contacts page.
+export default function Contacts() {
   return (
     <>
       <Navbar selectedPage="Contacts" />
@@ -21,13 +21,9 @@ function Contacts() {
           </div>
           
         </div>
-        
       </div>
       
       <Footer />
     </>
   )
 }
-
-// Export the page.
-export default Contacts

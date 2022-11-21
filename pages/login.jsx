@@ -1,9 +1,8 @@
 // Import everything we need.
 import Navbar from '/components/Navbar'
-import Footer from '/components/Footer'
 
-import { useState } from 'react'
 import Router from 'next/router'
+import { useState } from 'react'
 
 // Admin login page.
 export default function Login() {
