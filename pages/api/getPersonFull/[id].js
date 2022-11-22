@@ -1,11 +1,12 @@
-import db from '/database'
+import db from '/functions/database'
 import socials from '/data/socials.json'
 
 export default function handler(req, res) {
   const personID = req.query.id
-  const people = []
   db.get(`SELECT * FROM People WHERE id = (?1)`, { 1: personID }, (err, row) => {
     db.all(`SELECT * FROM Projects`, (err, rows) => {
+
+      // Get all the projects the person contributted to.
       const projects = []
       rows.forEach(project => {
         const contributors = JSON.parse(project.contributors)
@@ -19,15 +20,16 @@ export default function handler(req, res) {
         })
       })
       
-      const fullSocials = []
-      JSON.parse(row.socials).forEach(social => {
+      // Return the person's socials with the correct icon and stuff.
+      const fullSocials = JSON.parse(row.socials).flatMap(social => {
         const fullSocial = socials.find(f => f.name == social.name)
         if (!fullSocial) return
         fullSocial.link = social.link
-        fullSocials.push(fullSocial)
+        return fullSocial
       })
 
-      const info = {
+      // Put all the info together.
+      const personInfo = {
         id: row.id,
         name: row.name,
         image: row.image,
@@ -38,7 +40,8 @@ export default function handler(req, res) {
         projects: projects,
         date: row.date
       }
-      res.status(200).json(info)
+      
+      res.status(200).json(personInfo)
     })
   })
 }

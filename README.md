@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# codcsclub
 
-## Getting Started
+This website is a hub for all things related to the College of Dupage Computer Science Club. The site hosts information about all our projects, team members, and other related details.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This project is made with [Next.js 12.2+](https://nextjs.org/) and requires [Node.js 16+](https://nodejs.org/en/). To get started, run `npm install` to install all dependencies, then run `npm run dev` to start the development server. Open [http://localhost:3000](http://localhost:3000) with your browser to view the site.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Important configuration settings can be changed in the `config.json` file.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Other Technologies
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This project uses the following notable technologies/packages:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `SASS`
+- `SQLite3`
+- `Cookie`
 
-## Learn More
+## Content Management
 
-To learn more about Next.js, take a look at the following resources:
+Administrators can manage all club members, projects, and other information through the admin panel, accessed in the `/admin` page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All data is stored in the `database.db` file, located in the root folder.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Public & Private API
 
-## Deploy on Vercel
+You can access the following data using these API routes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Public API
+Can be accessed at any time
+- `/api/getProjects` Returns all club projects.
+- `/api/getPeople` Returns all club members.
+- `/api/getPersonFull/<ID>` Return full info on club member.
+- `/api/login` Login to the admin panel.
+- `/api/logout` Logout as admin.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Private API
+Can only be accessed if the request contains the correct admin password in the `cs-password` cookie.
+- `/api/createProject`, `/api/deleteProject`, `/api/editProject`, `/api/createPerson`, `/api/deletePerson`, `/api/editPerson`
