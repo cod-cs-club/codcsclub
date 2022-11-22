@@ -27,8 +27,7 @@ function Footer() {
                   </div>
             </div>
             <div class = "footer-bottom">
-                  <img src="/CSLogoWhite.png" alt="Website logo" /> 
-                  <p> &copy; Website created by the College of Dupage Computer Science Club</p>
+                  <p><img src="/CSLogoWhite.png" alt="Website logo" />  &copy; Website created by the College of Dupage Computer Science Club</p>
             </div>
           </div>
                    
