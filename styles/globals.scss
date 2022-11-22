@@ -110,13 +110,15 @@ body {
 .row{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 ul{
   list-style: none;
 }
 .footer-col{
-padding:0 80px;
+padding:0 200px;
+
 }
 .footer-col h3{
 text-transform: capitalize;
