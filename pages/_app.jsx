@@ -6,10 +6,12 @@ import '/styles/Team.scss'
 import '/styles/Contacts.scss'
 import '/styles/People.scss'
 import '/styles/Admin.scss'
-import '/styles/Login.scss'
 import '/styles/404.scss'
 
 // Main app function.
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
+
+// Export our app.
+export default App

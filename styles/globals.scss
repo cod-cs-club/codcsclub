@@ -91,7 +91,6 @@ body {
 @media(max-width: 500px) {
   #navbar {
     flex-direction: column;
-    height: fit-content;
   }
 }
 
@@ -212,12 +211,6 @@ position: relative;
   }
 }
 
-@media(max-width: 500px) {
-  #banner h1 {
-    font-size: 3rem;
-  }
-}
-
 // Scroll to top button
 
 #scrollButton {
@@ -241,7 +234,7 @@ position: relative;
     width: 50px;
     color: #fff;
     cursor: pointer;
-    animation: movebtn 0.5s ease-in-out;
+    animation: movebtn 1s ease-in-out;
     transition: all .5s ease-in-out;
   }
 
@@ -255,8 +248,8 @@ position: relative;
     0%{
       transform: translateY(100px);
     }
-    50%{
-      transform: translateY(-10px);
+    75%{
+      transform: translateY(-20px);
     }
     100%{
       transform: translateY(0px);

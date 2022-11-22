@@ -1,9 +1,6 @@
-import db from '/functions/database'
-import isAdmin from '/functions/isAdmin'
+import db from '/database'
 
 export default function handler(req, res) {
-  if (!isAdmin(req)) return res.status(403).send({ error: 'No permission' })
-
   db.serialize(() => {
     db.run(`INSERT INTO Projects (name) VALUES (?1)`, { 1: req.body.name })
     db.get(`SELECT * FROM Projects ORDER BY id DESC LIMIT 1`, (err, row) => {

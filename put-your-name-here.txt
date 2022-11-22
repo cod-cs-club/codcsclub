@@ -1,0 +1,25 @@
+To make sure you're able to commit a change
+to the project, Add your name below.
+
+------------------------------------------
+
+Voy
+Akthem
+Noah
+Allan
+Aaron
+Ayesha 
+Hubert
+Abdulaziz
+Ben
+Valentin
+Rachel
+Natalia
+<<<<<<< HEAD
+sam lee
+=======
+Ari
+Ethan
+Jason
+>>>>>>> 1db4a7d92a45fdb615d5de87a8db645a0fa26754
+Oscar

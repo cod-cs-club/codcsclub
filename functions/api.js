@@ -60,8 +60,6 @@ async function getProjects(options) {
 }
 
 async function editProject(info) {
-  console.log('edit')
-  console.log(info)
   const result = await fetch(`/api/editProject`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

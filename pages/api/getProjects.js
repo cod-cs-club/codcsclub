@@ -1,9 +1,10 @@
-import db from '/functions/database'
+import db from '/database'
 
 export default async function handler(req, res) {
+  const projects = []
   db.all(`SELECT * FROM Projects`, (err, rows) => {
-    const projects = rows.map(row => {
-      return {
+    rows.forEach(row => {
+      projects.push({
         id: row.id,
         name: row.name,
         image: row.image,
@@ -13,7 +14,7 @@ export default async function handler(req, res) {
         contributors: JSON.parse(row.contributors),
         tags: JSON.parse(row.tags),
         date: row.date
-      }
+      })
     })
     res.status(200).json(projects)
   })

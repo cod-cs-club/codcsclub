@@ -1,9 +1,7 @@
-import db from '/functions/database'
-import isAdmin from '/functions/isAdmin'
+import db from '/database'
 
 export default function handler(req, res) {
-  if (!isAdmin(req)) return res.status(403).send({ error: 'No permission' })
-
+  console.log(req.body.info)
   // Filter out contributors with id of 0 (aka: No Person Selected).
   const contributors = req.body.info.contributors.filter(f => f.id != 0)
   db.serialize(() => {

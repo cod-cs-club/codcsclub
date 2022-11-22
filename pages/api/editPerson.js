@@ -1,9 +1,6 @@
-import db from '/functions/database'
-import isAdmin from '/functions/isAdmin'
+import db from '/database'
 
 export default function handler(req, res) {
-  if (!isAdmin(req)) return res.status(403).send({ error: 'No permission' })
-
   db.serialize(() => {
     db.run(`UPDATE People SET name = (?1), bio = (?2), image = (?3), role = (?4), onteam = (?5), socials = (?6) WHERE id = (?7)`, {
       1: req.body.info.name,
