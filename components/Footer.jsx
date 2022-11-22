@@ -18,13 +18,6 @@ function Footer() {
                               <li><a href="#"> GALLERY </a></li>
                         </ul> 
                  </div>
-                 <div class = "footer-col">
-                        <h3> FREQUENTLY ASKED QUESTIONS</h3>
-                        <ul>
-                              <li><a href = "/" class = "#"> FRQUENTLY ASKED QUESTION 1</a></li>
-                              <li><a href = "/" class = "#"> FRQUENTLY ASKED QUESTION 2</a></li>
-                        </ul>
-                  </div>
             </div>
             <div class = "footer-bottom">
                   <p><img src="/CSLogoWhite.png" alt="Website logo" />  &copy; Website created by the College of Dupage Computer Science Club</p>
