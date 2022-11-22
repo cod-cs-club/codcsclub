@@ -14,21 +14,17 @@ function Footer() {
                 <div class = "footer-col">
                         <h3>ABOUT US</h3>
                         <ul>
-                              <li><a href="#" >PROJECTS </a></li>
-                              <li><a href="#"> GALLERY </a></li>
+                             <li><a href="/Home"> HOME </a></li> 
+                             <li><a href="/projects" >PROJECTS </a></li>
+                             <li><a href="/Team" >TEAM </a></li>
+
+                              
                         </ul> 
                  </div>
-                 <div class = "footer-col">
-                        <h3> FREQUENTLY ASKED QUESTIONS</h3>
-                        <ul>
-                              <li><a href = "/" class = "#"> FRQUENTLY ASKED QUESTION 1</a></li>
-                              <li><a href = "/" class = "#"> FRQUENTLY ASKED QUESTION 2</a></li>
-                        </ul>
-                  </div>
             </div>
             <div class = "footer-bottom">
-                  <img src="/CSLogoWhite.png" alt="Website logo" /> 
-                  <p> &copy; Website created by the College of Dupage Computer Science Club</p>
+                  
+                  <p><img src="/CSLogoWhite.png" alt="Website logo" />  &copy; Website created by the College of Dupage Computer Science Club</p>
             </div>
           </div>
                    
