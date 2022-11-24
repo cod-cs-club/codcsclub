@@ -14,9 +14,9 @@ function Footer() {
                 <div class = "footer-col">
                         <h3>ABOUT US</h3>
                         <ul>
-                             <li><a href="/Home"> HOME </a></li> 
+                             <li><a href="/"> HOME </a></li> 
                              <li><a href="/projects" >PROJECTS </a></li>
-                             <li><a href="/Team" >TEAM </a></li>
+                             <li><a href="/team" >TEAM </a></li>
 
                               
                         </ul> 
