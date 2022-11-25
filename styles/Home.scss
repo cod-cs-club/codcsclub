@@ -253,13 +253,7 @@
       font-size: 1.875rem;
     }
 
-    .acc {
-      width: 100%;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    b span {
+    span {
       font-size: 25px;
     }
 
@@ -277,6 +271,8 @@
       color: white;
       transition: all .3s ease-out;
       padding: 20px;
+
+      &.active { background-color: var(--dark-teal); }
     }
 
     .answer {
@@ -289,10 +285,6 @@
       text-align: justify;
       overflow: hidden;
       transition: all .3s ease-out;
-    }
-
-    .active {
-      background-color: var(--dark-teal);
     }
   }
 }

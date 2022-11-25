@@ -72,7 +72,7 @@ export default function Home() {
             <h2>Image Gallery</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
           </div>
-         <div className="img-container">
+          <div className="img-container">
             <img src='https://source.unsplash.com/400x400?mountain' />
             <img src='https://source.unsplash.com/400x400?lake' />
             <img src='https://source.unsplash.com/400x400?trees' />
@@ -120,7 +120,17 @@ export default function Home() {
         <div className="glassWindow"></div>
 
         {/* FAQ */}
-        <Question />
+        <div className="faq">
+          <h2>Frequently Asked Questions</h2>
+          <Question
+            question="Question 1: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque."
+            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam."
+          />
+          <Question
+            question="Question 2: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque."
+            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam."
+          />
+        </div>
       </main>
 
       <ScrollToTop />
