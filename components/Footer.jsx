@@ -1,36 +1,38 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 // Global Footer component.
-function Footer() {
+export default function Footer() {
   return (
     <footer id="footer">
-       <div class= "container">
-           <div class= "row">
-               <div class= "footer-col">
-                  <h3>CONTACT US</h3>
-                  <ul>
-                        <li><img src="/DiscordLogo.png" alt="The discord logo" id="discordimg"/><a href="https://discord.gg/uzBEgApK9K" class="btn">DISCORD</a></li>
-                        <li><img src="/github.png" alt="The github logo" id="githubimg"/><a href="https://github.com/cod-cs-club" class="btn">GITHUB</a></li>
-                  </ul>
-                </div>
-                <div class = "footer-col">
-                        <h3>ABOUT US</h3>
-                        <ul>
-                             <li><a href="/"> HOME </a></li> 
-                             <li><a href="/projects" >PROJECTS </a></li>
-                             <li><a href="/team" >TEAM </a></li>
-
-                              
-                        </ul> 
-                 </div>
-            </div>
-            <div class = "footer-bottom">
-                  
-                  <p><img src="/CSLogoWhite.png" alt="Website logo" />  &copy; Website created by the College of Dupage Computer Science Club</p>
-            </div>
-          </div>
-                   
+      <div className="row">
+        <div className="column">
+          <h6>CONTACT US</h6>
+          <ul>
+            <li>
+              <Image src="/DiscordLogo.png" alt="The discord logo" width="30" height="30" />
+              <a href="https://discord.gg/uzBEgApK9K" className="btn">DISCORD</a>
+            </li>
+            <li>
+              <Image src="/github.png" alt="The github logo" width="30" height="30" />
+              <a href="https://github.com/cod-cs-club" className="btn">GITHUB</a>
+            </li>
+          </ul>
+        </div>
+        <div className="column">
+          <h6>QUICK LINKS</h6>
+          <ul>
+            <li><Link href="/"><a>HOME</a></Link></li> 
+            <li><Link href="/projects"><a>PROJECTS</a></Link></li> 
+            <li><Link href="/team"><a>TEAM</a></Link></li> 
+            <li><Link href="/admin"><a>ADMIN PANEL</a></Link></li> 
+          </ul> 
+        </div>
+      </div>
+      <div className="bottom">
+        <Image src="/CSLogoWhite.png" alt="Website logo" width="30" height="30" />
+        <p>&copy; Website created by the College of Dupage Computer Science Club</p>
+      </div>
     </footer>
   )
 }
-
-// Export the component.
-export default Footer

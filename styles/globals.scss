@@ -94,82 +94,77 @@ body {
   }
 }
 
-/* Global Footer */
+// Global Footer
 #footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 20px;
   padding: 30px 30px 50px 30px;
+  font-size: 1em;
   background-color: var(--bg-color-2);
   border-top: 1px solid var(--border-color-2);
   border-bottom: 1px solid var(--border-color-2);
-  font-size: 1em;
 
-.row{
+  .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     justify-content: space-evenly;
-}
-
-ul{
-  list-style: none;
-}
-.footer-col{
-padding:0 200px;
-}
-.footer-col h3{
-text-transform: capitalize;
-font-size: 18px;
-color: white;
-margin-bottom: 25px;
-margin-top: 20px;
-font-weight: 500;
-position: relative;
-}
-.footer-col h3::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #0d9292;
-  height: 2px;
-  box-sizing: border-box;
-  width: 100px;
-}
-.footer-col ul li{
-  margin-bottom: 20px;
-}
-.footer-col ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffffff;
-  text-decoration: none;
-  color: #bbbb;
-  display: block;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-.footer-col ul li a:hover{
-  color: #ffffff;
-  padding-left: 10px;
-}
-
-  img {
-    width: 30px;
-    height: 30px;
-    border-radius: 70%;
-    
   }
+
+  .column {
+    padding: 0 200px;
+
+    h6 {
+      position: relative;
+      margin-bottom: 25px;
+      margin-top: 20px;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 18px;
+      color: white;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100px;
+        height: 2px;
+        background-color: #0d9292;
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 10px;
+
+        img { border-radius: 50%; }
   
-  p {
+        a {
+          display: block;
+          text-decoration: none;
+          font-size: 1rem;
+          color: #bbbb;
+          transition: 300ms ease;
+          &:hover{ color: #ffffff; padding-left: 10px; }
+        }
+      }
+    }
+  }
+
+  .bottom {
     display: flex;
-    font-size: 1rem;
-    color: var(--text-color-4);
-    margin-top: 0px;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+
+    img { border-radius: 50%; }
+    p { font-size: 1rem; color: var(--text-color-4); }
   }
 }
 
@@ -217,7 +212,6 @@ position: relative;
 }
 
 // Scroll to top button
-
 #scrollButton {
   position: relative;
 
