@@ -28,6 +28,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--main-bg-color);
   padding-top: 50px;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -254,6 +255,16 @@ body {
       transform: translateY(0px);
     }
   }
+}
+
+// Page transitions
+main {
+  animation: page-transition 300ms ease-in-out;
+}
+
+@keyframes page-transition {
+  0% { translate: 70vw 0; opacity: 0; }
+  100% { translate: 0 0; opacity: 1; }
 }
 
 // Global role colors

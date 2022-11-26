@@ -15,7 +15,7 @@ export default function Contacts() {
       />
 
 
-      <div id="contacts">
+      <main id="contacts">
         <div class="container">
           <div class="discord">
             <center><img src="/DiscordLogo.png" alt="The discord logo" id="discordimg"/></center>
@@ -38,7 +38,7 @@ export default function Contacts() {
               </div>
           </div>
         </div>
-      </div>
+      </main>
       
       <Footer />
     </>

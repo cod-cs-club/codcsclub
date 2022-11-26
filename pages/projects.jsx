@@ -25,7 +25,7 @@ export default function Projects() {
         subtitle="All of our projects"
       />
       
-      <div id="projects">
+      <main id="projects">
         <div id="project-list">
           { projects && projects.map(project => {
             return (
@@ -64,7 +64,7 @@ export default function Projects() {
             )
           })}
         </div>
-      </div>
+      </main>
 
       <Footer />
     </>

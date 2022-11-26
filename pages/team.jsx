@@ -18,14 +18,14 @@ export default function Team() {
 
   return (
     <>
-      <Navbar selectedPage="Meet the Team" />
+      <Navbar selectedPage="Team" />
       <Banner
         image="/TheTeam.jpg"
         title="Meet the Team"
         subtitle="Subtitle"
       />
 
-      <div id="team">
+      <main id="team">
         <div id="people-container">
           { people && people.map(person => {
             return (
@@ -43,7 +43,7 @@ export default function Team() {
             )
           })}
         </div>
-      </div>
+      </main>
       
       <Footer />
     </>
