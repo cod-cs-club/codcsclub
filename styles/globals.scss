@@ -28,7 +28,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--main-bg-color);
   padding-top: 50px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -101,6 +101,7 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 30px 30px 50px 30px;
+  margin-right: 0;
   font-size: 1em;
   background-color: var(--bg-color-2);
   border-top: 1px solid var(--border-color-2);
@@ -109,22 +110,21 @@ body {
   .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   .column {
-    padding: 0 200px;
+    max-width: 300px;
 
     h6 {
       position: relative;
       margin-bottom: 25px;
       margin-top: 20px;
-      text-transform: capitalize;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 1.1rem;
       color: white;
 
-      &::before{
+      &::before {
         content: '';
         position: absolute;
         left: 0;
