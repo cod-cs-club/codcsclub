@@ -31,6 +31,23 @@ body {
   // overflow-x: hidden;
 }
 
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 6px;
+  background: gainsboro;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark-teal);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #006570;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
