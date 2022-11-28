@@ -9,7 +9,7 @@ export default function Contacts() {
     <>
       <Navbar selectedPage="Contacts" />
       <Banner
-        image = "/contactsBanner.jpg"
+        image = "bg-contact.jpg"
         title="Contact Us"
         subtitle="Subtitle"
       />

@@ -20,7 +20,7 @@ export default function Projects() {
     <>
       <Navbar selectedPage="Projects" />
       <Banner
-        image="/CSLogo.png"
+        image = "bg-project2.jpg"
         title="Projects"
         subtitle="All of our projects"
       />
