@@ -2,6 +2,7 @@
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
+import GallaryImage from '/components/GallaryImage'
 import Question from '/components/Question'
 import ScrollToTop from '/components/ScrollToTop'
 
@@ -73,16 +74,8 @@ export default function Home() {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
           </div>
           <div className="img-container">
-            <img src='https://source.unsplash.com/400x400?mountain' />
-            <img src='https://source.unsplash.com/400x400?lake' />
-            <img src='https://source.unsplash.com/400x400?trees' />
-            <img src='https://source.unsplash.com/400x400?water' />
-            <img src='https://source.unsplash.com/400x400?nature' />
-            <img src='https://source.unsplash.com/400x400?yellowstone' />
-            <img src='https://source.unsplash.com/400x400?life' />
-            <img src='https://source.unsplash.com/400x400?sky' />
-            <img src='https://source.unsplash.com/400x400?waterfall' />
-            <img src='https://source.unsplash.com/400x400?city' />
+            <GallaryImage image="Team 2022.jpg" />
+            <GallaryImage image="bg-home2.png" />
           </div>
         </div>
 
