@@ -1,11 +1,13 @@
 /* CSS specific to the Home page. */
 
 #home {
+ /*
   .glassWindow{
     background-image: url("/codBackground2.jpg");
     background-size: cover;
     background-position: fixed;
   }
+  */
 
   .button {
     /* background-color: #009ea9; */
@@ -30,7 +32,7 @@
   .showcase {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 30px 10px;
+    padding: 0px 10px;
     text-align: center;
 
     p {
@@ -197,9 +199,6 @@
         z-index: 9999;
         animation: image-fade-in 300ms ease-in-out;
 
-        img {
-          
-        }
 
         @keyframes image-fade-in {
           0% {
@@ -320,8 +319,17 @@
 /* Mobile */
 
 @media(max-width: 500px) {
+
+  #home .showcase{
+    margin-top: -30px;
+  }
+
   #home .showcase .wrapper {
-    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  #home .showcase .dynamic-txts li{
+    font-size: 1.875rem;
   }
   #home .info-stats div {
     margin: 20px 30px;
