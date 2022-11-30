@@ -33,7 +33,7 @@ export default function Contacts() {
             <center><img src="/email.png" alt="The email logo" id="emailimg"/></center>
             <center><p class="p">Get in contact with leadership here!</p></center>
               <div class="emails">
-                <center><a href = "stovanjovsksid@dupage.edu" class="btn">Send Email</a></center>
+                <center><a href = "mailto: stovanjovsksid@dupage.edu" class="btn">Send Email</a></center>
               </div>
           </div>
         </div>
