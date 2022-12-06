@@ -121,7 +121,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
                       <select id="person-edit-role" defaultValue={personEditModal.role}>
                         { roles.map((role, index) => {
                           return (
-                            <option value={role.name}>{role.name}</option>
+                            <option value={role.name} key={role.name}>{role.name}</option>
                           )
                         })}
                       </select>
