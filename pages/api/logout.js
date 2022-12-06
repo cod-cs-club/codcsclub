@@ -1,12 +1,11 @@
 import cookie from 'cookie'
-import config from '/config.json'
 
 export default function handler(req, res) {
   res.setHeader(
     'Set-Cookie',
     cookie.serialize('cs-password', '', {
         httpOnly: true,
-        secure: config.https,
+        secure: process.env.HTTPS,
         maxAge: new Date(0),
         sameSite: 'strict',
         path: '/'

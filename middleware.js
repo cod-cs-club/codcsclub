@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
-import { adminPassword } from '/config.json'
+
+const adminPassword = process.env.ADMIN_PASSWORD
 
 export default function middleware(req) {
   const url = req.nextUrl.pathname

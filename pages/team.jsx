@@ -3,14 +3,13 @@ import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
-import config from '/config.json'
 
 import Image from 'next/image'
 import Link from 'next/link'
 
 // Fetch people server-side, then pass as a prop.
 export async function getStaticProps() {
-  const result = await fetch(`${config.host}/api/getPeople`)
+  const result = await fetch(`${process.env.HOST}/api/getPeople`)
   const people = await result.json()
   return {
     props: { people },
