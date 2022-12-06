@@ -63,11 +63,7 @@
     margin-right: 2px;
   }
   
-  .contributors img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
+  .contributors img { border-radius: 50%; }
   
   .languages {
     display: flex;
@@ -86,10 +82,10 @@
     border-radius: 8px;
   }
   
-  .bubble img {
-    width: 15px;
-    height: 15px;
-  }
+  // .bubble img {
+  //   width: 15px;
+  //   height: 15px;
+  // }
   
   .right {
     display: flex;
@@ -97,11 +93,7 @@
     justify-content: space-between;
   }
   
-  .right img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
+  .right img { margin-bottom: 10px; }
   
   .right a {
     padding: 4px 8px;

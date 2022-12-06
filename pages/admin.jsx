@@ -1,4 +1,5 @@
 // Import everything we need.
+import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
 import AdminPeopleSection from '/components/AdminPeopleSection'
@@ -30,6 +31,7 @@ export default function Admin() {
 
   return (
     <>
+      <HeadMeta title="Admin Panel" />
       <Navbar />
       
       <div id="admin">

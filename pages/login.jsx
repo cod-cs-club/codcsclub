@@ -1,4 +1,5 @@
 // Import everything we need.
+import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 
 import Router from 'next/router'
@@ -27,6 +28,7 @@ export default function Login() {
 
   return (
     <>
+      <HeadMeta title="Admin Login" />
       <Navbar />
       
       <main id="login">

@@ -1,26 +1,31 @@
 // Import everything we need.
+import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
-import api from '/functions/api'
+import config from '/config.json'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+
+// Fetch projects server-side, then pass as a prop.
+export async function getStaticProps() {
+  const result = await fetch(`${config.host}/api/getProjectsFull`)
+  const projects = await result.json()
+  return {
+    props: { projects },
+    revalidate: 10 // 10 seconds
+  }
+}
 
 // Projects page.
-export default function Projects() {
-  const [projects, setProjects] = useState()
-
-  useEffect(() => {
-    api.getProjects({ fullInfo: true })
-      .then(data => setProjects(data))
-  }, [])
-
+export default function Projects({ projects }) {
   return (
     <>
+      <HeadMeta title="Projects" />
       <Navbar selectedPage="Projects" />
       <Banner
-        image = "bg-project2.jpg"
+        image = "bg-projects.jpg"
         title="Projects"
         subtitle="All of our projects"
       />
@@ -39,7 +44,7 @@ export default function Projects() {
                       return (
                         <Link href={`/people/${person.id}`} key={person.id}>
                           <a>
-                            <img src={person.image} />
+                            <Image src={person.image} alt="" width="20" height="20" />
                           </a>
                         </Link>
                       )
@@ -49,7 +54,7 @@ export default function Projects() {
                     { project.tags.map(tag => {
                       return (
                         <div className="bubble" key={tag.name}>
-                          <img src={tag.image} />
+                          <Image src={tag.image} alt="" width="18" height="18" />
                           <span>{tag.name}</span>
                         </div>
                       )
@@ -57,7 +62,7 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="right">
-                  <img src={project.image} alt="Project logo image" />
+                  <Image src={project.image} alt="Project logo image" width="100" height="100" />
                   <a href={project.repository}>Open in GitHub</a>
                 </div>
               </div>

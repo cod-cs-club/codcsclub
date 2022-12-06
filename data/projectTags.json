@@ -1,8 +1,8 @@
 [
-  { "name": "HTML", "image": "/html.png" },
-  { "name": "CSS", "image": "/css.png" },
-  { "name": "JavaScript", "image": "/javascript.png" },
-  { "name": "Next.js", "image": "/nextjs.png" },
-  { "name": "Node.js", "image": "/node.png" },
-  { "name": "Python", "image": "/python.png" }
+  { "name": "HTML", "image": "/icons/html.png" },
+  { "name": "CSS", "image": "/icons/css.png" },
+  { "name": "JavaScript", "image": "/icons/javascript.png" },
+  { "name": "Next.js", "image": "/icons/nextjs.png" },
+  { "name": "Node.js", "image": "/icons/node.png" },
+  { "name": "Python", "image": "/icons/python.png" }
 ]

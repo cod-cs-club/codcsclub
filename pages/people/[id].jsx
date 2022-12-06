@@ -1,4 +1,5 @@
 // Import everything we need.
+import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
 import config from '/config.json'
@@ -12,7 +13,9 @@ export async function getStaticPaths() {
   const paths = people.map(person => {
     return { params: { id: `${person.id}` } }
   })
-  return { paths, fallback: false }
+  // fallback: 'blocking' will server-render
+  // page on-demand if the path doesn't exist.
+  return { paths, fallback: 'blocking' }
 }
 
 // Return all the given person's info as a prop,
@@ -20,13 +23,17 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const result = await fetch(`${config.host}/api/getPersonFull/${context.params.id}`)
   const person = await result.json()
-  return { props: { person } }
+  return {
+    props: { person },
+    revalidate: 10 // 10 seconds
+  }
 }
 
 // People's template page.
 export default function People({ person }) {
   return (
     <>
+      <HeadMeta title={person.name} />
       <Navbar />
       
       <div id="people" className={person.name}>

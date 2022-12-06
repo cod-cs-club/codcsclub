@@ -1,4 +1,4 @@
-/* CSS rules for every page. */
+// CSS rules for every page.
 
 :root {
   --bg-color-1: rgb(15, 15, 15);
@@ -28,24 +28,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--main-bg-color);
   padding-top: 50px;
-  // overflow-x: hidden;
-}
-
-/* Designing for scroll-bar */
-::-webkit-scrollbar {
-  width: 6px;
-  background: gainsboro;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--dark-teal);
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #006570;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -54,7 +37,32 @@ body {
   padding: 0;
 }
 
-/* Global Navbar */
+// Page transitions
+main {
+  animation: page-transition 300ms ease-in-out;
+
+  @keyframes page-transition {
+    0% { translate: 70vw 0; opacity: 0; }
+    100% { translate: 0 0; opacity: 1; }
+  }
+}
+
+// Global role colors
+.role-President { color: rgb(255, 235, 123); }
+.role-Vice { color: rgb(255, 235, 123); }
+.role-Project { color: rgb(255, 192, 203); }
+.role-Leadership { color: rgb(172, 255, 172); }
+.role-Member { color: rgb(142, 203, 203); }
+
+// Designing for scroll-bar
+::-webkit-scrollbar { width: 6px; background: gainsboro; }
+::-webkit-scrollbar-thumb { // Handle
+  background: var(--dark-teal);
+  border-radius: 10px;
+  &:hover { background: #006570; }
+}
+
+// Global Navbar
 #navbar {
   position: fixed;
   top: 0;
@@ -75,40 +83,48 @@ body {
     font-weight: normal;
     font-size: 1.25rem;
     color: #ffffff;
+
+    img { border-radius: 50%; background-color: white; }
   }
   
-  #logo img { border-radius: 50%; background-color: white; }
-  #pages { display: flex; align-items: center; }
-  
-  #pages a {
+  #pages {
     display: flex;
     align-items: center;
-    height: 100%;
-    gap: 5px;
-    padding: 15px 15px 12px 15px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #e6e6e6;
-    fill: #e6e6e6;
-    border-bottom: 3px solid transparent;
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 5px;
+      padding: 15px 15px 12px 15px;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #e6e6e6;
+      fill: #e6e6e6;
+      border-bottom: 3px solid transparent;
+
+      &:hover { color: #0d9292; fill: #0d9292; }
+      svg { width: 20px; height: 20px; }
+
+      &.current-page {
+        color: #ffffff;
+        fill: #ffffff; 
+        border-color: #b500d1;
+        &:hover { color: #ffffff; fill: #ffffff; }
+        svg { animation: svg-selected ease-in-out 400ms; }
+      }
+    }
   }
-  
-  #pages a:hover { color: #0d9292; fill: #0d9292; }
-  #pages a svg { width: 20px; height: 20px; }
-  #pages .current-page { color: #ffffff; fill: #ffffff;  border-color: #b500d1; }
-  #pages .current-page:hover { color: #ffffff; fill: #ffffff; }
-  #pages .current-page svg { animation: svg-selected ease-in-out 400ms; }
   
   @keyframes svg-selected {
     0% { scale: 1; }
     50% { scale: 1.2; }
     100% { scale: 1; }
   }
-}
 
-@media(max-width: 500px) {
-  #navbar {
-    flex-direction: column;
+  @media(max-width: 500px) {
+    & { flex-direction: column; }
+    & #pages a { flex-direction: column; gap: 0; }
   }
 }
 
@@ -194,6 +210,7 @@ body {
   box-shadow: inset 0 0 0 9999em rgb(0, 0, 0, 0.5);
   text-align: center;
   background-position: center;
+  border-top: 1px solid var(--border-color-2);
   border-bottom: 1px solid var(--border-color-2);
 
   h1 {
@@ -217,16 +234,10 @@ body {
   }
 }
 
-@media(max-width: 500px) {
-  body {
-    padding-top: 100px;
-  }
-  #banner {
-    padding: 20px;
-  }
-  #banner h1 {
-    font-size: 1.875rem;
-  }
+@media (max-width: 500px) {
+  body { padding-top: 121px; }
+  #banner { padding: 20px; }
+  #banner h1 { font-size: 1.875rem; }
 }
 
 // Scroll to top button
@@ -253,40 +264,17 @@ body {
     cursor: pointer;
     animation: movebtn 0.5s ease-in-out;
     transition: all .5s ease-in-out;
-  }
 
-  .icon-style:hover {
-    background: #fff;
-    color: var(--dark-teal);
-    border: 2px solid var(--dark-teal);
+    &:hover {
+      background: #fff;
+      color: var(--dark-teal);
+      border: 2px solid var(--dark-teal);
+    }
   }
 
   @keyframes movebtn {
-    0%{
-      transform: translateY(100px);
-    }
-    50%{
-      transform: translateY(-10px);
-    }
-    100%{
-      transform: translateY(0px);
-    }
+    0% { transform: translateY(100px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
   }
 }
-
-// Page transitions
-main {
-  animation: page-transition 300ms ease-in-out;
-}
-
-@keyframes page-transition {
-  0% { translate: 70vw 0; opacity: 0; }
-  100% { translate: 0 0; opacity: 1; }
-}
-
-// Global role colors
-.role-President { color: rgb(255, 235, 123); }
-.role-Vice { color: rgb(255, 235, 123); }
-.role-Project { color: pink; }
-.role-Leadership { color: rgb(172, 255, 172); }
-.role-Member { color: rgb(142, 203, 203); }

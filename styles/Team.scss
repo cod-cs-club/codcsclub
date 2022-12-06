@@ -1,4 +1,4 @@
-/* CSS specific to the Meet the Team page. */
+// CSS specific to the Team page.
 
 #team {
   display: flex;
@@ -21,7 +21,7 @@
       position: relative;
       width: 250px;
       height: calc(250px * (4/3));
-      background: rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 255, 255, 0.02);
       margin: 20px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.2);
       border-radius: 15px;
@@ -41,8 +41,6 @@
 
         .imgBox {
           position: relative;
-          width: 160px;
-          height: 160px;
           transition: 0.5s;
           z-index: 1;
           overflow: hidden;

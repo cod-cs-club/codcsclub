@@ -29,6 +29,7 @@ You can access the following data using these API routes:
 ### Public API
 Can be accessed at any time
 - `/api/getProjects` Returns all club projects.
+- `/api/getProjectsFull` Returns all club projects with full contributors and tags info.
 - `/api/getPeople` Returns all club members.
 - `/api/getPersonFull/<ID>` Return full info on club member.
 - `/api/login` Login to the admin panel.

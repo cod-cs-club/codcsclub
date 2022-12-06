@@ -32,36 +32,12 @@ async function deletePerson(id) {
   return result.json()
 }
 
-async function getProjects(options) {
+async function getProjects() {
   const projects = await (await fetch(`/api/getProjects`)).json()
-  if (options && options.fullInfo) { // Makes project have full contributors and tags info.
-    const people = await (await fetch(`/api/getPeople`)).json()
-    projects.map(project => {
-      const fullContributors = []
-      project.contributors.map(contributor => {
-        const person = people.find(f => f.id == contributor.id)
-        if (!person) return
-        person.note = contributor.note
-        fullContributors.push(person)
-      })
-      project.contributors = fullContributors
-      
-      const fullTags = []
-      project.tags.map(tag => {
-        const fullTag = tags.find(f => f.name == tag)
-        if (!fullTag) return
-        fullTags.push(fullTag)
-      })
-      project.tags = fullTags
-    })
-    return projects
-  }
-  else return projects
+  return projects
 }
 
 async function editProject(info) {
-  console.log('edit')
-  console.log(info)
   const result = await fetch(`/api/editProject`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

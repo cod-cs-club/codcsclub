@@ -1,4 +1,5 @@
 // Import everything we need.
+import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
 
@@ -6,6 +7,7 @@ import Footer from '/components/Footer'
 export default function PageNotFound() {
   return (
     <>
+      <HeadMeta title="404 Page not Found" />
       <Navbar />
       
       <div id="pagenotfound">

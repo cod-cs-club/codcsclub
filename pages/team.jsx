@@ -1,28 +1,33 @@
 // Import everything we need.
+import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
-import api from '/functions/api'
+import config from '/config.json'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+
+// Fetch people server-side, then pass as a prop.
+export async function getStaticProps() {
+  const result = await fetch(`${config.host}/api/getPeople`)
+  const people = await result.json()
+  return {
+    props: { people },
+    revalidate: 10 // 10 seconds
+  }
+}
 
 // Team page.
-export default function Team() {
-  const [people, setPeople] = useState()
-
-  useEffect(() => {
-    api.getPeople({ fullInfo: true })
-      .then(data => setPeople(data))
-  }, [])
-
+export default function Team({ people }) {
   return (
     <>
+      <HeadMeta title="Team" />
       <Navbar selectedPage="Team" />
       <Banner
-        image="/TheTeam.jpg"
+        image="/bg-team.jpg"
         title="Meet the Team"
-        subtitle="Subtitle"
+        subtitle="The People Who Make it Happen!"
       />
 
       <main id="team">
@@ -33,7 +38,7 @@ export default function Team() {
                 <a className="person">
                   <div className="content">
                     <div className="imgBox">
-                      <img src={person.image} />
+                      <Image src={person.image} alt="Profile image" width="150" height="150" />
                     </div>
                     <h3>{person.name}<br></br><span class={"role role-" + person.role}>{person.role}</span></h3>
                   </div>
