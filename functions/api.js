@@ -1,5 +1,3 @@
-import tags from '/data/projectTags.json'
-
 async function getPeople() {
   const result = await fetch(`/api/getPeople`)
   return result.json()

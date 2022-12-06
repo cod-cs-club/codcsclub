@@ -3,14 +3,14 @@ import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
+import getProjectsFull from '/functions/db/getProjectsFull'
 
 import Image from 'next/image'
 import Link from 'next/link'
 
 // Fetch projects server-side, then pass as a prop.
 export async function getStaticProps() {
-  const result = await fetch(`${process.env.HOST}/api/getProjectsFull`)
-  const projects = await result.json()
+  const projects = await getProjectsFull()
   return {
     props: { projects },
     revalidate: 10 // 10 seconds

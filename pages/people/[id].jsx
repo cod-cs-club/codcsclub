@@ -2,13 +2,14 @@
 import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
+import getPeople from '/functions/db/getPeople'
+import getPersonFull from '/functions/db/getPersonFull'
 
 // Return a list of all the possible paths.
 // i.e: /people/(Every possible person's name)
 // This is so Next.js can pre-render the page.
 export async function getStaticPaths() {
-  const result = await fetch(`${process.env.HOST}/api/getPeople`)
-  const people = await result.json()
+  const people = await getPeople()
   const paths = people.map(person => {
     return { params: { id: `${person.id}` } }
   })
@@ -20,8 +21,7 @@ export async function getStaticPaths() {
 // Return all the given person's info as a prop,
 // so we can use it in the People() function.
 export async function getStaticProps(context) {
-  const result = await fetch(`${process.env.HOST}/api/getPersonFull/${context.params.id}`)
-  const person = await result.json()
+  const person = await getPersonFull(context.params.id)
   return {
     props: { person },
     revalidate: 10 // 10 seconds
