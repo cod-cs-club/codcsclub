@@ -7,6 +7,8 @@ import GalleryImage from '/components/GalleryImage'
 import Question from '/components/Question'
 import ScrollToTop from '/components/ScrollToTop'
 import Icons from '/components/CommonSVGs'
+import getPeople from '/functions/db/getPeople'
+import getProjects from '/functions/db/getProjects'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,10 +16,8 @@ import Head from 'next/head'
 
 // Fetch projects server-side, then pass as a prop.
 export async function getStaticProps() {
-  const result1 = await fetch(`${process.env.HOST}/api/getProjects`)
-  const projects = await result1.json()
-  const result2 = await fetch(`${process.env.HOST}/api/getPeople`)
-  const people = await result2.json()
+  const projects = await getProjects()
+  const people = await getPeople()
   return {
     props: {
       projectsCount: projects.length,
