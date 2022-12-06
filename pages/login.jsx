@@ -45,10 +45,9 @@ export default function Login() {
               <p>Wrong password bud</p>
             }
             { forgotPassword &&
-              <p>Too bad bud</p>
+              <p>Too bad.</p>
             }
             <button type="submit">Login</button>
-            
           </form>
         </div>
       </main>

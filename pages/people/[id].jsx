@@ -43,7 +43,7 @@ export default function People({ person }) {
             <div id="socials">
               { person.socials.map(social => {
                 return (
-                  <div className="social-item">
+                  <div className="social-item" key={social.name}>
                     <img src={social.image} alt="Social icon" />
                     <a href={social.link}>{social.name}</a>
                   </div>
@@ -61,7 +61,7 @@ export default function People({ person }) {
             <div id="projects-list">
               { person.projects.map(project => {
                 return (
-                  <div className="project">
+                  <div className="project" key={project.name}>
                     <img src={project.image} alt="" />
                     <span>{project.name}</span>
                     <p>{project.note}</p>

@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
         <title>codcsclub.com</title>
         <link rel="icon" href="/CSLogo.png" />
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta content="codcsclub.com" property="og:title" />
         <meta content="The official website for the College of Dupage Computer Science Club." property="og:description" />

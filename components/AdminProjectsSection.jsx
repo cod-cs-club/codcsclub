@@ -121,7 +121,7 @@ export default function AdminProjectsSection({ projects, setProjects, people }) 
       <div id="projects-list">
         { projects.map(project => {
           return (
-            <div className="project-item">
+            <div className="project-item" key={project.name}>
               <img src={project.image} alt="Project logo" />
               <h4>{project.name}</h4>
               <p>{project.description}</p>
@@ -163,7 +163,7 @@ export default function AdminProjectsSection({ projects, setProjects, people }) 
                   <div className="tags-select-container">
                     { tags.map(tag => {
                       return (
-                        <button type="button" className={projectTags.find(f => f == tag.name) ? "tag selected" : "tag"} onClick={() => projectToggleTag(tag.name)}>
+                        <button type="button" className={projectTags.find(f => f == tag.name) ? "tag selected" : "tag"} onClick={() => projectToggleTag(tag.name)} key={tag.name}>
                           <img src={tag.image} alt="" />
                           {tag.name}
                         </button>
@@ -202,7 +202,7 @@ export default function AdminProjectsSection({ projects, setProjects, people }) 
                 { people.map(person => {
                   if (projectContributors.find(f => f.id == person.id)) return
                   return (
-                    <div onClick={() => projectSelectContributor(person, projectAddContributorModal)} className="add-item-select">
+                    <div onClick={() => projectSelectContributor(person, projectAddContributorModal)} className="add-item-select" key={person.name}>
                       <img src={person.image} alt="" />
                       <span>{person.name}</span>
                     </div>
@@ -251,7 +251,7 @@ export default function AdminProjectsSection({ projects, setProjects, people }) 
 function PersonItem({ people, personID, clickAction }) {
   const person = [...people].find(f => f.id == personID)
   return (
-    <div className="item-button" onClick={clickAction}>
+    <div className="item-button" onClick={clickAction} key={person.id}>
       { person &&
         <>
           <img src={person.image} alt="" />

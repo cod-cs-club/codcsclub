@@ -6,6 +6,7 @@ import AdminPeopleSection from '/components/AdminPeopleSection'
 import AdminProjectsSection from '/components/AdminProjectsSection'
 import api from '/functions/api'
 
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 // Admin Panel page.
@@ -40,7 +41,9 @@ export default function Admin() {
           <button className={section == 'People' ? 'nav-selected' : ''} onClick={() => setSection('People')}>People</button>
           <button className={section == 'Projects' ? 'nav-selected' : ''} onClick={() => setSection('Projects')}>Projects</button>
           <button className={section == 'Other' ? 'nav-selected' : ''} onClick={() => setSection('Other')}>Other</button>
-          <a href="/api/logout" id="logout">Logout</a>
+          <Link href="/api/logout">
+            <a id="logout">Logout</a>
+          </Link>
         </nav>
 
         { section == 'People' &&

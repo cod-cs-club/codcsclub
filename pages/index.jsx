@@ -59,7 +59,7 @@ export default function Home({ projectsCount, peopleCount }) {
               <a className="button">See Our Projects</a>
             </Link>
           </div>
-          <iframe id="intro-vid" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
+          <iframe id="intro-vid" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
         </div>
 
         { /* Info cards */ }
@@ -85,7 +85,7 @@ export default function Home({ projectsCount, peopleCount }) {
         { /* Image Gallery */}
         <div className="gallery">
           <h2>Image Gallery</h2>
-          <p>We are real people! Here are some photos we've taken together.</p>
+          <p>We are real people! Here are some photos we&apos;ve taken together.</p>
           <div className="img-container">
             <GalleryImage image="/gallery/outside2022.jpg" />
             <GalleryImage image="/gallery/session1.jpg" />
@@ -98,7 +98,7 @@ export default function Home({ projectsCount, peopleCount }) {
         {/* Languages Used */}
         <div className="languages">
           <h2>Languages Used</h2>
-          <p>Here are some of the languages/technologies we've used in our projects!</p>
+          <p>Here are some of the languages/technologies we&apos;ve used in our projects!</p>
           <div className="lang-container">
             <div className="card"><h4>Python</h4><Image src="/icons/python.png" alt="Python" width="80" height="80" /></div>
             <div className="card"><h4>JavaScript</h4><Image src="/icons/javascript.png" alt="JavaScript" width="80" height="80" /></div>

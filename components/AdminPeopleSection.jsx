@@ -81,7 +81,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
       <div id="people-list">
         { people.map(person => {
           return (
-            <div className="person-item">
+            <div className="person-item" key={person.id}>
               <img src={person.image} alt="Profile image" />
               <h4>{person.name}</h4>
               <p>{person.bio}</p>
@@ -102,9 +102,9 @@ export default function AdminPeopleSection({ people, setPeople }) {
               <form onSubmit={editPerson}>
                 <div className="colum">
                   <input id="person-edit-id" type="hidden" value={personEditModal.id} />
-                  <label for="person-edit-name">Full Name</label>
+                  <label htmlFor="person-edit-name">Full Name</label>
                   <input id="person-edit-name" type="text" defaultValue={personEditModal.name} />
-                  <label for="person-edit-bio">Person Bio</label>
+                  <label htmlFor="person-edit-bio">Person Bio</label>
                   <textarea id="person-edit-bio" defaultValue={personEditModal.bio}></textarea>
                   <div className="image-select">
                     <div>
@@ -117,7 +117,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
                 <div className="colum">
                   <div className="side-by-side">
                     <div>
-                      <label for="person-edit-role">Club Role</label>
+                      <label htmlFor="person-edit-role">Club Role</label>
                       <select id="person-edit-role" defaultValue={personEditModal.role}>
                         { roles.map((role, index) => {
                           return (
@@ -127,7 +127,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
                       </select>
                     </div>
                     <div>
-                      <label for="person-edit-onteam">On Team Page</label>
+                      <label htmlFor="person-edit-onteam">On Team Page</label>
                       <select id="person-edit-onteam" defaultValue={personEditModal.onteam}>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -168,7 +168,7 @@ export default function AdminPeopleSection({ people, setPeople }) {
           <div id="person-create-modal" className="modal">
             <h4>Create New Person</h4>
             <form onSubmit={createPerson}>
-              <label for="person-create-name">Person Name</label>
+              <label htmlFor="person-create-name">Person Name</label>
               <input id="person-create-name" type="text" />
               <button type="submit">Create</button>
             </form>

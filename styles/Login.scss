@@ -6,7 +6,12 @@
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 50px);
-  background: #23242a;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url('/bg-home.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
 
   .box {
     position: relative;
@@ -16,31 +21,6 @@
     border-radius: 8px;
     overflow: hidden;
   }
-
-  // .box::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: -50%;
-  //   left: -50%;
-  //   width: 380px;
-  //   height: 360px;
-  //   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-  //   transform-origin: bottom right;
-  //   animation: animateLogin 6s linear infinite;
-  // }
-
-  // .box::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: -50%;
-  //   left: -50%;
-  //   width: 380px;
-  //   height: 360px;
-  //   background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
-  //   transform-origin: bottom right;
-  //   animation: animateLogin 6s linear infinite;
-  //   animation-delay: -3s;
-  // }
 
   form {
     position: absolute;
