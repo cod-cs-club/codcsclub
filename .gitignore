@@ -37,5 +37,5 @@ next-env.d.ts
 # VSCode
 /.vscode
 
-# Project-psecific
+# Project-specific
 database.db
