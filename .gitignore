@@ -25,7 +25,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
-.env.local
+.env.local*
 
 # vercel
 .vercel
@@ -36,3 +36,6 @@ next-env.d.ts
 
 # VSCode
 /.vscode
+
+# Project-psecific
+database.db

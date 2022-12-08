@@ -26,7 +26,7 @@ export default function Projects({ projects }) {
       <Banner
         image = "bg-projects.jpg"
         title="Projects"
-        subtitle="All of our projects"
+        subtitle="All of our projects!"
       />
       
       <main id="projects">

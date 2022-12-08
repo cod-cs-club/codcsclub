@@ -99,10 +99,7 @@
     text-align: center;
     color: var(--text-color-3);
     fill: var(--text-color-3);
-    background-color: #1e2627;
-    // background-image: url("https://source.unsplash.com/1000x1000?code");
-    // background-size: cover;
-    // background-position: fixed;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(31,30,32,1) 5%, rgba(25,50,56,1) 18%, rgba(42,28,63,1) 53%, rgba(49,20,37,1) 94%, rgba(0,4,27,1) 100%);
 
     h2 { font-size: 1.8rem; color: var(--text-color-1); }
     p { margin: 15px 0; color: var(--text-color-2); }

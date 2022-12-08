@@ -510,4 +510,13 @@
       span { font-size: 1rem; color: var(--text-color-1); }
     }
   }
+
+  // Other section
+  #other-sec {
+    p {
+      margin: 10px 0;
+      font-size: .9rem;
+      color: rgb(127, 127, 127);
+    }
+  }
 }

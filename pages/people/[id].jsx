@@ -36,7 +36,7 @@ export default function People({ person }) {
       <Navbar />
       
       <div id="people" className={person.name}>
-        <div id="card">
+        <main id="card">
           <div id="left">
             <img id="profile-image" src={person.image} alt="Profile image of person" />
             <div id="socials">
@@ -44,7 +44,8 @@ export default function People({ person }) {
                 return (
                   <div className="social-item" key={social.name}>
                     <img src={social.image} alt="Social icon" />
-                    <a href={social.link}>{social.name}</a>
+                    { social.name == 'Email' && <a href={'mailto:' + social.link}>{social.link}</a> }
+                    { social.name != 'Email' && <a href={social.link}>{social.name}</a> }
                   </div>
                 )
               })}
@@ -69,7 +70,7 @@ export default function People({ person }) {
               })}
             </div>
           </div>
-        </div>
+        </main>
       </div>
 
       <Footer />

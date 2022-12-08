@@ -21,10 +21,10 @@ export default function getPersonFull(personID) {
         })
         
         // Return the person's socials with the correct icon and stuff.
-        const fullSocials = JSON.parse(row.socials).flatMap(social => {
-          const fullSocial = socials.find(f => f.name == social.name)
-          if (!fullSocial) return
-          fullSocial.link = social.link
+        const fullSocials = socials.flatMap(social => {
+          let fullSocial = JSON.parse(row.socials).find(f => f.name == social.name)
+          if (!fullSocial) return []
+          fullSocial.image = social.image
           return fullSocial
         })
   

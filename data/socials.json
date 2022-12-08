@@ -1,7 +1,7 @@
 [
+  { "name": "Email", "image": "/icons/email.png" },
   { "name": "GitHub", "image": "/icons/github.png" },
   { "name": "LinkedIn", "image": "/icons/linkedin.png" },
-  { "name": "Email", "image": "/icons/email.png" },
   { "name": "Twitter", "image": "/icons/twitter.png" },
-  { "name": "Instagram", "image": "/icons/twitter.png" }
+  { "name": "Instagram", "image": "/icons/instagram.png" }
 ]

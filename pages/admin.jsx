@@ -4,6 +4,7 @@ import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
 import AdminPeopleSection from '/components/AdminPeopleSection'
 import AdminProjectsSection from '/components/AdminProjectsSection'
+import Icons from '/components/CommonSVGs'
 import api from '/functions/api'
 
 import Link from 'next/link'
@@ -12,8 +13,8 @@ import { useState, useEffect } from 'react'
 // Admin Panel page.
 export default function Admin() {
   const [section, setSection] = useState('People')
-  const [people, setPeople] = useState([])
-  const [projects, setProjects] = useState([])
+  const [people, setPeople] = useState(null)
+  const [projects, setProjects] = useState(null)
 
   // Fetch needed data.
   useEffect(() => {
@@ -46,14 +47,16 @@ export default function Admin() {
           </Link>
         </nav>
 
-        { section == 'People' &&
+        { section == 'People' && !people && <Icons name="loading" /> }
+        { section == 'People' && people?.length >= 0 &&
           <AdminPeopleSection
             people={people}
             setPeople={setPeople}
           />
         }
 
-        { section == 'Projects' &&
+        { section == 'Projects' && !projects && <Icons name="loading" /> }
+        { section == 'Projects' && projects?.length >= 0 &&
           <AdminProjectsSection
             projects={projects}
             setProjects={setProjects}
@@ -64,6 +67,7 @@ export default function Admin() {
         { section == 'Other' &&
           <section id="other-sec">
             <h3>Other</h3>
+            <p>This section is currently unused, but can be utilized in the future.</p>
           </section>
         }
       </div>

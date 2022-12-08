@@ -278,3 +278,18 @@ main {
     100% { transform: translateY(0px); }
   }
 }
+
+// Loading icons
+.loading-icon {
+  fill: gray;
+  color: gray;
+  width: 40px;
+  height: 40px;
+  margin: 30px;
+  animation: loading-icon 1s infinite ease-in-out;
+}
+
+@keyframes loading-icon {
+  0% { rotate: 0deg; }
+  100% { rotate: 360deg; }
+}
