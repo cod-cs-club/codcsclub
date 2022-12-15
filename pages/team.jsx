@@ -38,7 +38,7 @@ export default function Team({ people }) {
                   <div className="content">
                     <div className="imgBox">
                       <Image src={person.image} alt="Profile image" layout="responsive"
-                      width={150} height={150}/>
+                      width="150" height="150" />
                     </div>
                     <h3>{person.name}<br /><span className={"role role-" + person.role}>{person.role}</span></h3>
                   </div>
