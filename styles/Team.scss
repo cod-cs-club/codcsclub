@@ -45,6 +45,8 @@
           z-index: 1;
           overflow: hidden;
           border-radius: 50%;
+          width: 150px;
+          height: 150px;
         }
 
         .imgBox::before {
@@ -52,7 +54,7 @@
           position: absolute;
           left: 50%;
           top: 50%;
-          height: 100px;
+          height: 100%;
           width: 100%;
           background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
           transform: translate(-50%, -180%);
@@ -82,14 +84,14 @@
           text-transform: uppercase;
           letter-spacing: 2px;
           font-weight: 500;
-          font-size: 18px;
+          font-size: 1.1rem;
           text-align: center;
           margin: 20px 0 10px;
           line-height: 1.1em;
         }
 
         .role {
-          font-size: 12px;
+          font-size: 0.75rem;
           font-weight: 300;
           text-transform: initial;
         }
@@ -125,253 +127,20 @@
   }
 }
 
+@media(max-width: 500px) {
+  #team #people-container .person {
+    width: 140px;
+    height: calc(140px * (4/3));
 
-// DESIGN 3
-// THIS WAS A TEST DESIGN THAT LOOKED REALLY BAD
-
-// #team {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   // background: #333;
-//   min-height: 100vh;
-//   flex-wrap: wrap;
-
-//   #people-container {
-//     position: relative;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     align-items: center;
-//     margin: 70px 10px;
-//     gap: 80px 30px;
-
-//     .person {
-//       position: relative;
-//       width: 350px;
-//       height: 190px;
-//       background: #333;
-//       transition: 0.5s;
-
-//       .lines {
-//         position: absolute;
-//         inset: 0;
-//         background: #000;
-//         overflow: hidden;
-//       }
-
-//       .lines::before {
-//         content: '';
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         width: 600px;
-//         height: 120px;
-//         background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
-//         animation: animate 4s linear infinite;
-//       }
-
-//       .lines::after {
-//         content: '';
-//         position: absolute;
-//         inset: 3px;
-//         background: #333;
-//       }
-
-//       .imgBx {
-//         position: absolute;
-//         top: -50px;
-//         left: 50%;
-//         transform: translateX(-50%);
-//         width: 150px;
-//         height: 150px;
-//         background: #000;
-//         transition: 0.5s;
-//         z-index: 1;
-//         overflow: hidden;
-
-//         img {
-//           position: absolute;
-//           top: 10px;
-//           left: 10px;
-//           z-index: 1;
-//           width: calc(100% - 20px);
-//           height: calc(100% - 20px);
-//         }
-//       }
-
-//       .imgBx::before {
-//         content: '';
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         width: 500px;
-//         height: 150px;
-//         transform: translate(-50%, -50%);
-//         background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
-//         animation: animate2 6s linear infinite;
-//       }
-
-//       .imgBx::after {
-//         content: '';
-//         position: absolute;
-//         inset: 3px;
-//         background: #292929;
-//       }
-
-//       .content {
-//         position: absolute;
-//         width: 100%;
-//         height: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: flex-end;
-//         overflow: hidden;
-
-//         .details {
-//           padding: 40px;
-//           text-align: center;
-//           width: 100%;
-//           transition: 0.5s;
-//           transform: translateY(145px);
-
-//           h2 {
-//             font-size: 1.25em;
-//             font-weight: 600;
-//             color: #45f3ff;
-//             line-height: 1.2em;
-
-//             span {
-//               font-size: 0.75em;
-//               font-weight: 500;
-//               color: #fff;
-//             }
-//           }
-
-//           .data {
-//             display: flex;
-//             justify-content: space-between;
-//             margin: 25px 0;
-
-//             h3 {
-//               font-size: 1em;
-//               color: #45f3ff;
-//               line-height: 1.2em;
-//               font-weight: 600;
-
-//               span {
-//                 font-size: 0.85em;
-//                 font-weight: 400;
-//                 color: #fff;
-//               }
-//             }
-//           }
-
-//           button {
-//             padding: 10px 30px;
-//             border: none;
-//             outline: none;
-//             border-radius: 5px;
-//             font-size: 1em;              font-weight: 500;
-//             background: #45f3ff;
-//             color: #222;
-//             cursor: pointer;
-//             opacity: 0.8;
-//           }
-
-//           button:hover {
-//             opacity: 1;
-//           }
-//         }
-//       }
-//     }
-
-//     .person:hover {
-//       height: 450px;
-
-//       .imgBx {
-//         width: 250px;
-//         height: 250px;
-//       }
-
-//       .details {
-//         transform: translateY(0px);
-//       }
-//     }
-
-//     @keyframes animate {
-//       0% {transform: translate(-50%, -50%) rotate(0deg);}
-//       100% {transform: translate(-50%, -50%) rotate(360deg);}
-//     }
-//     @keyframes animate2 {
-//       0% {transform: translate(-50%, -50%) rotate(360deg);}
-//       100% {transform: translate(-50%, -50%) rotate(0deg);}
-//     }
-//   }
-// }
-
-
-// THIS IS THE FIRST DESIGN
-
-// #team {
-//   #people-container {
-//     display: flex;
-//     /* justify-content: space-around; */
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     gap: 50px;
-//     margin: 130px 50px;
-//   }
-  
-//   .person {
-//     display: flex;
-//     flex-direction: column;
-//     text-decoration: none;
-//     align-items: center;
-//     min-width: 200px;
-//     max-width: 200px;
-//     padding: 10px;
-//     border-radius: 10px;
-//     --underlined: none;
-//     --image-scale: 0.8;
-//   }
-  
-//   .person:hover {
-//     background-color: var(--bg-color-3);
-//     --underlined: underline;
-//     --image-scale: 1;
-//   }
-  
-//   .person img {
-//     width: 120px;
-//     height: 120px;
-//     border-radius: 50%;
-//     transition: ease-in-out 300ms;
-//     scale: var(--image-scale);
-//   }
-  
-//   .person h3 {
-//     font-weight: normal;
-//     font-size: 20px;
-//     color: var(--text-color-1);
-//   }
-  
-//   .person .role {
-//     text-align: center;
-//     font-size: 16px;
-//     margin: 8px 0;
-//     padding: .1em .5em;
-//     background-color: var(--bg-color-3);
-//     border: 1px solid var(--border-color-3);
-//     border-radius: .5em;
-//   }
-  
-//   .person .role-Leadership { color: pink; }
-//   .person .role-Member { color: aqua; }
-  
-//   .person .info {
-//     text-decoration: var(--underlined);
-//     font-size: 14px;
-//     color: rgb(127, 127, 255);
-//   }
-// }
+    .content {
+      .imgBox {
+        width: 75px;
+        height: 75px;
+      }
+      
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
