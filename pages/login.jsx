@@ -18,8 +18,9 @@ export default function Login() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password: event.target[0].value })
     })
+    
     const data = await result.json()
-    if (data.success == true) Router.push('/admin')
+    if (data.success == true) Router.reload()
     else setWrongPassword(true)
   }
   function forgot() {
