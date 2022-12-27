@@ -5,6 +5,5 @@ import getProjectsFull from '/functions/db/getProjectsFull'
 
 export default async function handler(req, res) {
   const projects = await getProjectsFull()
-  console.log(projects)
-  res.status(200).json([])
+  res.status(200).json(projects)
 }

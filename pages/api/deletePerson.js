@@ -1,11 +1,16 @@
-import db from '/functions/database'
 import isAdmin from '/functions/isAdmin'
+import db from '/functions/firebase'
+import { doc, deleteDoc } from 'firebase/firestore'
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (!isAdmin(req)) return res.status(403).send({ error: 'No permission' })
 
-  db.serialize(() => {
-    db.run(`DELETE FROM People WHERE id = (?1)`, { 1: req.body.id })
-    res.status(200).json({})
-  })
+  try {
+    await deleteDoc(doc(db, 'people', req.body.id))
+    res.status(200).json({ success: true })
+  }
+  catch (err) {
+    console.log(err)
+    res.status(200).json({ success: false })
+  }
 }

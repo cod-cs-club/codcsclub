@@ -1,13 +1,20 @@
-import db from '/functions/database'
 import isAdmin from '/functions/isAdmin'
+import db from '/functions/firebase'
+import { collection, addDoc } from 'firebase/firestore'
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (!isAdmin(req)) return res.status(403).send({ error: 'No permission' })
 
-  db.serialize(() => {
-    db.run(`INSERT INTO People (name) VALUES (?1)`, { 1: req.body.name })
-    db.get(`SELECT * FROM People ORDER BY id DESC LIMIT 1`, (err, row) => {
-      res.status(200).json(row.id)
-    })
-  })
+  const newPerson = {
+    name: req.body.name,
+    image: '/defaultPerson.png',
+    bio: 'I am studying computer science.',
+    role: 'Member',
+    onteam: 'true',
+    socials: '[]',
+    date: Date.now().toString()
+  }
+
+  const newDoc = await addDoc(collection(db, 'people'), newPerson)
+  res.status(200).json(newDoc.id)
 }

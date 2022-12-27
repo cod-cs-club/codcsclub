@@ -1,21 +1,21 @@
-import db from '/functions/database'
 import isAdmin from '/functions/isAdmin'
+import db from '/functions/firebase'
+import { doc, updateDoc } from 'firebase/firestore'
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (!isAdmin(req)) return res.status(403).send({ error: 'No permission' })
 
-  db.serialize(() => {
-    db.run(`UPDATE People SET name = (?1), bio = (?2), image = (?3), role = (?4), onteam = (?5), socials = (?6) WHERE id = (?7)`, {
-      1: req.body.info.name,
-      2: req.body.info.bio,
-      3: req.body.info.image,
-      4: req.body.info.role,
-      5: req.body.info.onteam,
-      6: JSON.stringify(req.body.info.socials),
-      7: req.body.info.id
-    })
-    res.status(200).json({})
-  })
+  const personInfo = {
+    name: req.body.info.name,
+    bio: req.body.info.bio,
+    image: req.body.info.image,
+    role: req.body.info.role,
+    onteam: req.body.info.onteam,
+    socials: JSON.stringify(req.body.info.socials)
+  }
+
+  await updateDoc(doc(db, 'people', req.body.info.id), personInfo)
+  res.status(200).json({ success: true })
 }
 
 export const config = {

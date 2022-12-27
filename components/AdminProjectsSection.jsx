@@ -250,21 +250,22 @@ export default function AdminProjectsSection({ projects, setProjects, people }) 
 
 function PersonItem({ people, personID, clickAction }) {
   const person = [...people].find(f => f.id == personID)
+  console.log(person)
   return (
-    <div className="item-button" onClick={clickAction} key={person.id}>
+    <>
       { person &&
-        <>
+        <div className="item-button" onClick={clickAction} key={person.id}>
           <img src={person.image} alt="" />
           <span>{person.name}</span>
           <Icons name="edit" />
-        </>
+        </div>
       }
       { !person &&
-        <>
+        <div className="item-button" onClick={clickAction} key="no-person">
           <span>No Person Selected</span>
           <Icons name="edit" />
-        </>
+        </div>
       }
-    </div>
+    </>
   )
 }

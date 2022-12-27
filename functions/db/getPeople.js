@@ -1,28 +1,31 @@
-import db from '/functions/database'
+import db from '/functions/firebase'
+import { collection, getDocs } from 'firebase/firestore'
+
 import roles from '/data/roles.json'
 
 export default async function getPeople() {
-  return new Promise(resolve => {
-    db.all(`SELECT * FROM People`, (err, rows) => {
-      const people = rows.map(row => {
-        return {
-          id: row.id,
-          name: row.name,
-          image: row.image,
-          bio: row.bio,
-          role: row.role,
-          onteam: row.onteam,
-          socials: JSON.parse(row.socials),
-          date: row.date
-        }
+  return new Promise(async resolve => {
+    const people = []
+    const snapshot = await getDocs(collection(db, 'people'))
+    snapshot.forEach(doc => {
+      const person = doc.data()
+      people.push({
+        id: doc.id,
+        name: person.name,
+        image: person.image,
+        bio: person.bio,
+        role: person.role,
+        onteam: person.onteam,
+        socials: JSON.parse(person.socials),
+        date: person.date
       })
-  
-      // Sort people by highest role.
-      const sortedPeople = roles.flatMap(role => {
-        return people.filter(person => person.role == role.name)
-      })
-  
-      resolve(sortedPeople)
     })
+
+    // Sort people by highest role.
+    const sortedPeople = roles.flatMap(role => {
+      return people.filter(person => person.role == role.name)
+    })
+
+    resolve(sortedPeople)
   })
 }

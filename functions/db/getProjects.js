@@ -1,22 +1,25 @@
-import db from '/functions/database'
+import db from '/functions/firebase'
+import { collection, getDocs } from 'firebase/firestore'
 
 export default async function getProjects() {
-  return new Promise(resolve => {
-    db.all(`SELECT * FROM Projects`, (err, rows) => {
-      const projects = rows.map(row => {
-        return {
-          id: row.id,
-          name: row.name,
-          image: row.image,
-          description: row.description,
-          visit: row.visit,
-          repository: row.repository,
-          contributors: JSON.parse(row.contributors),
-          tags: JSON.parse(row.tags),
-          date: row.date
-        }
+  return new Promise(async resolve => {
+    const projects = []
+    const snapshot = await getDocs(collection(db, 'projects'))
+    snapshot.forEach(doc => {
+      const project = doc.data()
+      projects.push({
+        id: doc.id,
+        name: project.name,
+        image: project.image,
+        description: project.description,
+        visit: project.visit,
+        repository: project.repository,
+        contributors: JSON.parse(project.contributors),
+        tags: JSON.parse(project.tags),
+        date: project.date
       })
-      resolve(projects)
     })
+
+    resolve(projects)
   })
 }
