@@ -35,6 +35,11 @@ async function getProjects() {
   return projects
 }
 
+async function getProjectsFull() {
+  const projects = await (await fetch(`/api/getProjectsFull`)).json()
+  return projects
+}
+
 async function editProject(info) {
   const result = await fetch(`/api/editProject`, {
     method: 'POST',
@@ -62,4 +67,4 @@ async function deleteProject(id) {
   return result.json()
 }
 
-export default { getPeople, editPerson, createPerson, deletePerson, getProjects, editProject, createProject, deleteProject }
+export default { getPeople, editPerson, createPerson, deletePerson, getProjects, getProjectsFull, editProject, createProject, deleteProject }

@@ -3,22 +3,22 @@ import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
-import getPeople from '/functions/db/getPeople'
+import Icons from '/components/CommonSVGs'
+import api from '/functions/api'
 
 import Image from 'next/image'
 import Link from 'next/link'
-
-// Fetch people server-side, then pass as a prop.
-export async function getStaticProps() {
-  const people = await getPeople()
-  return {
-    props: { people },
-    revalidate: 10 // 10 seconds
-  }
-}
+import { useState, useEffect } from 'react'
 
 // Team page.
-export default function Team({ people }) {
+export default function Team() {
+  const [people, setPeople] = useState(null)
+
+  useEffect(() => {
+    api.getPeople()
+      .then(data => setPeople(data))
+  }, [])
+
   return (
     <>
       <HeadMeta title="Team" />
@@ -31,6 +31,7 @@ export default function Team({ people }) {
 
       <main id="team">
         <div id="people-container">
+          { !people && <Icons name="loading" /> }
           { people && people.map(person => {
             return (
               <Link href={'/people/' + person.id} key={person.id}>

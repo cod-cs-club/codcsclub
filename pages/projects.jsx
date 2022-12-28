@@ -3,22 +3,22 @@ import HeadMeta from '/components/HeadMeta'
 import Navbar from '/components/Navbar'
 import Banner from '/components/Banner'
 import Footer from '/components/Footer'
-import getProjectsFull from '/functions/db/getProjectsFull'
+import Icons from '/components/CommonSVGs'
+import api from '/functions/api'
 
 import Image from 'next/image'
 import Link from 'next/link'
-
-// Fetch projects server-side, then pass as a prop.
-export async function getStaticProps() {
-  const projects = await getProjectsFull()
-  return {
-    props: { projects },
-    revalidate: 10 // 10 seconds
-  }
-}
+import { useState, useEffect } from 'react'
 
 // Projects page.
-export default function Projects({ projects }) {
+export default function Projects() {
+  const [projects, setProjects] = useState(null)
+
+  useEffect(() => {
+    api.getProjectsFull()
+      .then(data => setProjects(data))
+  }, [])
+
   return (
     <>
       <HeadMeta title="Projects" />
@@ -31,6 +31,7 @@ export default function Projects({ projects }) {
       
       <main id="projects">
         <div id="project-list">
+          { !projects && <Icons name="loading" /> }
           { projects && projects.map(project => {
             return (
               <div className="project" key={project.id}>
