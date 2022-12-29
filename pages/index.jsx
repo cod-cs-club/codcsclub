@@ -53,7 +53,7 @@ export default function Home({ projectsCount, peopleCount }) {
                 <li><span>Development</span></li>
               </ul>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit.</p>
+            <p>Empowering the next generation of tech leaders through hands-on, industry-standard projects</p>
             <Link href="/projects">
               <a className="button">See Our Projects</a>
             </Link>
@@ -65,7 +65,7 @@ export default function Home({ projectsCount, peopleCount }) {
         <div className="info">
           <div className="info-text">
             <h2>About Our Club</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Mollis nunc sed id semper risus. Elementum tempus egestas sed sed risus. Dictum fusce ut placerat orci nulla pellentesque dignissim enim sit. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.</p>
+            <p>Our Computer Science Club is a student-led organization dedicated to providing members with opportunities to learn, grow, and connect in the field of computer science. We offer a range of activities and events, including guest lectures from industry professionals, workshops on cutting-edge technologies, and group projects that allow members to work on real-world problems and projects.</p>
           </div>
           <div className="info-stats">
             <div>
@@ -112,12 +112,12 @@ export default function Home({ projectsCount, peopleCount }) {
         <div className="faq">
           <h2>Frequently Asked Questions</h2>
           <Question
-            question="Question 1: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque."
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam."
+            question="Question 1: Do you work on paid projects?"
+            answer="Yes. Some members choose to work on paid projects as a way to generate revenue or to fund club activities, while others may prefer to focus on unpaid projects as a way to gain other experience and build skills."
           />
           <Question
-            question="Question 2: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque."
-            answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fugit repellendus, nihil eligendi fugiat atque inventore nemo soluta assumenda ipsam."
+            question="Question 2: Who is on the team?"
+            answer="Advanced to beginner programmers. Do not be fooled, the students can provide quality above industry standard."
           />
         </div>
       </main>
