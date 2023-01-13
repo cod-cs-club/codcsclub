@@ -16,8 +16,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 80px;
-    max-width: 900px;
-    // min-width: 500px;
+    width: clamp(300px, 850px, 850px);
     padding: 20px;
     background-color: var(--bg-color-1);
     border: 1px solid var(--border-color-1);
@@ -29,7 +28,7 @@
   .left {
     display: flex;
     flex-direction: column;
-    /* background: red; */
+    max-width: 600px;
   }
   
   .left a {
@@ -49,6 +48,7 @@
   
   .contributors {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 20px;
     font-size: 16px;
     color: var(--text-color-2);
@@ -58,13 +58,7 @@
     margin-right: 10px;
   }
   
-  .contributors a {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    margin-right: 2px;
-  }
-  
+  .contributors a { display: flex; margin-right: -1px; }
   .contributors img { border-radius: 50%; }
   
   .languages {
@@ -83,11 +77,6 @@
     background-color: var(--bg-color-2);
     border-radius: 8px;
   }
-  
-  // .bubble img {
-  //   width: 15px;
-  //   height: 15px;
-  // }
   
   .right {
     display: flex;
