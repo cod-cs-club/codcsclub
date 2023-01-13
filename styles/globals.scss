@@ -223,7 +223,7 @@ main {
   p {
     margin-top: 30px;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     animation: text-fade-in ease-in-out 800ms;
   }
@@ -238,6 +238,7 @@ main {
   body { padding-top: 121px; }
   #banner { padding: 20px; }
   #banner h1 { font-size: 1.875rem; }
+  #banner p { font-size: 1.1rem; }
 }
 
 // Scroll to top button

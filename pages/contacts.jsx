@@ -15,7 +15,7 @@ export default function Contacts() {
       <Banner
         image = "/bg-contacts.jpg"
         title="Contact Us"
-        subtitle="Get in Contact With us!"
+        subtitle="Get in Contact With Us!"
       />
 
       <main id="contacts">

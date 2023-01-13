@@ -34,9 +34,9 @@ export default function Home({ projectsCount, peopleCount }) {
       <HeadMeta title="Home" />
       <Navbar selectedPage="Home" />
       <Banner
-       image = "bg-home.png"
+       image="bg-home.png"
        title="Computer Science Club"
-        subtitle="The best club on Earth!"
+        subtitle="The Best Club on Earth!"
       />
       
       <main id="home">

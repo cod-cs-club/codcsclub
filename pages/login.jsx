@@ -32,8 +32,8 @@ export default function Login() {
       <HeadMeta title="Admin Login" />
       <Navbar />
       
-      <main id="login">
-        <div className="box">
+      <div id="login">
+        <main className="box">
           <form onSubmit={login}>
             <h2>Admin Panel Login</h2>
             <div className="inputBox">
@@ -50,8 +50,8 @@ export default function Login() {
             }
             <button type="submit">Login</button>
           </form>
-        </div>
-      </main>
+        </main>
+      </div>
 
       {/* <Footer /> */}
     </>
