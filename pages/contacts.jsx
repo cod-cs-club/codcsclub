@@ -34,9 +34,9 @@ export default function Contacts() {
 
           <div className="card">
             <Image src="/icons/email.png" alt="The email logo" width="180" height="180" />
-            <p>Get in contact with leadership here!<br />stovanjovsksid@dupage.edu</p>
+            <p>Get in contact with leadership here!<br />stojanovskid@dupage.edu</p>
             <div className="emails">
-              <a href = "mailto:stovanjovsksid@dupage.edu">Send Email</a>
+              <a href = "mailto:stojanovskid@dupage.edu">Send Email</a>
             </div>
           </div>
         </div>

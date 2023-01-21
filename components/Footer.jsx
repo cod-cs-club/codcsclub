@@ -19,7 +19,7 @@ export default function Footer() {
             </li>
             <li>
               <Image src="/icons/email.png" alt="The email logo" width="24" height="24" />
-              <a href="mailto:stovanjovsksid@dupage.edu" className="btn">stovanjovsksid@dupage.edu</a>
+              <a href="mailto:stojanovskid@dupage.edu" className="btn">stojanovskid@dupage.edu</a>
             </li>
           </ul>
         </div>
