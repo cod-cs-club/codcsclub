@@ -76,7 +76,8 @@ export default function Home({ projectsCount, peopleCount }) {
             </div>
             <div>
             <Icons name="members" />
-              <h3>{peopleCount}+</h3>
+              {/* <h3>{peopleCount}+</h3> */}
+              <h3>400+</h3>
               <p className="text-secondary">Members</p>
             </div>
           </div>
