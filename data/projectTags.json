@@ -4,5 +4,6 @@
   { "name": "JavaScript", "image": "/icons/javascript.png" },
   { "name": "Next.js", "image": "/icons/nextjs.png" },
   { "name": "Node.js", "image": "/icons/node.png" },
-  { "name": "Python", "image": "/icons/python.png" }
+  { "name": "Python", "image": "/icons/python.png" },
+  { "name": "TensorFlow", "image": "/icons/tf.png" }
 ]
