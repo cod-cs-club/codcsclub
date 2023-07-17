@@ -2,7 +2,7 @@
   { "name": "President" },
   { "name": "Vice President" },
   { "name": "Project Manager" },
+  { "name": "Founder" },
   { "name": "Leadership" },
-  { "name": "Member" },
-  { "name": "Founder" }
+  { "name": "Member" }
 ]
