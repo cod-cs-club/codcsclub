@@ -58,7 +58,8 @@ export default function Home({ projectsCount, peopleCount }) {
               <a className="button">See Our Projects</a>
             </Link>
           </div>
-          <iframe id="intro-vid" src="https://www.youtube.com/watch?v=nlaqVqR1KYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
+          
+          <iframe id="intro-vid" src="https://www.youtube.com/embed/nlaqVqR1KYA" title="Welcome to the CS Club" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         { /* Info cards */ }
