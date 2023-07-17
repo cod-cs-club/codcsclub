@@ -34,9 +34,9 @@ export default function Home({ projectsCount, peopleCount }) {
       <HeadMeta title="Home" />
       <Navbar selectedPage="Home" />
       <Banner
-       image="bg-home.png"
+       image = "bg-home.png"
        title="Computer Science Club"
-        subtitle="The Best Club on Earth!"
+        subtitle="The best club on Earth!"
       />
       
       <main id="home">
@@ -58,7 +58,7 @@ export default function Home({ projectsCount, peopleCount }) {
               <a className="button">See Our Projects</a>
             </Link>
           </div>
-          <iframe id="intro-vid" src="https://www.youtube.com/embed/LZ-f2hMaJKs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
+          <iframe id="intro-vid" src="https://www.youtube.com/watch?v=nlaqVqR1KYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;picture-in-picture" allowfullscreen />
         </div>
 
         { /* Info cards */ }
@@ -81,7 +81,7 @@ export default function Home({ projectsCount, peopleCount }) {
           </div>
         </div>
 
-        { /* Image Gallery */}
+        { /* Image Gallery */} 
         <div className="gallery">
           <h2>Image Gallery</h2>
           <p>We are real people! Here are some photos we&apos;ve taken together.</p>
