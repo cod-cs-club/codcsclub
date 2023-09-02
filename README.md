@@ -1,5 +1,7 @@
 # codcsclub
 
+<h2>Visit now: <a href="https://www.codcsclub.com/">codcsclub.com</a></h2>
+
 This website is a hub for all things related to the College of Dupage Computer Science Club. The site hosts information about all our projects, team members, and other related details.
 
 ## Installation
