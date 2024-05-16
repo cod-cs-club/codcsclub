@@ -59,7 +59,7 @@ export default function Home({ projectsCount, peopleCount }) {
             </Link>
           </div>
           
-          <iframe id="intro-vid" src="https://www.youtube.com/embed/nlaqVqR1KYA" title="Welcome to the CS Club" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe id="intro-vid" src="https://www.youtube.com/embed/ovTJMGhpV0Q" title="Welcome to the CS Club" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
         { /* Info cards */ }
